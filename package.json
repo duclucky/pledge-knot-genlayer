@@ -1,0 +1,9 @@
+{
+  "name": "pledge-knot-genlayer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Semantic assurance clearing for cash-backed conditional cofunding pledges.",
+  "scripts": {"check": "node scripts/check.mjs"},
+  "dependencies": {"genlayer-js": "2.0.0-rc.1", "viem": "2.56.5"}
+}
