@@ -1,0 +1,565 @@
+{
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "rpc": "https://studio-next.genlayer.com/api",
+  "explorer": "https://explorer-studio-dev.genlayer.com",
+  "target": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "checkedAt": "2026-10-19T22:18:14.867Z",
+  "pools": [
+    {
+      "id": "pk-pair-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792435086,
+      "definition_digest": "091f7e7a0b20671abacd12000396edeb825236c8fb12a8313c120bb9783642d8",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    {
+      "id": "pk-cycle-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792435679,
+      "definition_digest": "cbeecb43435d32039777fdcdc47204e5eeed9fc3c6aa04078caa1de07cdec9a0",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    {
+      "id": "pk-target-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792436214,
+      "definition_digest": "6f687593d8c2f017555b7bca5789a6edad74091bbf36ce043f39e1578e223e0a",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    {
+      "id": "pk-unclear-v2b",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    {
+      "id": "pk-partial-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792448146,
+      "definition_digest": "e1b71cb79b656b8d0ea1a436a07aac97027126987217790163e1931ec9bc0d03",
+      "phase": "CLOSED",
+      "pledged_mask": 1,
+      "attempts": 0,
+      "resolved": false,
+      "received": "1 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "1 GEN"
+    }
+  ],
+  "accounting": {
+    "received": "16 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "16 GEN",
+    "invariant": true
+  },
+  "nativeContractGEN": "0",
+  "feeBudget": {
+    "capGEN": "1",
+    "reservedGEN": "0.633753753600786752",
+    "entries": {
+      "0xb9298b617c2cb36b5fa8024370b3e2605992dad05531430f32d8f6dd1c956bb4": {
+        "feeGEN": "0.000379287600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000379287600010352"
+      },
+      "0xd07492d06e8ac06f6487a687b204fe8863cc0e42ae62f254a38ad4347715006f": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0xbc9f4606ba283dd44e03194e0fee77e3c7d7eba89b7b5351e65e73f5069ba7ee": {
+        "feeGEN": "0.000378518400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378518400010352"
+      },
+      "0x10e68238a7083cf473908921317a48453c89c344f2690fc288143764698221a7": {
+        "feeGEN": "0.000378512400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378512400010352"
+      },
+      "0xf890e6975826bac08cc80b3e967aae358a33d7cff98febec303d697dd59d1e13": {
+        "feeGEN": "0.000378513600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378513600010352"
+      },
+      "0xc3ea4dc60bd02ce1cd843a5d394ffd05d5d1f3d3850bcc0f40e2ff14d6628b94": {
+        "feeGEN": "0.000378514800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378514800010352"
+      },
+      "0x315c5975688736219845b2ba3f7aac6c0c084c75a2738e53b01aeffaac0f3f18": {
+        "feeGEN": "0.000380230800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380230800010352"
+      },
+      "0x404c13585d80f96ce611a6523a9af3ad01ca42be85f06aecc0baf56b8fd54794": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0xceb2aa191c7890fdfc13205d3055cc60f79f3f14fa65196c1b455403f6f609fc": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0x192bbbe2aaede22ec1627f9b27e2065330e9f8a80019fccd01d18ee953fd40b3": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x2714c046789c629cf8e13a07935366b935ba3b01ecc247b501e69978568b51ff": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x8197daf5243daa7a86b8ad31bc1010628d7f9d02b812df1111e5c2cb42ccc558": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0x73788e61769c15bf5f97b07d5f93d50a752035377adaf9aa23d8e8ef063e3e14": {
+        "feeGEN": "0.000378519600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378519600010352"
+      },
+      "0x4471baafc8eaee1e39a96772ac26c9a6b35f996cc4f0ddbf4be02222e78d8c43": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0x928ba146f72a84e0bdf08047dd26ccc00c4833abfe661e0583ac317db592d414": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0xcb4874b9cf32c59692f0c601d575789e544ee681badcfdb4d2b38ca643df5713": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0x44d8a35e6adc9f0e0e132fc19bda9a7e2e80d1985e31c75eb758bfadcdba440d": {
+        "feeGEN": "0.000380082000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380082000010352"
+      },
+      "0x213630a2067e2d58ae2f192c7fdbcfb9e5653282563d993c9e992a4298a9669f": {
+        "feeGEN": "0.000378513600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378513600010352"
+      },
+      "0x0798d1da4951ceaa6315961f78c494fd0ecc0ff9469185026dec20da493ae4d8": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x96a00a82a1c800299f8ccf275a8d8e3ab1f9c821dd9fb4f1b7a36cf4b885c128": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x40c46a067135fb22d23e7691a5221892a85ff1de23f196cd988727db8df09a79": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x77ef761c932f23f12cba2141795f33d13252ce6093d1c108168098e6d5a6a53d": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0xf5e68d2f2cec90e7d21fd5652f7c8e5b53b662c0abca56f73cc2dd2eb006bd3e": {
+        "feeGEN": "0.000379321200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000379321200010352"
+      },
+      "0x37044a8fde03541956628b682596fa35615b85498e66630cd5c24d62fa46c84a": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0x4d12d293563677e6315d46d24ee9a6c49e39412dff401ea9c2913b4a447e630e": {
+        "feeGEN": "0.000378518400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378518400010352"
+      },
+      "0xe7da4daee054e638ecc78af73854b8027d148edfd0ddcec8a41dd059069b094c": {
+        "feeGEN": "0.000378512400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378512400010352"
+      },
+      "0x527db871c3e6cd6c42581555d2446230f2f963eadf78b20216ddde652e6f2be1": {
+        "feeGEN": "0.000378513600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378513600010352"
+      },
+      "0x6fb87d60283c9084cb6bc802dcabf8e2d51524d15c2227f6dfc5721e886246a9": {
+        "feeGEN": "0.000378514800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378514800010352"
+      },
+      "0x0a37970479d4ae5eabb9126ed3e286f219f7fcc9559d323b4c55348fbfb39198": {
+        "feeGEN": "0.000380270400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380270400010352"
+      },
+      "0xf5b97e27a1ce2a1b691507230c2f083433c87d7b4873c2b2343644cb25dab4c8": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0xe9d58570d1e94f064dd75a01f88e70c060da7dbab20581f0fff06026958ef438": {
+        "feeGEN": "0.100000000000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.100000000000010352"
+      },
+      "0x6324cbc5559da9da29cc3297007d50e9ed2cd4f3e3751749d42c8e41fc7bbfd6": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x66ccb966113ef84aef0d1f0c125f6c20f6da841a2257f53efe35d32ed585a9d0": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x45a6fb5537c8a15d8ca931614c2a259dd13af3ee7829d5503957650f894afc39": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0xd4d6a05f599b9a4358edea7e51a2d552ff0c113aad1a07214e091638c461e684": {
+        "feeGEN": "0.000378519600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378519600010352"
+      },
+      "0xcc8b03fd1214c6a514a2c7e06668472481455a3ac742d753fc8c50747e492baa": {
+        "feeGEN": "0.000378519600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378519600010352"
+      },
+      "0x2bde8175fab4d92ac3a5193955405b2ec9a5baf7ee84000b79927816f011ba04": {
+        "feeGEN": "0.000378520800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378520800010352"
+      },
+      "0x8c43d92ae4578a2d1f6382d0d4af0378e3927faaf902729693285732fb0dedd1": {
+        "feeGEN": "0.000378520800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378520800010352"
+      },
+      "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf": {
+        "feeGEN": "0.000380197200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380197200010352"
+      },
+      "0xaf665bbc60cd963fa84c2d29668845d665fdab1f418e82f9ca60884aa88c5071": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0xe8dc16e55a32a3236546d59d1315dc6812ba1349c28f64384cc184825b9c5d36": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0xf86937ed763a065a6f7390bd70e3937170fb06d6a29730a66d189a73fb75e4ae": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0xc884e060e64fe580525074bc46328ef70b0c784a840827f58e77005368a917b6": {
+        "feeGEN": "0.000378520800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378520800010352"
+      },
+      "0x194356a0cdbfa49727e86a77813ae31da1d3bd9f2d809ea2f7279de77b36a6df": {
+        "feeGEN": "0.000378517200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378517200010352"
+      },
+      "0x09fdd433442eebc4ac62958b69446f6d4feb38b287522d6a045341481ca486d9": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0x65191cb70f892fed946032f94d3884a5f9ab6e986ae389e13d377d98bace62e1": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0xe9fd7b71148d58a19dadd4c66ac28243956d671dd417523c95559d6569483424": {
+        "feeGEN": "0.000380288400010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380288400010352"
+      },
+      "0x94184c8015c5066c71ebe21d67731b9b817a320d39b5d73de36d1c018396ef39": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0xf8b7ae05bc5bcb5174738720ef42a47e9a301179f4f6f1fe6ac90e12c3318078": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x07c9b46f641ee8fdc01b2bb9ade4680d875699a473b5acfcca3922af5b3983b9": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0xefc592820aab1a02fad8372d1d2ecd4baf24fdf2929b826101334800d1dcac05": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0xfddbd32df79876c5fc05d0f0c2d0d4eb96a74b0abfaf8e4b1874cf3ba3912870": {
+        "feeGEN": "0.000378519600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378519600010352"
+      },
+      "0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9": {
+        "feeGEN": "0.000378519600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378519600010352"
+      },
+      "0x504499650b336c7502123da540bad326151e9cd178b6b7f1f26d960f11599de7": {
+        "feeGEN": "0.000378513600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378513600010352"
+      },
+      "0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797": {
+        "feeGEN": "0.000378517200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378517200010352"
+      },
+      "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9": {
+        "feeGEN": "0.000380160000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380160000010352"
+      },
+      "0x3337d06d5fe71885f86084808a0e822376dfe8829c601085b2ff5cd0b3e15f23": {
+        "feeGEN": "0.000378514800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378514800010352"
+      },
+      "0x7ae8e906a64819b33330916c7d83a3b356881b594490e572d152a21a7700035c": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x22fb1ad38da2ab01ed8b6ab67e00a41b2a9aec5e6dac222f6c5353a2e4e8134f": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0x4418b2aa1743b77ec0a12dfbbe65f8cef6bd20783179454367821164dd3b2313": {
+        "feeGEN": "0.000759801600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759801600010352"
+      },
+      "0xc9d1bf52e0ba8cd6eddcec2e9d7a9c896f8ece5f6949f0090432d638a71928ae": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0xe07e279273b3873a1541579cfffe12d21e944d6ec2c30af2d84a001d18941cfb": {
+        "feeGEN": "0.000378523200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378523200010352"
+      },
+      "0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a": {
+        "feeGEN": "0.000378522000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378522000010352"
+      },
+      "0x5f27619a17296c72ee9e9b01752d54c8b94f4fc72a9367b959b8706fffd4e21e": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4": {
+        "feeGEN": "0.000378516000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378516000010352"
+      },
+      "0xa515b9cd6b87ccc262e1b2c9a4c8cb5f6cf9dae09af726139aa764b25d454aac": {
+        "feeGEN": "0.000380160000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000380160000010352"
+      },
+      "0x4b562035b05fc41e8f5b239449b5d07d4e9741cabd68d16c64e9e609177a7ca4": {
+        "feeGEN": "0.000378517200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378517200010352"
+      },
+      "0x7a05604d0ceb9d006507fc80a9cc154b18b6b6803ee277a20bedf6cc3fa6fed5": {
+        "feeGEN": "0.000759804000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759804000010352"
+      },
+      "0x0700950aa05239adb895573c13e8d96905b911d86a78c16a04046502aacb5759": {
+        "feeGEN": "0.000759802800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759802800010352"
+      },
+      "0xab999a1b08ee56896f05a3c496221320ba979334e27757c2663aa06bcc43d815": {
+        "feeGEN": "0.000759804000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759804000010352"
+      },
+      "0x449140d97c26d8945ef01a8281d64620abcdcb383b63864a7ed59998e68cc8aa": {
+        "feeGEN": "0.000378492000010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378492000010352"
+      },
+      "0x21735248d06685685150639ae437a5c2eea61a99c66fb7c81defee627ae2d080": {
+        "feeGEN": "0.000378525600010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378525600010352"
+      },
+      "0x434ea8673526f69daa9e45100c6d097e4ef124e4d9172ff6d35dbd54df37f194": {
+        "feeGEN": "0.000378517200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378517200010352"
+      },
+      "0x90735b32d54d43cf1795e428406ec424883c87d87ac6bdaada5696232ef709c6": {
+        "feeGEN": "0.000378508800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378508800010352"
+      },
+      "0xcf64fd0a16d58abc72fa5ee6eb60e0ad0a8d4613988e5dc22e5ac613795d5894": {
+        "feeGEN": "0.000759802800010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000759802800010352"
+      },
+      "0x021f91850d2f81d52ac3dc6267a60d062107d394939a2913f2dec3a97848565b": {
+        "feeGEN": "0.000378493200010352",
+        "gasGEN": "0",
+        "totalGEN": "0.000378493200010352"
+      }
+    }
+  },
+  "extraNegativePool": {
+    "id": "pk-unclear-v2",
+    "version": "PK_V2",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "2 GEN",
+    "deadline": 1792430136,
+    "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+    "phase": "CLOSED",
+    "pledged_mask": 7,
+    "attempts": 0,
+    "resolved": false,
+    "received": "3 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "3 GEN"
+  },
+  "cumulativeEscrow": {
+    "capGEN": "22",
+    "reservedGEN": "22",
+    "entries": {
+      "0x10e68238a7083cf473908921317a48453c89c344f2690fc288143764698221a7": "1",
+      "0xf890e6975826bac08cc80b3e967aae358a33d7cff98febec303d697dd59d1e13": "1",
+      "0xc3ea4dc60bd02ce1cd843a5d394ffd05d5d1f3d3850bcc0f40e2ff14d6628b94": "1",
+      "0x4471baafc8eaee1e39a96772ac26c9a6b35f996cc4f0ddbf4be02222e78d8c43": "1",
+      "0x928ba146f72a84e0bdf08047dd26ccc00c4833abfe661e0583ac317db592d414": "1",
+      "0xcb4874b9cf32c59692f0c601d575789e544ee681badcfdb4d2b38ca643df5713": "1",
+      "0xe7da4daee054e638ecc78af73854b8027d148edfd0ddcec8a41dd059069b094c": "1",
+      "0x527db871c3e6cd6c42581555d2446230f2f963eadf78b20216ddde652e6f2be1": "1",
+      "0x6fb87d60283c9084cb6bc802dcabf8e2d51524d15c2227f6dfc5721e886246a9": "1",
+      "0xcc8b03fd1214c6a514a2c7e06668472481455a3ac742d753fc8c50747e492baa": "1",
+      "0x2bde8175fab4d92ac3a5193955405b2ec9a5baf7ee84000b79927816f011ba04": "1",
+      "0x8c43d92ae4578a2d1f6382d0d4af0378e3927faaf902729693285732fb0dedd1": "1",
+      "0x194356a0cdbfa49727e86a77813ae31da1d3bd9f2d809ea2f7279de77b36a6df": "1",
+      "0x09fdd433442eebc4ac62958b69446f6d4feb38b287522d6a045341481ca486d9": "1",
+      "0x65191cb70f892fed946032f94d3884a5f9ab6e986ae389e13d377d98bace62e1": "1",
+      "0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9": "1",
+      "0x504499650b336c7502123da540bad326151e9cd178b6b7f1f26d960f11599de7": "1",
+      "0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797": "1",
+      "0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a": "1",
+      "0x5f27619a17296c72ee9e9b01752d54c8b94f4fc72a9367b959b8706fffd4e21e": "1",
+      "0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4": "1",
+      "0x434ea8673526f69daa9e45100c6d097e4ef124e4d9172ff6d35dbd54df37f194": "1"
+    }
+  },
+  "fullLifecyclePassed": true
+}

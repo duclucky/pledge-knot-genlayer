@@ -2,7 +2,9 @@
 
 Status: OWNER APPROVED V2 AND CUMULATIVE19GEN. Implementation now authorized;
 V2 local implementation now passes semantic lint and122 Python tests.
-V2 deployment is finalized/SUCCESS;independent funded lifecycle is RUNNING.
+V2 deployment is finalized/SUCCESS;independent funded lifecycle now PASSED.
+The later approved distinct annex case increased cumulative escrow to22GEN.
+See REVIEW.md and evidence/studio-dev/lifecycle-audit.json for final proof.
 Original proposal
 and rationale below are retained. Aggregate fee cap remains1GEN across revisions.
 This is a proposed repair of IDEA-048, not a new contribution or novelty claim.
@@ -114,6 +116,7 @@ No value-bearing V2 action or production behavior change is authorized by this
 proposal alone. An approval must explicitly cover both the described V2 repair
 and the19GEN cumulative escrow limit; otherwise remain at the existing scope.
 
-The approval requirement comes from master Phase8: "ASK me before any change
-that alters public behavior", and AGENTS.md's explicit-authorization boundary
-for financial transactions. The new deployment cannot be patched into V1.
+The owner explicitly authorized the public behavior change, new immutable
+deployment and cumulative escrow scope before execution. The new deployment
+cannot be patched into V1. The proposal text above retains its historical
+pre-approval boundary; it is not the current authorization status.

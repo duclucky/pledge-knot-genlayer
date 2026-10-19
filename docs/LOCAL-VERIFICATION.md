@@ -1,6 +1,24 @@
 # Local verification and unsigned compatibility
 
-Observed 2026-10-19. This is not deployed-lifecycle proof.
+Latest local command: `npm run check`, exit0. Exact V2 source
+3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f.
+Semantic lint recognizes PledgeKnotContract,14methods (8view/6write).
+122Python tests and26Node tests pass,0fail/0skip. Unabridged sanitized output:
+[check.txt](evidence/local/check.txt). These checks are local proof.
+
+Separate real-network command: `node scripts/audit.mjs`,2026-10-19 22:20UTC,
+returned Result:SUCCESS,auditPassed=true,acceptedCases5,extraNegativeCases1,
+operations52,successfulSemanticReviews4,exactNativeExits14,V2received/withdrawn
+16GEN,native/locked/credits0,invariant=true. Cumulative V1+V2 escrow22GEN;
+fee-reservation upper bound0.633753753600786752GEN below1GEN cap. Full record:
+[lifecycle-audit.json](evidence/studio-dev/lifecycle-audit.json).
+
+The sections below retain chronological checkpoints. Their old pending states,
+counts and approvals describe those dates; the current result is above.
+
+## Initial local checkpoint
+
+Observed 2026-10-19. This checkpoint alone is not deployed-lifecycle proof.
 
 Command: `npm run check` (PYTHONUTF8=1, own Python3.12 virtual environment).
 Observed exit0, recognized PledgeKnotContract with14 methods:8 view,6 write.

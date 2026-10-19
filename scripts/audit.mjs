@@ -62,9 +62,29 @@ async function main(){
   if(!p.balanceProven||parseUnits(p.contractBeforeGEN,18)-parseUnits(p.contractAfterGEN,18)!==parseUnits(p.expectedTransferGEN,18)||!message.messageValueDelivered)throw new SafeError('NativeDeliveryProofMismatch');
   deliveries.push({file:name,parentHash:p.parentHash,recipient:p.recipient,valueGEN:p.expectedTransferGEN,exactNativeDecrease:true,externalMessageDelivered:true});
  }
- const accounting=JSON.parse(await read(target,'get_accounting')),native=gen(await balance(target)),budget=await loadJournal('fee-budget.json');
- if(deliveries.length!==11||deliveries.reduce((n,p)=>n+parseUnits(p.valueGEN,18),0n)!==13n*10n**18n||accounting.received!=='13 GEN'||accounting.withdrawn!=='13 GEN'||accounting.locked!=='0 GEN'||accounting.credits!=='0 GEN'||!accounting.invariant||native!=='0'||budget.capGEN!=='1'||parseUnits(budget.reservedGEN,18)>10n**18n)throw new SafeError('FinalAccountingDeliveryOrBudgetMismatch');
- const record={at:new Date().toISOString(),command:'node scripts/audit.mjs',...network,target,sourceSha256:sha(code),codeMatchesDeployment:true,deploymentResult:'SUCCESS',recognizedMethods:14,pools,semantics,operations,deliveries,accounting,nativeContractGEN:native,feeCapGEN:'1',reservedFeeUpperBoundGEN:budget.reservedGEN,passed:true};
- await save('lifecycle-audit.json',record);console.log('Result: SUCCESS');console.log(JSON.stringify({auditPassed:true,pools:5,operations:42,semanticReviews:4,exactNativeExits:11,totalWithdrawnGEN:'13',accounting,nativeContractGEN:native,reservedFeeUpperBoundGEN:budget.reservedGEN}));
+ const extraPool=JSON.parse(await read(target,'get_pool',['pk-unclear-v2'])),manifest=await loadJournal('failed-annex-manifest.json');
+ if(manifest?.target?.toLowerCase()!==target.toLowerCase()||manifest.sourceSha256!==sha(code)||manifest.neverCountAsSuccessfulReview!==true||extraPool.phase!=='CLOSED'||extraPool.resolved||extraPool.attempts!==0||extraPool.received!=='3 GEN'||extraPool.withdrawn!=='3 GEN'||extraPool.locked!=='0 GEN'||extraPool.credits!=='0 GEN')throw new SafeError('FailedAnnexMustRemainFailedAndRecovered');
+ const extraOperations=[],extraDeliveries=[];
+ for(const part of ['create','pledge0','pledge1','pledge2','adjudicate','recovery','recovery-exit0','recovery-exit1','recovery-exit2','recovery-close']){
+  const file='failed-annex-lifecycle-unclear-'+part+'.json',j=await loadJournal(file),tx=await transaction(j?.hash),state=receiptState(tx),failure=part==='adjudicate';
+  if(j.target?.toLowerCase()!==target.toLowerCase()||j.args[0]!==extraPool.id||state.status!=='FINALIZED'||state.successful===failure||(!failure&&!j.verified)||(tx.from_address??tx.sender)?.toLowerCase()!==j.actor.toLowerCase())throw new SafeError('ArchivedAnnexOperationMismatch');
+  if(failure&&(tx.result_name!=='MAJORITY_DISAGREE'||j.hash!==manifest.verdictHash))throw new SafeError('ArchivedAnnexCannotBecomeSuccessfulVerdict');
+  extraOperations.push({file,hash:j.hash,operation:j.operation,actor:j.actor,semanticFailure:failure,...state});
+ }
+ const failed=await loadJournal('failed-annex-lifecycle-unclear-adjudicate.json'),recovery=await loadJournal('failed-annex-lifecycle-unclear-recovery.json');
+ if(JSON.stringify([failed.before.pool,failed.before.accounting,failed.before.nativeContractGEN])!==JSON.stringify([recovery.before.pool,recovery.before.accounting,recovery.before.nativeContractGEN])||recovery.before.pool.deadline>Math.floor(Date.parse(recovery.preparedAt)/1000))throw new SafeError('FailedReviewChangedStateOrEarlyRecovery');
+ for(let i=0;i<3;i++){
+  const p=await loadJournal('failed-annex-delivery-unclear-recovery-exit'+i+'.json'),j=await loadJournal('failed-annex-lifecycle-unclear-recovery-exit'+i+'.json');
+  if(!p?.balanceProven||p.parentHash!==j.hash||p.recipient?.toLowerCase()!==extraPool.donors[i]||p.expectedTransferGEN!=='1'||parseUnits(p.contractBeforeGEN,18)-parseUnits(p.contractAfterGEN,18)!==10n**18n||!externalDeliveryProof(await transaction(p.parentHash),p.recipient,'1').messageValueDelivered||await read(target,'get_credit',[extraPool.id,p.recipient])!=='0 GEN')throw new SafeError('ArchivedAnnexActualRefundMissing');
+  extraDeliveries.push({parentHash:p.parentHash,recipient:p.recipient,valueGEN:'1',exactNativeDecrease:true,externalMessageDelivered:true});
+ }
+ const accounting=JSON.parse(await read(target,'get_accounting')),native=gen(await balance(target)),budget=await loadJournal('fee-budget.json'),escrow=await loadJournal('escrow-budget.json');
+ const expectedDeposits=operations.filter(x=>x.operation==='pledge').map(x=>x.hash);
+ for(const kind of ['pair','cycle'])for(let i=0;i<3;i++)expectedDeposits.push((await loadJournal('v1-lifecycle-'+kind+'-pledge'+i+'.json')).hash);
+ for(let i=0;i<3;i++)expectedDeposits.push((await loadJournal('failed-annex-lifecycle-unclear-pledge'+i+'.json')).hash);
+ if(expectedDeposits.length!==22||new Set(expectedDeposits).size!==22||escrow?.capGEN!=='22'||escrow.reservedGEN!=='22'||Object.keys(escrow.entries).length!==22||expectedDeposits.some(h=>escrow.entries[h]!=='1'))throw new SafeError('CrossRevisionCumulativeEscrowMismatch');
+ if(operations.length!==42||semantics.length!==4||deliveries.length!==11||deliveries.reduce((n,p)=>n+parseUnits(p.valueGEN,18),0n)!==13n*10n**18n||extraOperations.length!==10||extraDeliveries.length!==3||accounting.received!=='16 GEN'||accounting.withdrawn!=='16 GEN'||accounting.locked!=='0 GEN'||accounting.credits!=='0 GEN'||!accounting.invariant||native!=='0'||budget.capGEN!=='1'||parseUnits(budget.reservedGEN,18)>10n**18n)throw new SafeError('FinalAccountingDeliveryOrBudgetMismatch');
+ const record={at:new Date().toISOString(),command:'node scripts/audit.mjs',...network,target,sourceSha256:sha(code),codeMatchesDeployment:true,deploymentResult:'SUCCESS',recognizedMethods:14,pools,semantics,operations,deliveries,extraNegativeCase:{pool:extraPool,operations:extraOperations,deliveries:extraDeliveries,semanticReviewPassed:false,refundPassed:true},accounting,nativeContractGEN:native,feeCapGEN:'1',reservedFeeUpperBoundGEN:budget.reservedGEN,cumulativeEscrowGEN:'22',passed:true};
+ await save('lifecycle-audit.json',record);console.log('Result: SUCCESS');console.log(JSON.stringify({auditPassed:true,acceptedCases:5,extraNegativeCases:1,operations:52,successfulSemanticReviews:4,exactNativeExits:14,activeCaseWithdrawnGEN:'13',totalV2WithdrawnGEN:'16',cumulativeV1V2WithdrawnGEN:'22',accounting,nativeContractGEN:native,reservedFeeUpperBoundGEN:budget.reservedGEN}));
 }
 try{await main();}catch(error){console.log(JSON.stringify({auditStopped:safeError(error)}));process.exitCode=1;}

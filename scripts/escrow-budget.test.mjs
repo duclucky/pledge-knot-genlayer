@@ -17,3 +17,9 @@ test('missing baseline, wrong cap, fractional deposit and corrupt sum fail close
  for(const b of [null,{capGEN:'20',reservedGEN:'0',entries:{}},{capGEN:'19',reservedGEN:'1',entries:{}}])assert.throws(()=>reserveEscrow(b,hash(1),'1'));
  assert.throws(()=>reserveEscrow({capGEN:'19',reservedGEN:'0',entries:{}},hash(1),'0.5'));
 });
+test('explicitly approved twenty-two GEN retains old deposits and rejects twenty-third',()=>{
+ let b={capGEN:'22',reservedGEN:'18',entries:Object.fromEntries(Array.from({length:18},(_,i)=>[hash(i+1),'1']))};
+ for(let i=19;i<=22;i++)b=reserveEscrow(b,hash(i),'1');
+ assert.equal(b.capGEN,'22');assert.equal(b.reservedGEN,'22');assert.equal(Object.keys(b.entries).length,22);
+ assert.throws(()=>reserveEscrow(b,hash(23),'1'),/AuthorizedEscrowBudgetExceeded/);
+});

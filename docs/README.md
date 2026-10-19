@@ -3,12 +3,14 @@
 ## Identity
 
 IDEA-048 / PledgeKnot / pledge-knot / Intelligent Contracts.
-Status: V2 PASS_ADMISSION / OWNER_APPROVED_IMPLEMENTATION / PENDING_EXECUTION.
-Owner explicitly approved PROPOSED-V2 and cumulative19GEN escrow; aggregate
+Status: V2 PASS_ADMISSION / PASS_EXECUTION / Phase7 lifecycle audit passed.
+Owner explicitly approved PROPOSED-V2 and later cumulative22GEN escrow; aggregate
 fees stay1GEN across V1+V2. V1 all6GEN exited with zero liability; its failure
 and recovery remain archived evidence, not V2 proof. V2 deployed FINALIZED/SUCCESS at
-0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a;three semantic cases passed;the missing-annex case failed
-consensus and recovered,all12GEN out,zero liability. Partial case unstarted.
+0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a. Five acceptance cases passed,
+including four independent successful semantic reviews and partial expiry.
+The original failed-annex case remains a failed review with full recovery.
+V2 received/withdrew16GEN; native/locked/credits0; all six pools CLOSED.
 Target: Studio Dev61997, https://studio-next.genlayer.com/api .
 Pinned family: Python API v0.3.0,GenVM v0.6.0-rc5,runner
 5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng;
@@ -16,8 +18,9 @@ JS2.0.0-rc.1,Python client0.19.0rc2,genlayer-test0.30.0rc2,
 genvm-linter0.11.1rc2. Same verified API; no runner migration.
 Six unsigned per-relation simulations matched36/36 frozen cells across new
 explicit cycle,original pair and missing-annex. No expected labels in prompt.
-This is model feasibility,not real independent consensus or value execution.
-Public repository/CI and Phase7-10 remain pending. See PROPOSED-V2.md.
+Those simulations alone were model feasibility. Subsequent real network proof
+is evidence/studio-dev/lifecycle-audit.json: passed=true,52operations,14native
+exits,4independent reviews. Public repository/CI and final packaging are pending.
 
 ## One-sentence product hook
 
@@ -65,9 +68,9 @@ code owns coalition computation, target, payer provenance and every value exit.
 |Reuse|PASS_ADMISSION|LangGraph multi-treasury,DAOhaus joint-grant and A2A maintainer-support coordinators have the concrete API path below; no adoption claim|
 |Contract count|PASS_ADMISSION|One owner of conditional pledges,core,grant and refund ledgers; a second consumer would be pass-through|
 |Differentiation|PASS_ADMISSION|Greatest cash-contributor closure and cascading assurance loss differ from priority execution pairs,capacity matching,policy authorization,netting and contingent branch reserves|
-|Claim-to-code|PASS_ADMISSION|Six complete method/state/view/test/network rows below; actual execution evidence remains pending|
-|Full lifecycle|PASS_ADMISSION / PENDING_EXECUTION|Two-member core grant,three-cycle grant,target failure,partial/unknown expiry,own native exits and zero closure specified before code|
-|Scope honesty|PASS_ADMISSION|Constitutive declarations and cash-backed cofunding only; no external delivery,identity/charity fact,dominant-strategy theorem,unanimity,adoption or V2 deployment claim|
+|Claim-to-code|PASS_ADMISSION / VERIFIED|Six complete method/state/view/test/network rows below; exact deployed source and canonical outcomes checked by lifecycle-audit.json|
+|Full lifecycle|PASS_ADMISSION / PASS_EXECUTION|All five cases specified before code; lifecycle-audit.json verifies four finalized independent reviews,52operations including the preserved negative,14actual exits and zero closure|
+|Scope honesty|PASS_ADMISSION / VERIFIED|Constitutive declarations and cash-backed cofunding only; exact Studio Dev deployment is proved; no external delivery,identity/charity fact,dominant-strategy theorem,unanimity or adoption claim|
 
 ## Actors, roles and incentives
 
@@ -253,12 +256,12 @@ Historical RED must be recorded per implementation batch as in TDD-PLAN.md.
 
 | Claim | Contract method/state | View/read | Test | Network evidence |
 |---|---|---|---|---|
-|Only authenticated actual payer pledges count|create_pool/pledge,immutable slots|pool/pledge|test_pledge_safety_before_body;test_pledge_deadline_stale_open;test_source_metadata_public_surface_and_temporal_guards|Separate donor pledge receipts and authority smoke planned|
-|Validators compare all directed meaning|adjudicate/_judge/attempts|attempt/matrix|test_semantic_validator_replay_all_edges_not_only_same_core;test_adjudicate_invalid_output_no_mutation|Finalized review with completed independent validator executions planned|
-|Greatest contributor set includes cash-backed cycles and cascades|adjudicate/_greatest_core|core/matrix|test_exhaustive_independent_subset_oracle_512_graph_masks;test_core_three_cycle_and_cascading_loss_require_actual_closure|Two-member and three-cycle canonical cores/credits planned|
-|Only sufficient core funds fixed recipient|adjudicate,FUNDED/REFUNDED|pool/core/credit|test_adjudicate_core_and_conservation;test_recipient_overlaps_excluded_donor_credit_adds_then_split_exit;test_actual_settlement_cannot_repeat_or_change_pledges|Target2 success,target3 cycle and insufficient-core all-refund planned|
-|Unresolved/partial deposits recover to actual payer|recover/EXPIRED|pool/pledge/credit|test_recover_stale_phase_all_actual_payers;test_retry_exhaustion_recovery_no_orphan;test_recover_safety_before_body|Partial and UNCLEAR expiry receipts/own refunds planned|
-|Own money leaves and closes at zero liability|withdraw_credit/close_pool|credit/accounting/native balance|test_withdraw_actual_EVM_boundary_debit_then_message;test_withdraw_safety_before_body;test_close_actual_zero_liability_and_idempotent;receipt.test.mjs|Per-exit native decrease and recipient proof;all pools CLOSED planned|
+|Only authenticated actual payer pledges count|create_pool/pledge,immutable slots|pool/pledge|test_pledge_safety_before_body;test_pledge_deadline_stale_open;test_source_metadata_public_surface_and_temporal_guards|caller-spoof-smoke.json;all pledge actors/amounts/digests in lifecycle-audit.json|
+|Validators compare all directed meaning|adjudicate/_judge/attempts|attempt/matrix|test_semantic_validator_replay_all_edges_not_only_same_core;test_adjudicate_invalid_output_no_mutation|semantic-pair/cycle/target/unclear.json;independent successful executions reread in lifecycle-audit.json|
+|Greatest contributor set includes cash-backed cycles and cascades|adjudicate/_greatest_core|core/matrix|test_exhaustive_independent_subset_oracle_512_graph_masks;test_core_three_cycle_and_cascading_loss_require_actual_closure|semantic-pair.json core3 and semantic-cycle.json core7;cascade removal additionally direct-tested|
+|Only sufficient core funds fixed recipient|adjudicate,FUNDED/REFUNDED|pool/core/credit|test_adjudicate_core_and_conservation;test_recipient_overlaps_excluded_donor_credit_adds_then_split_exit;test_actual_settlement_cannot_repeat_or_change_pledges|pair target2 grant2GEN;cycle target3 grant3GEN;target target3 funded0/all3refund in lifecycle-audit.json|
+|Unresolved/partial deposits recover to actual payer|recover/EXPIRED|pool/pledge/credit|test_recover_stale_phase_all_actual_payers;test_retry_exhaustion_recovery_no_orphan;test_recover_safety_before_body|semantic-unclear.json RETRYABLE/noallocation;case-unclear-final.json and case-partial-final.json actual refunds/CLOSED|
+|Own money leaves and closes at zero liability|withdraw_credit/close_pool|credit/accounting/native balance|test_withdraw_actual_EVM_boundary_debit_then_message;test_withdraw_safety_before_body;test_close_actual_zero_liability_and_idempotent;receipt.test.mjs|lifecycle-audit.json rechecks14native decreases/delivered-recipient messages;all6pools CLOSED;native/locked/credits0|
 
 ## Analogue and differentiation matrix
 
@@ -297,7 +300,8 @@ explicitly abandoned/replaced;otherwise superseded revisions recover to zero.
 
 V2 admission and unsigned per-relation feasibility passed36/36 frozen cells;
 V1 batch failures remain preserved. Owner approved exact V2 behavior and19GEN
-cumulative escrow scope before implementation. All six write safety cards and
+cumulative escrow before implementation,then22GEN for the distinct new annex
+case. All six write safety cards and
 value/authority destinations above precede V2 source changes;no state/value
 write body changes are proposed. Add meaningful RED tests for six relation
 questions,strict one-cell parser,source failure before any model call and full
@@ -311,7 +315,7 @@ and unsigned V2 simulations do not prove any of the V2 network lifecycle.
 
 ## Adoption path and kill criteria
 
-After accepted V1,a substantial milestone could add bounded variable pledge
+After acceptance of this contribution,a separately reviewed milestone could add bounded variable pledge
 amounts/multiple peer requirements with feasibility proof,or an actual treasury
 adapter. None is included. Stop if a4-dimension collision is established,
 unsupported payers are charged,different edge meaning can pass,source/provenance

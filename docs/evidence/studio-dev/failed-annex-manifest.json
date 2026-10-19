@@ -1,0 +1,145 @@
+{
+  "at": "2026-10-19T21:57:24.990Z",
+  "target": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+  "status": "FAILED_SEMANTIC_REVIEW_FULLY_RECOVERED",
+  "verdictHash": "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9",
+  "consensus": "MAJORITY_DISAGREE",
+  "neverCountAsSuccessfulReview": true,
+  "pool": {
+    "id": "pk-unclear-v2",
+    "version": "PK_V2",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "2 GEN",
+    "deadline": 1792430136,
+    "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+    "phase": "CLOSED",
+    "pledged_mask": 7,
+    "attempts": 0,
+    "resolved": false,
+    "received": "3 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "3 GEN"
+  },
+  "pledges": [
+    {
+      "id": "D0",
+      "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "funded": true,
+      "amount": "1 GEN",
+      "purpose": "Support for creating freely downloadable documentation.",
+      "peer_required": "Support for the activity defined only in unavailable annex Q. No activity meaning is specified here.",
+      "timestamp": 1792429590,
+      "pledge_digest": "ca4a6f8b218571222c44b94331243a9f5f940005050202bd725dd73fbb5b27b6"
+    },
+    {
+      "id": "D1",
+      "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "funded": true,
+      "amount": "1 GEN",
+      "purpose": "Support for public accessibility testing of documentation.",
+      "peer_required": "Support for creating freely downloadable documentation.",
+      "timestamp": 1792429647,
+      "pledge_digest": "a2f61aba2dfa3713f39eeeca71549aada986fb628d64570816229b06487c34b2"
+    },
+    {
+      "id": "D2",
+      "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+      "funded": true,
+      "amount": "1 GEN",
+      "purpose": "Backing only closed proprietary advertising analytics.",
+      "peer_required": "Support for shipping physical medical equipment.",
+      "timestamp": 1792429695,
+      "pledge_digest": "3547a8b34b1168d19ef76517374e12a00cdaa9a02cf78bfa6d81b0e4c0d3f885"
+    }
+  ],
+  "files": [
+    {
+      "original": "delivery-unclear-recovery-exit0.json",
+      "archived": "failed-annex-delivery-unclear-recovery-exit0.json",
+      "sha256": "4da872752777a782802ff3921cd6db793cd271a3bea894998fd4e8b5af90af7f"
+    },
+    {
+      "original": "delivery-unclear-recovery-exit1.json",
+      "archived": "failed-annex-delivery-unclear-recovery-exit1.json",
+      "sha256": "6b5cef7d19542ae9ff189dce2957b273c40d442aecf141cb329f077bdb5a5ec1"
+    },
+    {
+      "original": "delivery-unclear-recovery-exit2.json",
+      "archived": "failed-annex-delivery-unclear-recovery-exit2.json",
+      "sha256": "727d896fe1e1ef8c9e0096d4b04053695342cd53c7c776906c8176268a888c30"
+    },
+    {
+      "original": "lifecycle-unclear-adjudicate.json",
+      "archived": "failed-annex-lifecycle-unclear-adjudicate.json",
+      "sha256": "8d1a3953b75b0250a5c59c3dce5854c6e99d2bd29fbafff710cd8d98cedcace5"
+    },
+    {
+      "original": "lifecycle-unclear-create.json",
+      "archived": "failed-annex-lifecycle-unclear-create.json",
+      "sha256": "db18bfb6160c0e2586f2462f80c45aa4c7a763d049d543dde135aa994698ca11"
+    },
+    {
+      "original": "lifecycle-unclear-pledge0.json",
+      "archived": "failed-annex-lifecycle-unclear-pledge0.json",
+      "sha256": "05bbf0a8862b4e3d64f38a62f3948ff8af0d83249bec78ac8647c750ba59586f"
+    },
+    {
+      "original": "lifecycle-unclear-pledge1.json",
+      "archived": "failed-annex-lifecycle-unclear-pledge1.json",
+      "sha256": "de17cad06caaa4eab6373f50d737ec1067f6aaf7e7da71339b4e40c66af8e85b"
+    },
+    {
+      "original": "lifecycle-unclear-pledge2.json",
+      "archived": "failed-annex-lifecycle-unclear-pledge2.json",
+      "sha256": "1447711f99edab47d3b634282db10ec3b6374be1512bf14da1a63906c828f625"
+    },
+    {
+      "original": "lifecycle-unclear-recovery-close.json",
+      "archived": "failed-annex-lifecycle-unclear-recovery-close.json",
+      "sha256": "5ee61b35505a588ba67a5868e9c1696e34192dcc3913fb172077bbb05ad04c33"
+    },
+    {
+      "original": "lifecycle-unclear-recovery-exit0.json",
+      "archived": "failed-annex-lifecycle-unclear-recovery-exit0.json",
+      "sha256": "7277dcb3baabbcd6c7b74ba145c7a5f9a7f59b0d0942c0766f1013fb66768e3a"
+    },
+    {
+      "original": "lifecycle-unclear-recovery-exit1.json",
+      "archived": "failed-annex-lifecycle-unclear-recovery-exit1.json",
+      "sha256": "cd37cb4d1354fb3bd956b53a8630edcd6e95223de4988dc6507554953fe5bec7"
+    },
+    {
+      "original": "lifecycle-unclear-recovery-exit2.json",
+      "archived": "failed-annex-lifecycle-unclear-recovery-exit2.json",
+      "sha256": "4a55034a54c73e244a25514456c8f6c0d04463c0bc5de8a31efeea8081dbae95"
+    },
+    {
+      "original": "lifecycle-unclear-recovery.json",
+      "archived": "failed-annex-lifecycle-unclear-recovery.json",
+      "sha256": "80277c1db07e52c636f0059578e228837effe37e1ae612118cf1aebc2b52ab19"
+    },
+    {
+      "original": "unclear-consensus-inspection.json",
+      "archived": "failed-annex-unclear-consensus-inspection.json",
+      "sha256": "bacf101fd6bd687e9df1a82c7288df3aca997e71a9b708def029a8563d67c809"
+    },
+    {
+      "original": "unclear-leader-meaning.json",
+      "archived": "failed-annex-unclear-leader-meaning.json",
+      "sha256": "22d62d9cc0f05d82486726d0ca567a8da44c49adae92f9354d1044f0bcb5659d"
+    },
+    {
+      "original": "unclear-recovery-final.json",
+      "archived": "failed-annex-unclear-recovery-final.json",
+      "sha256": "d68b9b03291015a8a8be42886a673efaaab626373ca8418c69dcf08fbbdf185d"
+    }
+  ]
+}

@@ -2,11 +2,11 @@
   "network": "Studio Dev",
   "chainId": 61997,
   "rpc": "https://studio-next.genlayer.com/api",
-  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9",
+  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a",
   "identity": {
     "network": "Studio Dev",
     "chainId": 61997,
-    "sourceCommit": "bc9306a5e8acffdbb27f0b30161207732ea6e5ac",
+    "sourceCommit": "3da6568e8c4c98f667f0f1cb0c60fe5e3d81caf9",
     "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
     "contractVersion": "PK_V2",
     "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
@@ -18,18 +18,18 @@
   "operation": "pledge",
   "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
   "args": [
-    "pk-unclear-v2",
-    "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+    "pk-unclear-v2b",
+    "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
     "Support for creating freely downloadable documentation.",
-    "Support for the activity defined only in unavailable annex Q. No activity meaning is specified here."
+    "Support for the unidentified activity described only in unavailable annex Q. That activity might be public accessibility testing of documentation or closed proprietary advertising analytics; the missing annex is needed to know which. No activity is identified by this declaration."
   ],
   "valueGEN": "1",
-  "feeDepositGEN": "0.000378519600010352",
+  "feeDepositGEN": "0.000378522000010352",
   "expectedSuccess": true,
   "before": {
-    "observedAt": "2026-10-19T17:06:23.692Z",
+    "observedAt": "2026-10-19T22:00:06.210Z",
     "pool": {
-      "id": "pk-unclear-v2",
+      "id": "pk-unclear-v2b",
       "version": "PK_V2",
       "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "donors": [
@@ -39,8 +39,8 @@
       ],
       "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "target": "2 GEN",
-      "deadline": 1792430136,
-      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
       "phase": "OPEN",
       "pledged_mask": 0,
       "attempts": 0,
@@ -51,21 +51,21 @@
       "withdrawn": "0 GEN"
     },
     "accounting": {
-      "received": "9 GEN",
+      "received": "12 GEN",
       "locked": "0 GEN",
       "credits": "0 GEN",
-      "withdrawn": "9 GEN",
+      "withdrawn": "12 GEN",
       "invariant": true
     },
     "nativeContractGEN": "0"
   },
-  "preparedAt": "2026-10-19T17:06:29.349Z",
+  "preparedAt": "2026-10-19T22:00:11.120Z",
   "status": "FINALIZED",
-  "hash": "0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9",
+  "hash": "0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a",
   "after": {
-    "observedAt": "2026-10-19T17:07:18.163Z",
+    "observedAt": "2026-10-19T22:00:50.460Z",
     "pool": {
-      "id": "pk-unclear-v2",
+      "id": "pk-unclear-v2b",
       "version": "PK_V2",
       "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "donors": [
@@ -75,8 +75,8 @@
       ],
       "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "target": "2 GEN",
-      "deadline": 1792430136,
-      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
       "phase": "OPEN",
       "pledged_mask": 1,
       "attempts": 0,
@@ -87,10 +87,10 @@
       "withdrawn": "0 GEN"
     },
     "accounting": {
-      "received": "10 GEN",
+      "received": "13 GEN",
       "locked": "1 GEN",
       "credits": "0 GEN",
-      "withdrawn": "9 GEN",
+      "withdrawn": "12 GEN",
       "invariant": true
     },
     "nativeContractGEN": "1"
@@ -99,11 +99,11 @@
     "status": "FINALIZED",
     "execution": "SUCCESS",
     "successful": true,
-    "hash": "0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9",
+    "hash": "0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a",
     "from": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
     "to": "0xecee9caff3dc3fe026ea71d8fd3a1532ca7f230a"
   },
   "executionResult": "SUCCESS",
-  "finalizedObservedAt": "2026-10-19T17:07:20.472Z",
+  "finalizedObservedAt": "2026-10-19T22:00:52.490Z",
   "verified": true
 }

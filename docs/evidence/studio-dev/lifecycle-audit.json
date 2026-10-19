@@ -1,0 +1,1223 @@
+{
+  "at": "2026-10-19T22:20:18.025Z",
+  "command": "node scripts/audit.mjs",
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "rpc": "https://studio-next.genlayer.com/api",
+  "explorer": "https://explorer-studio-dev.genlayer.com",
+  "target": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+  "codeMatchesDeployment": true,
+  "deploymentResult": "SUCCESS",
+  "recognizedMethods": 14,
+  "pools": [
+    {
+      "id": "pk-pair-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792435086,
+      "definition_digest": "091f7e7a0b20671abacd12000396edeb825236c8fb12a8313c120bb9783642d8",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "pledges": [
+        {
+          "id": "D0",
+          "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial support for creating openly downloadable documentation with accessible text.",
+          "peer_required": "Support for public accessibility testing of documentation.",
+          "timestamp": 1792427944,
+          "pledge_digest": "44878f3e9d88a74a148bc571514e541d2a0b385faf1cdd54e4a1bec1ea06ef24"
+        },
+        {
+          "id": "D1",
+          "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial backing for public accessibility testing of documentation.",
+          "peer_required": "Support for creating freely downloadable documentation.",
+          "timestamp": 1792427993,
+          "pledge_digest": "44c512694a19d1ae970ba8afbf1617130bd64ef22216e41d76f3d2c00bfc1a61"
+        },
+        {
+          "id": "D2",
+          "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Backing only closed proprietary advertising analytics.",
+          "peer_required": "Support for shipping physical medical equipment.",
+          "timestamp": 1792428053,
+          "pledge_digest": "9d95939767bced935e86917fa3f4ed9adc6804b3a152c1a827300e4e63ec4f8c"
+        }
+      ]
+    },
+    {
+      "id": "pk-cycle-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792435679,
+      "definition_digest": "cbeecb43435d32039777fdcdc47204e5eeed9fc3c6aa04078caa1de07cdec9a0",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "pledges": [
+        {
+          "id": "D0",
+          "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Funding only the publication of original English training manuals for free public download. This pledge excludes translation work and accessibility testing.",
+          "peer_required": "Funding translation of training manuals into French for free public download.",
+          "timestamp": 1792428535,
+          "pledge_digest": "33bc8de110551c4d6ea79ef675d0c552936c4d28f4270906316c7e79b9f722b0"
+        },
+        {
+          "id": "D1",
+          "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial backing solely for translating training manuals into French and making those translations freely downloadable. This pledge excludes publishing original English manuals and performing accessibility tests.",
+          "peer_required": "Funding public accessibility testing of documentation.",
+          "timestamp": 1792428602,
+          "pledge_digest": "de650916d899409dbe3e30216ee76a9e4e84dff5c4e7f6b97c6621860df072d7"
+        },
+        {
+          "id": "D2",
+          "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Funding only public accessibility tests of documentation. This pledge excludes publishing original English manuals and translating manuals into French.",
+          "peer_required": "Funding publication of original English training manuals for free public download.",
+          "timestamp": 1792428698,
+          "pledge_digest": "506bbb03314c9be9fbcabd5ef93227c00b075057888f2f6c5826835902eaf891"
+        }
+      ]
+    },
+    {
+      "id": "pk-target-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792436214,
+      "definition_digest": "6f687593d8c2f017555b7bca5789a6edad74091bbf36ce043f39e1578e223e0a",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "pledges": [
+        {
+          "id": "D0",
+          "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial support for creating openly downloadable documentation with accessible text.",
+          "peer_required": "Support for public accessibility testing of documentation.",
+          "timestamp": 1792429067,
+          "pledge_digest": "b3396a9884e6de53ec9f84254146a28ea33c15d87e755275bed2ff3ba7be04a3"
+        },
+        {
+          "id": "D1",
+          "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial backing for public accessibility testing of documentation.",
+          "peer_required": "Support for creating freely downloadable documentation.",
+          "timestamp": 1792429114,
+          "pledge_digest": "23d9ab05af741e428f9c634b7fbe00c41421264433b6ecbe136758cfc9c2b7f7"
+        },
+        {
+          "id": "D2",
+          "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Backing only closed proprietary advertising analytics.",
+          "peer_required": "Support for shipping physical medical equipment.",
+          "timestamp": 1792429162,
+          "pledge_digest": "00a15a1dbcf30de83058db26697ec2b4b8999a4c1defe2384614204cf7b08513"
+        }
+      ]
+    },
+    {
+      "id": "pk-unclear-v2b",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "pledges": [
+        {
+          "id": "D0",
+          "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Support for creating freely downloadable documentation.",
+          "peer_required": "Support for the unidentified activity described only in unavailable annex Q. That activity might be public accessibility testing of documentation or closed proprietary advertising analytics; the missing annex is needed to know which. No activity is identified by this declaration.",
+          "timestamp": 1792447212,
+          "pledge_digest": "f768f24037512702fad61898c3418a780a82d1c37dffed8911c452ba27c8c3c7"
+        },
+        {
+          "id": "D1",
+          "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Support for public accessibility testing of documentation.",
+          "peer_required": "Support for creating freely downloadable documentation.",
+          "timestamp": 1792447258,
+          "pledge_digest": "fd13d9656f121e00fc071aab035e044c963e1824745d897e42f13cd4c80d3174"
+        },
+        {
+          "id": "D2",
+          "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Backing only closed proprietary advertising analytics.",
+          "peer_required": "Support for shipping physical medical equipment.",
+          "timestamp": 1792447304,
+          "pledge_digest": "c55d057e1cece59fb03343cd3bae1647d4dc3060d4c133dc663c62487f56c730"
+        }
+      ]
+    },
+    {
+      "id": "pk-partial-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792448146,
+      "definition_digest": "e1b71cb79b656b8d0ea1a436a07aac97027126987217790163e1931ec9bc0d03",
+      "phase": "CLOSED",
+      "pledged_mask": 1,
+      "attempts": 0,
+      "resolved": false,
+      "received": "1 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "1 GEN",
+      "pledges": [
+        {
+          "id": "D0",
+          "payer": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+          "funded": true,
+          "amount": "1 GEN",
+          "purpose": "Financial support for creating openly downloadable documentation with accessible text.",
+          "peer_required": "Support for public accessibility testing of documentation.",
+          "timestamp": 1792448081,
+          "pledge_digest": "ca00e7716e46b8107d68e10600c5c73376f39abd31306044a214f48ecaf8bb7f"
+        },
+        {
+          "id": "D1",
+          "payer": "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+          "funded": false
+        },
+        {
+          "id": "D2",
+          "payer": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
+          "funded": false
+        }
+      ]
+    }
+  ],
+  "semantics": [
+    {
+      "case": "pair",
+      "hash": "0x0a37970479d4ae5eabb9126ed3e286f219f7fcc9559d323b4c55348fbfb39198",
+      "attempt": {
+        "id": "pk-pair-v2:1",
+        "requester": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "timestamp": 1792428126,
+        "definition_digest": "091f7e7a0b20671abacd12000396edeb825236c8fb12a8313c120bb9783642d8",
+        "stage": "OK",
+        "cells": [
+          {
+            "id": "D0:D1",
+            "class": "COVERED"
+          },
+          {
+            "id": "D0:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D1:D0",
+            "class": "COVERED"
+          },
+          {
+            "id": "D1:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D0",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D1",
+            "class": "NOT_COVERED"
+          }
+        ]
+      },
+      "core": {
+        "resolved": true,
+        "computed_mask": 3,
+        "funded_mask": 3,
+        "computed_donors": [
+          "D0",
+          "D1"
+        ],
+        "funded_donors": [
+          "D0",
+          "D1"
+        ],
+        "grant": "2 GEN"
+      },
+      "phaseAfterReview": "FUNDED",
+      "successfulIndependentValidators": 2,
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2,
+        "other": 0
+      }
+    },
+    {
+      "case": "cycle",
+      "hash": "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+      "attempt": {
+        "id": "pk-cycle-v2:1",
+        "requester": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "timestamp": 1792428764,
+        "definition_digest": "cbeecb43435d32039777fdcdc47204e5eeed9fc3c6aa04078caa1de07cdec9a0",
+        "stage": "OK",
+        "cells": [
+          {
+            "id": "D0:D1",
+            "class": "COVERED"
+          },
+          {
+            "id": "D0:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D1:D0",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D1:D2",
+            "class": "COVERED"
+          },
+          {
+            "id": "D2:D0",
+            "class": "COVERED"
+          },
+          {
+            "id": "D2:D1",
+            "class": "NOT_COVERED"
+          }
+        ]
+      },
+      "core": {
+        "resolved": true,
+        "computed_mask": 7,
+        "funded_mask": 7,
+        "computed_donors": [
+          "D0",
+          "D1",
+          "D2"
+        ],
+        "funded_donors": [
+          "D0",
+          "D1",
+          "D2"
+        ],
+        "grant": "3 GEN"
+      },
+      "phaseAfterReview": "FUNDED",
+      "successfulIndependentValidators": 2,
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2,
+        "other": 0
+      }
+    },
+    {
+      "case": "target",
+      "hash": "0xe9fd7b71148d58a19dadd4c66ac28243956d671dd417523c95559d6569483424",
+      "attempt": {
+        "id": "pk-target-v2:1",
+        "requester": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "timestamp": 1792429234,
+        "definition_digest": "6f687593d8c2f017555b7bca5789a6edad74091bbf36ce043f39e1578e223e0a",
+        "stage": "OK",
+        "cells": [
+          {
+            "id": "D0:D1",
+            "class": "COVERED"
+          },
+          {
+            "id": "D0:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D1:D0",
+            "class": "COVERED"
+          },
+          {
+            "id": "D1:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D0",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D1",
+            "class": "NOT_COVERED"
+          }
+        ]
+      },
+      "core": {
+        "resolved": true,
+        "computed_mask": 3,
+        "funded_mask": 0,
+        "computed_donors": [
+          "D0",
+          "D1"
+        ],
+        "funded_donors": [],
+        "grant": "0 GEN"
+      },
+      "phaseAfterReview": "REFUNDED",
+      "successfulIndependentValidators": 2,
+      "votes": {
+        "agree": 3,
+        "disagree": 0,
+        "idle": 2,
+        "other": 0
+      }
+    },
+    {
+      "case": "unclear",
+      "hash": "0xa515b9cd6b87ccc262e1b2c9a4c8cb5f6cf9dae09af726139aa764b25d454aac",
+      "attempt": {
+        "id": "pk-unclear-v2b:1",
+        "requester": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "timestamp": 1792447376,
+        "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
+        "stage": "OK",
+        "cells": [
+          {
+            "id": "D0:D1",
+            "class": "UNCLEAR"
+          },
+          {
+            "id": "D0:D2",
+            "class": "UNCLEAR"
+          },
+          {
+            "id": "D1:D0",
+            "class": "COVERED"
+          },
+          {
+            "id": "D1:D2",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D0",
+            "class": "NOT_COVERED"
+          },
+          {
+            "id": "D2:D1",
+            "class": "NOT_COVERED"
+          }
+        ]
+      },
+      "core": {
+        "resolved": false,
+        "computed_mask": 0,
+        "funded_mask": 0,
+        "computed_donors": [],
+        "funded_donors": [],
+        "grant": "0 GEN"
+      },
+      "phaseAfterReview": "RETRYABLE",
+      "successfulIndependentValidators": 2,
+      "votes": {
+        "agree": 3,
+        "disagree": 1,
+        "idle": 1,
+        "other": 0
+      }
+    }
+  ],
+  "operations": [
+    {
+      "file": "lifecycle-pair-create.json",
+      "operation": "create_pool",
+      "hash": "0x4d12d293563677e6315d46d24ee9a6c49e39412dff401ea9c2913b4a447e630e",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-pledge0.json",
+      "operation": "pledge",
+      "hash": "0xe7da4daee054e638ecc78af73854b8027d148edfd0ddcec8a41dd059069b094c",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-pledge1.json",
+      "operation": "pledge",
+      "hash": "0x527db871c3e6cd6c42581555d2446230f2f963eadf78b20216ddde652e6f2be1",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-pledge2.json",
+      "operation": "pledge",
+      "hash": "0x6fb87d60283c9084cb6bc802dcabf8e2d51524d15c2227f6dfc5721e886246a9",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-adjudicate.json",
+      "operation": "adjudicate",
+      "hash": "0x0a37970479d4ae5eabb9126ed3e286f219f7fcc9559d323b4c55348fbfb39198",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-exit0.json",
+      "operation": "withdraw_credit",
+      "hash": "0x6324cbc5559da9da29cc3297007d50e9ed2cd4f3e3751749d42c8e41fc7bbfd6",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-exit1.json",
+      "operation": "withdraw_credit",
+      "hash": "0x66ccb966113ef84aef0d1f0c125f6c20f6da841a2257f53efe35d32ed585a9d0",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-close.json",
+      "operation": "close_pool",
+      "hash": "0x45a6fb5537c8a15d8ca931614c2a259dd13af3ee7829d5503957650f894afc39",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-create.json",
+      "operation": "create_pool",
+      "hash": "0xd4d6a05f599b9a4358edea7e51a2d552ff0c113aad1a07214e091638c461e684",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-pledge0.json",
+      "operation": "pledge",
+      "hash": "0xcc8b03fd1214c6a514a2c7e06668472481455a3ac742d753fc8c50747e492baa",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-pledge1.json",
+      "operation": "pledge",
+      "hash": "0x2bde8175fab4d92ac3a5193955405b2ec9a5baf7ee84000b79927816f011ba04",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-pledge2.json",
+      "operation": "pledge",
+      "hash": "0x8c43d92ae4578a2d1f6382d0d4af0378e3927faaf902729693285732fb0dedd1",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-adjudicate.json",
+      "operation": "adjudicate",
+      "hash": "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-exit0.json",
+      "operation": "withdraw_credit",
+      "hash": "0xaf665bbc60cd963fa84c2d29668845d665fdab1f418e82f9ca60884aa88c5071",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-exit1.json",
+      "operation": "withdraw_credit",
+      "hash": "0xe8dc16e55a32a3236546d59d1315dc6812ba1349c28f64384cc184825b9c5d36",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-cycle-close.json",
+      "operation": "close_pool",
+      "hash": "0xf86937ed763a065a6f7390bd70e3937170fb06d6a29730a66d189a73fb75e4ae",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-create.json",
+      "operation": "create_pool",
+      "hash": "0xc884e060e64fe580525074bc46328ef70b0c784a840827f58e77005368a917b6",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-pledge0.json",
+      "operation": "pledge",
+      "hash": "0x194356a0cdbfa49727e86a77813ae31da1d3bd9f2d809ea2f7279de77b36a6df",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-pledge1.json",
+      "operation": "pledge",
+      "hash": "0x09fdd433442eebc4ac62958b69446f6d4feb38b287522d6a045341481ca486d9",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-pledge2.json",
+      "operation": "pledge",
+      "hash": "0x65191cb70f892fed946032f94d3884a5f9ab6e986ae389e13d377d98bace62e1",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-adjudicate.json",
+      "operation": "adjudicate",
+      "hash": "0xe9fd7b71148d58a19dadd4c66ac28243956d671dd417523c95559d6569483424",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-exit0.json",
+      "operation": "withdraw_credit",
+      "hash": "0x94184c8015c5066c71ebe21d67731b9b817a320d39b5d73de36d1c018396ef39",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-exit1.json",
+      "operation": "withdraw_credit",
+      "hash": "0xf8b7ae05bc5bcb5174738720ef42a47e9a301179f4f6f1fe6ac90e12c3318078",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-exit2.json",
+      "operation": "withdraw_credit",
+      "hash": "0x07c9b46f641ee8fdc01b2bb9ade4680d875699a473b5acfcca3922af5b3983b9",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-target-close.json",
+      "operation": "close_pool",
+      "hash": "0xefc592820aab1a02fad8372d1d2ecd4baf24fdf2929b826101334800d1dcac05",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-create.json",
+      "operation": "create_pool",
+      "hash": "0xe07e279273b3873a1541579cfffe12d21e944d6ec2c30af2d84a001d18941cfb",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-pledge0.json",
+      "operation": "pledge",
+      "hash": "0xd7c63eb05dded07c43e42ab6bdb14b0aa6275d6f5458ddc3133a676abc7e0a4a",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-pledge1.json",
+      "operation": "pledge",
+      "hash": "0x5f27619a17296c72ee9e9b01752d54c8b94f4fc72a9367b959b8706fffd4e21e",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-pledge2.json",
+      "operation": "pledge",
+      "hash": "0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-adjudicate.json",
+      "operation": "adjudicate",
+      "hash": "0xa515b9cd6b87ccc262e1b2c9a4c8cb5f6cf9dae09af726139aa764b25d454aac",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-recover.json",
+      "operation": "recover",
+      "hash": "0x4b562035b05fc41e8f5b239449b5d07d4e9741cabd68d16c64e9e609177a7ca4",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-exit0.json",
+      "operation": "withdraw_credit",
+      "hash": "0x7a05604d0ceb9d006507fc80a9cc154b18b6b6803ee277a20bedf6cc3fa6fed5",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-exit1.json",
+      "operation": "withdraw_credit",
+      "hash": "0x0700950aa05239adb895573c13e8d96905b911d86a78c16a04046502aacb5759",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-exit2.json",
+      "operation": "withdraw_credit",
+      "hash": "0xab999a1b08ee56896f05a3c496221320ba979334e27757c2663aa06bcc43d815",
+      "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-unclear-close.json",
+      "operation": "close_pool",
+      "hash": "0x449140d97c26d8945ef01a8281d64620abcdcb383b63864a7ed59998e68cc8aa",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-partial-create.json",
+      "operation": "create_pool",
+      "hash": "0x21735248d06685685150639ae437a5c2eea61a99c66fb7c81defee627ae2d080",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-partial-pledge0.json",
+      "operation": "pledge",
+      "hash": "0x434ea8673526f69daa9e45100c6d097e4ef124e4d9172ff6d35dbd54df37f194",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-partial-recover.json",
+      "operation": "recover",
+      "hash": "0x90735b32d54d43cf1795e428406ec424883c87d87ac6bdaada5696232ef709c6",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-partial-exit0.json",
+      "operation": "withdraw_credit",
+      "hash": "0xcf64fd0a16d58abc72fa5ee6eb60e0ad0a8d4613988e5dc22e5ac613795d5894",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-partial-close.json",
+      "operation": "close_pool",
+      "hash": "0x021f91850d2f81d52ac3dc6267a60d062107d394939a2913f2dec3a97848565b",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": true,
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "successful": true
+    },
+    {
+      "file": "lifecycle-pair-double-settlement-rejected.json",
+      "operation": "adjudicate",
+      "hash": "0xf5b97e27a1ce2a1b691507230c2f083433c87d7b4873c2b2343644cb25dab4c8",
+      "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "0",
+      "expectedSuccess": false,
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "successful": false
+    },
+    {
+      "file": "lifecycle-pair-wrong-credit-owner-rejected.json",
+      "operation": "withdraw_credit",
+      "hash": "0xe9d58570d1e94f064dd75a01f88e70c060da7dbab20581f0fff06026958ef438",
+      "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "0",
+      "expectedSuccess": false,
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "successful": false
+    }
+  ],
+  "deliveries": [
+    {
+      "file": "delivery-cycle-exit0.json",
+      "parentHash": "0xaf665bbc60cd963fa84c2d29668845d665fdab1f418e82f9ca60884aa88c5071",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "2",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-cycle-exit1.json",
+      "parentHash": "0xe8dc16e55a32a3236546d59d1315dc6812ba1349c28f64384cc184825b9c5d36",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-pair-exit0.json",
+      "parentHash": "0x6324cbc5559da9da29cc3297007d50e9ed2cd4f3e3751749d42c8e41fc7bbfd6",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "2",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-pair-exit1.json",
+      "parentHash": "0x66ccb966113ef84aef0d1f0c125f6c20f6da841a2257f53efe35d32ed585a9d0",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-partial-exit0.json",
+      "parentHash": "0xcf64fd0a16d58abc72fa5ee6eb60e0ad0a8d4613988e5dc22e5ac613795d5894",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-target-exit0.json",
+      "parentHash": "0x94184c8015c5066c71ebe21d67731b9b817a320d39b5d73de36d1c018396ef39",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-target-exit1.json",
+      "parentHash": "0xf8b7ae05bc5bcb5174738720ef42a47e9a301179f4f6f1fe6ac90e12c3318078",
+      "recipient": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-target-exit2.json",
+      "parentHash": "0x07c9b46f641ee8fdc01b2bb9ade4680d875699a473b5acfcca3922af5b3983b9",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-unclear-exit0.json",
+      "parentHash": "0x7a05604d0ceb9d006507fc80a9cc154b18b6b6803ee277a20bedf6cc3fa6fed5",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-unclear-exit1.json",
+      "parentHash": "0x0700950aa05239adb895573c13e8d96905b911d86a78c16a04046502aacb5759",
+      "recipient": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    },
+    {
+      "file": "delivery-unclear-exit2.json",
+      "parentHash": "0xab999a1b08ee56896f05a3c496221320ba979334e27757c2663aa06bcc43d815",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "valueGEN": "1",
+      "exactNativeDecrease": true,
+      "externalMessageDelivered": true
+    }
+  ],
+  "extraNegativeCase": {
+    "pool": {
+      "id": "pk-unclear-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792430136,
+      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 0,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    "operations": [
+      {
+        "file": "failed-annex-lifecycle-unclear-create.json",
+        "hash": "0xfddbd32df79876c5fc05d0f0c2d0d4eb96a74b0abfaf8e4b1874cf3ba3912870",
+        "operation": "create_pool",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-pledge0.json",
+        "hash": "0xe4ca63ab7c2f049ee6b7da42a7c6751d1b0b13d0dea9a9a314445f24b125bdf9",
+        "operation": "pledge",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-pledge1.json",
+        "hash": "0x504499650b336c7502123da540bad326151e9cd178b6b7f1f26d960f11599de7",
+        "operation": "pledge",
+        "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-pledge2.json",
+        "hash": "0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797",
+        "operation": "pledge",
+        "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-adjudicate.json",
+        "hash": "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9",
+        "operation": "adjudicate",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": true,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": false
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-recovery.json",
+        "hash": "0x3337d06d5fe71885f86084808a0e822376dfe8829c601085b2ff5cd0b3e15f23",
+        "operation": "recover",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-recovery-exit0.json",
+        "hash": "0x7ae8e906a64819b33330916c7d83a3b356881b594490e572d152a21a7700035c",
+        "operation": "withdraw_credit",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-recovery-exit1.json",
+        "hash": "0x22fb1ad38da2ab01ed8b6ab67e00a41b2a9aec5e6dac222f6c5353a2e4e8134f",
+        "operation": "withdraw_credit",
+        "actor": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-recovery-exit2.json",
+        "hash": "0x4418b2aa1743b77ec0a12dfbbe65f8cef6bd20783179454367821164dd3b2313",
+        "operation": "withdraw_credit",
+        "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      },
+      {
+        "file": "failed-annex-lifecycle-unclear-recovery-close.json",
+        "hash": "0xc9d1bf52e0ba8cd6eddcec2e9d7a9c896f8ece5f6949f0090432d638a71928ae",
+        "operation": "close_pool",
+        "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "semanticFailure": false,
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "successful": true
+      }
+    ],
+    "deliveries": [
+      {
+        "parentHash": "0x7ae8e906a64819b33330916c7d83a3b356881b594490e572d152a21a7700035c",
+        "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+        "valueGEN": "1",
+        "exactNativeDecrease": true,
+        "externalMessageDelivered": true
+      },
+      {
+        "parentHash": "0x22fb1ad38da2ab01ed8b6ab67e00a41b2a9aec5e6dac222f6c5353a2e4e8134f",
+        "recipient": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+        "valueGEN": "1",
+        "exactNativeDecrease": true,
+        "externalMessageDelivered": true
+      },
+      {
+        "parentHash": "0x4418b2aa1743b77ec0a12dfbbe65f8cef6bd20783179454367821164dd3b2313",
+        "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+        "valueGEN": "1",
+        "exactNativeDecrease": true,
+        "externalMessageDelivered": true
+      }
+    ],
+    "semanticReviewPassed": false,
+    "refundPassed": true
+  },
+  "accounting": {
+    "received": "16 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "16 GEN",
+    "invariant": true
+  },
+  "nativeContractGEN": "0",
+  "feeCapGEN": "1",
+  "reservedFeeUpperBoundGEN": "0.633753753600786752",
+  "cumulativeEscrowGEN": "22",
+  "passed": true
+}

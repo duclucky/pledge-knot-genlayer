@@ -97,7 +97,7 @@ async function main(){
  if(process.argv.includes('--recover-cycle')||process.argv.includes('--recover-unclear')){
   if(process.argv.includes('--recover-cycle')&&process.argv.includes('--recover-unclear'))throw new SafeError('OneRecoveryScopeRequired');
   const kind=process.argv.includes('--recover-unclear')?'unclear':'cycle',prefix=kind+'-recovery';
-  const c=cases[kind],current=await pool(c.id),expectedId=kind==='unclear'?'pk-unclear-v2':'pk-cycle-v1',plan=recoveryPlan(current,Math.floor(Date.now()/1000),accounts.map(a=>a.address),expectedId);
+  const c=cases[kind],current=await pool(c.id),expectedId=kind==='unclear'?c.id:'pk-cycle-v1',plan=recoveryPlan(current,Math.floor(Date.now()/1000),accounts.map(a=>a.address),expectedId);
   if(plan.recover)await write(prefix,accounts[0],'recover',[c.id]);
   for(let i=0;i<plan.withdrawals.length;i++){
    const step=plan.withdrawals[i],credit=await read(target,'get_credit',[c.id,accounts[step.owner].address]);
@@ -119,7 +119,10 @@ async function main(){
  const final={...network,target,checkedAt:new Date().toISOString(),pools:[],accounting:await accounting(),nativeContractGEN:gen(await balance(target)),feeBudget:await loadJournal('fee-budget.json')};
  for(const c of Object.values(cases)){try{final.pools.push(await pool(c.id));}catch{if(selected==='all')throw new SafeError('ExpectedPoolMissing');}}
  if(selected==='all'){
-  if(final.pools.length!==5||final.pools.some(p=>p.phase!=='CLOSED')||!final.accounting.invariant||final.accounting.received!=='13 GEN'||final.accounting.withdrawn!=='13 GEN'||final.accounting.locked!=='0 GEN'||final.accounting.credits!=='0 GEN'||final.nativeContractGEN!=='0')throw new SafeError('CompleteThirteenGENLifecycleRequired');
+  const old=await pool('pk-unclear-v2'),escrow=await loadJournal('escrow-budget.json');
+  if(old.phase!=='CLOSED'||old.resolved||old.attempts!==0||old.received!=='3 GEN'||old.withdrawn!=='3 GEN'||old.locked!=='0 GEN'||old.credits!=='0 GEN')throw new SafeError('FailedAnnexZeroLiabilityRequired');
+  if(final.pools.length!==5||final.pools.some(p=>p.phase!=='CLOSED')||final.pools.reduce((n,p)=>n+parseUnits(p.received.replace(' GEN',''),18),0n)!==13n*GEN||!final.accounting.invariant||final.accounting.received!=='16 GEN'||final.accounting.withdrawn!=='16 GEN'||final.accounting.locked!=='0 GEN'||final.accounting.credits!=='0 GEN'||final.nativeContractGEN!=='0'||escrow?.capGEN!=='22'||escrow.reservedGEN!=='22')throw new SafeError('CompleteFiveCasesPlusFailedAnnexAndCumulativeBudgetRequired');
+  final.extraNegativePool=old;final.cumulativeEscrow=escrow;
   final.fullLifecyclePassed=true;
  }
  await save('lifecycle-final-state.json',final);console.log(JSON.stringify(final));

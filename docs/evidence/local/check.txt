@@ -1,0 +1,69 @@
+
+> pledge-knot-genlayer@0.1.0 check
+> node scripts/check.mjs
+
+
+✓ Lint passed (3 checks)
+✓ Validation passed
+  Contract: PledgeKnotContract
+  Methods: 14 (8 view, 6 write)
+INFO: File `gltest.config.yaml` found in the current directory, using it
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studio_devnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-8.4.2, pluggy-1.7.0
+rootdir: D:\Genlayer Project\pledge-knot
+plugins: genlayer-test-0.30.0rc2
+collected 122 items
+
+tests\direct\test_pledgeknot.py ........................................ [ 32%]
+........................................................................ [ 91%]
+..........                                                               [100%]
+
+============================ 122 passed in 26.90s =============================
+✔ real SDK encodes all four pool addresses with distinct Address wire tags (3.472ms)
+✔ bad or zero address fails before signing; declaration text remains byte-for-byte text (0.5228ms)
+✔ fixture expectations never accept an edge swap just because core totals match (1.8668ms)
+✔ all five fixed withdrawal schedules conserve the authorized 13 GEN with only 1/2 GEN exits (1.6047ms)
+✔ idle or shape-only validator rows cannot establish independent successful agreement (0.2767ms)
+✔ nineteen cumulative GEN includes recovered deposits; twentieth stops before broadcast (2.3162ms)
+✔ hash resumption and zero-value writes never reserve another deposit (0.6019ms)
+✔ missing baseline, wrong cap, fractional deposit and corrupt sum fail closed (0.3743ms)
+✔ explicitly approved twenty-two GEN retains old deposits and rejects twenty-third (0.431ms)
+✔ reserve actual encoded gas upper bound separately from application GEN (4.3422ms)
+✔ cap violation stops before broadcast; hash replay reserves exactly once (1.0782ms)
+✔ verified zero EVM gas price still reserves positive GenLayer fees (1.032ms)
+✔ broadcast journal persists signed transaction hash before network send (7.7788ms)
+✔ only a recognized fetch connection failure is retried without signing (2.3965ms)
+✔ recognized read timeout has a bounded four-attempt ceiling (0.6762ms)
+✔ programming TypeError never silently retries (0.3034ms)
+✔ diagnostic projects only recognized transport markers and no private message (0.675ms)
+✔ raw Studio success requires finalized successful execution (1.6263ms)
+✔ majority disagreement finalized after UNDETERMINED is never successful application execution (0.3501ms)
+✔ normalized RC success and failed idle quorum distinguish actual failures (0.2863ms)
+✔ safe projection never contains validator config or arbitrary diagnostics (1.3347ms)
+✔ external message proof rejects parent-only finality and wrong value/recipient (1.329ms)
+✔ recovery cannot bypass expiry at boundary minus one; equality is eligible (3.2123ms)
+✔ recovery refuses finalized allocation, unexpected value, and actor mismatch (0.4561ms)
+✔ expired recovery resumes withdrawals without another recovery; closed needs zero liability (0.4576ms)
+✔ explicit V2 unclear recovery keeps the same expiry, payer and accounting guards (0.533ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 837.6237
+PLEDGEKNOT_CHECK_PASS: semantic lint, direct tests and applicable script tests.

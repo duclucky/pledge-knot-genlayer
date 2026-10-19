@@ -1,5 +1,5 @@
 {
-  "observedAt": "2026-10-19T16:56:52.115Z",
+  "observedAt": "2026-10-19T21:59:12.979Z",
   "pool": {
     "id": "pk-cycle-v2",
     "version": "PK_V2",
@@ -23,10 +23,10 @@
     "withdrawn": "3 GEN"
   },
   "accounting": {
-    "received": "6 GEN",
+    "received": "12 GEN",
     "locked": "0 GEN",
     "credits": "0 GEN",
-    "withdrawn": "6 GEN",
+    "withdrawn": "12 GEN",
     "invariant": true
   },
   "nativeContractGEN": "0"

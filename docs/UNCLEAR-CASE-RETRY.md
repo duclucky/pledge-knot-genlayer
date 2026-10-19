@@ -1,4 +1,14 @@
-# Proposed new unresolved-input case - approval pending
+# Owner-approved new unresolved-input case
+
+Owner explicitly approved the new case and cumulative22GEN on2026-10-20
+Bangkok. The aggregate1GENfee cap remains unchanged.
+
+Execution completed: pk-unclear-v2b finalized successful independent agreement
+on all6 frozen meanings,RETRYABLE/noallocation,three1GENexpiry refunds and
+CLOSED0. Partial1GENexpiry also passed. Read-only lifecycle-audit.json verifies
+all5acceptance cases plus the preserved failed review:52operations,14V2exits,
+16GENin/out,0native/locked/credits. V1 separately recovered6GEN; cumulative22GEN.
+The retained plan and pre-approval wording below describe the earlier decision.
 
 Same PK_V2 contract,address0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a,
 sourceSHA3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f.

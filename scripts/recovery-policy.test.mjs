@@ -17,10 +17,12 @@ test('expired recovery resumes withdrawals without another recovery; closed need
  assert.throws(()=>recoveryPlan({...ready,phase:'CLOSED'},101,donors));
 });
 test('explicit V2 unclear recovery keeps the same expiry, payer and accounting guards',()=>{
- const pool={...ready,id:'pk-unclear-v2'};
- assert.equal(recoveryPlan(pool,101,donors,'pk-unclear-v2').recover,true);
- assert.throws(()=>recoveryPlan(pool,99,donors,'pk-unclear-v2'),/RecoveryDeadlineNotReached/);
+ for(const id of ['pk-unclear-v2','pk-unclear-v2b']){
+ const pool={...ready,id};
+ assert.equal(recoveryPlan(pool,101,donors,id).recover,true);
+ assert.throws(()=>recoveryPlan(pool,99,donors,id),/RecoveryDeadlineNotReached/);
  assert.throws(()=>recoveryPlan(pool,101,donors,'pk-cycle-v1'));
- assert.throws(()=>recoveryPlan({...pool,phase:'FUNDED'},101,donors,'pk-unclear-v2'));
+ assert.throws(()=>recoveryPlan({...pool,phase:'FUNDED'},101,donors,id));
  assert.throws(()=>recoveryPlan({...pool,id:'other'},101,donors,'other'));
+ }
 });

@@ -2,11 +2,11 @@
   "network": "Studio Dev",
   "chainId": 61997,
   "rpc": "https://studio-next.genlayer.com/api",
-  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797",
+  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4",
   "identity": {
     "network": "Studio Dev",
     "chainId": 61997,
-    "sourceCommit": "bc9306a5e8acffdbb27f0b30161207732ea6e5ac",
+    "sourceCommit": "3da6568e8c4c98f667f0f1cb0c60fe5e3d81caf9",
     "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
     "contractVersion": "PK_V2",
     "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
@@ -18,18 +18,18 @@
   "operation": "pledge",
   "actor": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
   "args": [
-    "pk-unclear-v2",
-    "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+    "pk-unclear-v2b",
+    "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
     "Backing only closed proprietary advertising analytics.",
     "Support for shipping physical medical equipment."
   ],
   "valueGEN": "1",
-  "feeDepositGEN": "0.000378517200010352",
+  "feeDepositGEN": "0.000378516000010352",
   "expectedSuccess": true,
   "before": {
-    "observedAt": "2026-10-19T17:08:08.773Z",
+    "observedAt": "2026-10-19T22:01:37.524Z",
     "pool": {
-      "id": "pk-unclear-v2",
+      "id": "pk-unclear-v2b",
       "version": "PK_V2",
       "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "donors": [
@@ -39,8 +39,8 @@
       ],
       "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "target": "2 GEN",
-      "deadline": 1792430136,
-      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
       "phase": "OPEN",
       "pledged_mask": 3,
       "attempts": 0,
@@ -51,21 +51,21 @@
       "withdrawn": "0 GEN"
     },
     "accounting": {
-      "received": "11 GEN",
+      "received": "14 GEN",
       "locked": "2 GEN",
       "credits": "0 GEN",
-      "withdrawn": "9 GEN",
+      "withdrawn": "12 GEN",
       "invariant": true
     },
     "nativeContractGEN": "2"
   },
-  "preparedAt": "2026-10-19T17:08:14.463Z",
+  "preparedAt": "2026-10-19T22:01:43.733Z",
   "status": "FINALIZED",
-  "hash": "0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797",
+  "hash": "0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4",
   "after": {
-    "observedAt": "2026-10-19T17:08:53.918Z",
+    "observedAt": "2026-10-19T22:02:24.126Z",
     "pool": {
-      "id": "pk-unclear-v2",
+      "id": "pk-unclear-v2b",
       "version": "PK_V2",
       "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "donors": [
@@ -75,8 +75,8 @@
       ],
       "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
       "target": "2 GEN",
-      "deadline": 1792430136,
-      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "deadline": 1792447757,
+      "definition_digest": "f861014d0c84288dbdb7ab83bc03bd5c968963b359129c39b30ee9e68d01d491",
       "phase": "READY",
       "pledged_mask": 7,
       "attempts": 0,
@@ -87,10 +87,10 @@
       "withdrawn": "0 GEN"
     },
     "accounting": {
-      "received": "12 GEN",
+      "received": "15 GEN",
       "locked": "3 GEN",
       "credits": "0 GEN",
-      "withdrawn": "9 GEN",
+      "withdrawn": "12 GEN",
       "invariant": true
     },
     "nativeContractGEN": "3"
@@ -99,11 +99,11 @@
     "status": "FINALIZED",
     "execution": "SUCCESS",
     "successful": true,
-    "hash": "0xab4e449ad3e987fadc60aeaffa2d6725fcb26b7b5745066bbca06a4888b49797",
+    "hash": "0xb0919444a448873d566d780d8cecac33b77ccebbbf7f0c9d953056c3cd9e51c4",
     "from": "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8",
     "to": "0xecee9caff3dc3fe026ea71d8fd3a1532ca7f230a"
   },
   "executionResult": "SUCCESS",
-  "finalizedObservedAt": "2026-10-19T17:08:56.416Z",
+  "finalizedObservedAt": "2026-10-19T22:02:26.343Z",
   "verified": true
 }
