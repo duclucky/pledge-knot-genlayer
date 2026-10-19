@@ -4,6 +4,7 @@ import {resolve} from 'node:path';
 import {keccak256} from 'viem';
 import {evidence,save,SafeError,safeError,rpc} from './network.mjs';
 import {hash} from './receipt.mjs';
+import {feeReservation,reserveFees} from './fee-budget.mjs';
 export async function loadJournal(name){try{return JSON.parse(await readFile(resolve(evidence,name),'utf8'));}catch(error){if(error.code==='ENOENT')return null;throw new SafeError('JournalReadFailed');}}
 export async function sendJournal(name,metadata,submit){
  const existing=await loadJournal(name);if(existing?.hash)return existing;
@@ -13,6 +14,10 @@ export async function sendJournal(name,metadata,submit){
  globalThis.fetch=async(url,options)=>{
   let body;try{body=JSON.parse(options?.body??'{}');}catch{}
   if(body?.method==='eth_sendRawTransaction'){
+   const txHash=keccak256(body.params[0]);
+   const reservation=feeReservation(body.params[0],record.feeDepositGEN,record.valueGEN);
+   const budget=reserveFees(await loadJournal('fee-budget.json'),txHash,reservation);
+   await save('fee-budget.json',budget);
    record.hash=keccak256(body.params[0]);record.status='SENDING';await save(name,record);
    const response=await originalFetch(url,options);const envelope=await response.clone().json();
    if(hash(envelope.result)){record.hash=envelope.result;record.status='SUBMITTED';await save(name,record);console.log(JSON.stringify({operation:metadata.operation,stage:'submitted',hash:record.hash}));}
