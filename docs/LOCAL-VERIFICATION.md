@@ -65,7 +65,7 @@ It is a local HTTP mock, never authority for an outside-work/payment claim.
 Command: `node scripts/runtime-probe.mjs`.
 Observed Studio Dev chain61997; exact-source schema14 methods; constructor
 `executionResult: SUCCESS`; `passed: true`.
-See `evidence/studio-dev/runtime-probe.json` for source commit/SHA and methods.
+See `evidence/studio-dev/v1-runtime-probe.json` for source commit/SHA and methods.
 No key loading, signing, funding or broadcast occurs in this probe.
 
 ## Historical pre-authorization execution boundary
@@ -113,7 +113,7 @@ requires accepted consensus when result_name is present; normalized receipts
 retain their tested interpretation. `.codex/tdd/17-disagreement-green.txt`:
 112 Python tests, 18 Node tests passed, no skips. Read-only network verification
 shows pair MAJORITY_AGREE successful=true and cycle MAJORITY_DISAGREE
-successful=false, with cycle canonical state unchanged (blocked-state.json).
+successful=false, with cycle canonical state unchanged (v1-blocked-state.json).
 
 Recovery-policy RED: `node --test scripts/recovery-policy.test.mjs` with the
 unimplemented policy, log `.codex/tdd/18-recovery-red.txt`. Three focused tests
@@ -135,7 +135,7 @@ operations after expiry,3 exact1GEN refunds and zero closure at16:21UTC.
 `node scripts/recovery-audit.mjs` independently reread source/receipts/state:
 recoveryPassed=true,fullLifecyclePassed=false,operations5,exactNativeRefunds3;
 global received6GEN,withdrawn6GEN,locked0GEN,credits0GEN,native0,invariant=true.
-See evidence/studio-dev/cycle-recovery-audit.json. Existing1GEN fee cap retained;
+See evidence/studio-dev/v1-cycle-recovery-audit.json. Existing1GEN fee cap retained;
 reserved signed-fee upper bound0.309102232800227744GEN,not actual fee expenditure.
 
 `.codex/reassessment-probe.mjs` used the exact production judge on a new frozen
@@ -146,3 +146,21 @@ coverage definitions:2runs new cycle+2original pair+2original unavailable-annex,
 input, no key/signing/broadcast or GEN. This is unsigned feasibility only, not
 live independent consensus. Public sanitized records: evidence/local/reassessment-*.
 V2 production behavior/scope changes await approval; see PROPOSED-V2.md.
+
+## V2 owner-approved implementation
+
+Owner approved V2 and19GEN cumulative escrow,keeping1GEN aggregate fees.
+Spec/admission14rows,safety6rows,authority4rows,value5rows were updated before
+source. V2 semantic RED log20-v2-red:10failed,112deselected (one batch-call
+instead of6,missing strict one-relation parser). Focused GREEN10passed; full
+mandatory check now122Python tests and24Node tests,0skips. Existing safety,
+accounting,temporal,source-authority and semantic-edge assertions remain.
+
+Exact production _judge,sourceSHA3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f,
+matched36/36cells in6 unsigned frozen-input simulations across explicit cycle,
+original pair and unavailable-annex. This is not independent network consensus.
+New script-budget RED before implementation and3focusedGREEN: recovered deposits
+still count toward19GEN;20thGEN,corrupt baseline and replay mismatch reject.
+All V1 network files moved to v1-* with manifest and fresh zero balance proof;
+fee-budget.json retained unchanged and escrow-budget seeded from all6verified
+V1native deposit hashes. V1 results are never counted as V2 lifecycle proof.

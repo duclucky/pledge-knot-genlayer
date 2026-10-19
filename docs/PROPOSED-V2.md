@@ -1,6 +1,9 @@
 # Proposed PledgeKnot V2 - approval required before production changes
 
-Status: DESIGN + UNSIGNED FEASIBILITY ONLY. Not implemented or deployed.
+Status: OWNER APPROVED V2 AND CUMULATIVE19GEN. Implementation now authorized;
+V2 local implementation now passes semantic lint and122 Python tests.
+Deployment and independent network lifecycle remain pending. Original proposal
+and rationale below are retained. Aggregate fee cap remains1GEN across revisions.
 This is a proposed repair of IDEA-048, not a new contribution or novelty claim.
 
 ## Observations and hypothesis
@@ -26,7 +29,9 @@ expected labels were never sent to the model. Results:
 Total6 simulations,36/36 cells. This supports the hypothesis that a focused
 single-relation question can reduce role/scope confusion. It does not establish
 causality, future accuracy, independent network consensus or money settlement.
-No production source, validator, oracle, grading-bot or actor wallet changed.
+At that prototype checkpoint no production source or wallet changed.
+The owner subsequently approved V2 implementation; original V1 oracle and
+grading-bot remain unchanged.
 
 Sanitized input/probe evidence is in evidence/local/reassessment-*.json.
 

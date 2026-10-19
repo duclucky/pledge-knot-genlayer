@@ -50,7 +50,14 @@ def ready(env,target=2,recipient=None):
 
 def answer(vm,vector=PAIR,raw=None,source=CONTEXT):
     vm.clear_mocks();vm.mock_web(r'.*w3\.org.*',{'status':200,'body':source})
-    vm.mock_llm(r'(?s).*PledgeKnot constitutive.*',raw if raw is not None else json.dumps({'cells':[{'id':e,'class':v} for e,v in zip(IDS,vector)],'reason':'same economic meaning'}))
+    aggregate={'cells':[{'id':e,'class':v} for e,v in zip(IDS,vector)],'reason':'same economic meaning'} if raw is None else None
+    if raw is not None:
+        try:aggregate=json.loads(raw) if isinstance(raw,str) else raw
+        except Exception:pass
+    cells=aggregate.get('cells') if isinstance(aggregate,dict) and not set(aggregate)-{'cells','reason'} else None
+    if isinstance(cells,list) and len(cells)==6 and all(isinstance(x,dict) and set(x)=={'id','class'} and x['id'] in IDS and isinstance(x['class'],str) and x['class'].strip().upper() in ('COVERED','NOT_COVERED','UNCLEAR') for x in cells) and len({x['id'] for x in cells})==6:
+        for cell in cells:vm.mock_llm(r'(?s).*PledgeKnot constitutive.*"id": "'+cell['id']+'"',json.dumps({'class':cell['class'],'reason':aggregate.get('reason','same economic meaning')}))
+    else:vm.mock_llm(r'(?s).*PledgeKnot constitutive.*',raw)
 
 def resolve_pool(env,vector=PAIR,target=2,recipient=None):
     ready(env,target,recipient);c,vm,a=env;answer(vm,vector);vm.sender=a[0];c.adjudicate('pool');return env
@@ -69,6 +76,41 @@ def test_normalization_valid_meaning_is_not_raw_json_equality(env):
     c,vm,a=env;m=module(c)
     raw={'cells':[{'id':e,'class':v.lower()} for e,v in reversed(list(zip(IDS,PAIR)))],'reason':'different words'}
     assert m._normalize(raw)==list(PAIR)
+
+def test_v2_judge_scopes_each_relation_and_validator_replays_all_six(env,monkeypatch):
+    ready(env);c,vm,a=env;answer(vm);m=module(c);prompts=[]
+    def classify(prompt,response_format):
+        prompts.append(prompt)
+        if 'LOCKED RELATION: ' not in prompt:
+            return json.dumps({'cells':[{'id':e,'class':v} for e,v in zip(IDS,PAIR)]})
+        relation=json.loads(prompt.split('LOCKED RELATION: ',1)[1].split('\nReturn',1)[0])
+        assert set(relation)=={'id','owner_required','peer_purpose'}
+        i,j=int(relation['id'][1]),int(relation['id'][4])
+        assert relation['owner_required']=='Required peer funding purpose '+str(i)
+        assert relation['peer_purpose']=='Declared funding purpose '+str(j)
+        return json.dumps({'class':PAIR[IDS.index(relation['id'])].lower(),'reason':'independent wording'})
+    monkeypatch.setattr(m.gl.nondet,'exec_prompt',classify)
+    vm.sender=a[0];c.adjudicate('pool')
+    assert len(prompts)==6
+    assert vm.run_validator() is True
+    assert len(prompts)==12
+    other=list(PAIR);other[1]='COVERED'
+    assert vm.run_validator(leader_result={'stage':'OK','classes':other}) is False
+    assert len(prompts)==18
+
+@pytest.mark.parametrize('raw',[{'class':'PAY'},{'class':True},{'class':'COVERED','payout':99},{'class':'COVERED','id':'D0:D0'},{'class':'COVERED','reason':[]},'null','{"class":"COVERED","class":"NOT_COVERED"}',' '*12001],ids=['enum','bool','payout','extra_id','reason_type','null','duplicate_key','oversize'])
+def test_v2_single_relation_invalid_output_cannot_allocate(raw,env):
+    c,vm,a=env
+    assert module(c)._normalize_cell(raw) is None
+
+def test_v2_single_relation_paraphrase_case_and_source_failure(env,monkeypatch):
+    c,vm,a=env;m=module(c)
+    assert m._normalize_cell('```json\n{"class":" covered ","reason":"other wording"}\n```')=='COVERED'
+    ready(env);answer(vm,source=CONTEXT+b'wrong source version');calls=[]
+    monkeypatch.setattr(m.gl.nondet,'exec_prompt',lambda *args,**kwargs:calls.append(1))
+    vm.sender=a[0];c.adjudicate('pool')
+    assert calls==[] and data(c.get_pool('pool'))['locked']=='3 GEN'
+    assert data(c.get_pool('pool'))['credits']=='0 GEN'
 
 @pytest.mark.parametrize('kind',['wrong_creator','duplicate','closed','bad_roles','target','expired','horizon','accounting'])
 def test_create_safety_before_body(kind,env):

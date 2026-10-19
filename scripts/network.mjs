@@ -72,7 +72,7 @@ export async function balance(account){return BigInt(await retryRead(()=>rpc('et
 export async function identity(){
  const source=await readFile(sourcePath,'utf8');
  const revision=spawnSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).stdout.trim();
- return {network:'Studio Dev',chainId:61997,sourceCommit:/^[a-f0-9]{40}$/.test(revision)?revision:null,sourceSha256:sha(source),runner:'5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng',api:'v0.3.0',genvm:'v0.6.0-rc5',sdk:'2.0.0-rc.1'};
+ return {network:'Studio Dev',chainId:61997,sourceCommit:/^[a-f0-9]{40}$/.test(revision)?revision:null,sourceSha256:sha(source),contractVersion:'PK_V2',runner:'5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng',api:'v0.3.0',genvm:'v0.6.0-rc5',sdk:'2.0.0-rc.1'};
 }
 export async function save(name,data){await mkdir(evidence,{recursive:true});await writeFile(resolve(evidence,name),JSON.stringify(data,null,2)+'\n');}
 export async function inspect(){

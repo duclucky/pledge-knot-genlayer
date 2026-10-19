@@ -3,20 +3,19 @@
 ## Identity
 
 IDEA-048 / PledgeKnot / pledge-knot / Intelligent Contracts.
-Status: BLOCKED_SEMANTIC_CONSENSUS / NOT_SUBMITTED. Fourteen historical
-admission gates passed; Gate13 execution is NOT PASSED. Current viability needs
-Phase2/4 reassessment. See NETWORK-BLOCKER.md and LOCAL-VERIFICATION.md.
-Public repository: PENDING. Deployed address:
-0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD.
+Status: V2 PASS_ADMISSION / OWNER_APPROVED_IMPLEMENTATION / PENDING_EXECUTION.
+Owner explicitly approved PROPOSED-V2 and cumulative19GEN escrow; aggregate
+fees stay1GEN across V1+V2. V1 all6GEN exited with zero liability; its failure
+and recovery remain archived evidence, not V2 proof. V2 not deployed yet.
 Target: Studio Dev61997, https://studio-next.genlayer.com/api .
-Pinned family: Python API v0.3.0, GenVM v0.6.0-rc5, runner
+Pinned family: Python API v0.3.0,GenVM v0.6.0-rc5,runner
 5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng;
-JS2.0.0-rc.1, Python client0.19.0rc2, genlayer-test0.30.0rc2,
-genvm-linter0.11.1rc2. Exact-source lint/schema/constructor passed;
-signed authority smoke and first pair lifecycle passed. Cycle consensus failed;
-cycle recovery completed with all3GEN refunded and zero liability.
-Remaining semantic lifecycle scenarios are pending. V2 proposal awaits owner
-approval; current deployed V1 source and all14 historical gate records remain.
+JS2.0.0-rc.1,Python client0.19.0rc2,genlayer-test0.30.0rc2,
+genvm-linter0.11.1rc2. Same verified API; no runner migration.
+Six unsigned per-relation simulations matched36/36 frozen cells across new
+explicit cycle,original pair and missing-annex. No expected labels in prompt.
+This is model feasibility,not real independent consensus or value execution.
+Public repository/CI and Phase7-10 remain pending. See PROPOSED-V2.md.
 
 ## One-sentence product hook
 
@@ -54,10 +53,10 @@ code owns coalition computation, target, payer provenance and every value exit.
 | Gate | PASS/FAIL | Evidence/reason |
 |---|---|---|
 |Replacement|PASS_ADMISSION|A private backend choosing semantic support edges controls who is charged; deterministic core arithmetic cannot replace independent interpretation|
-|Judgment|PASS_ADMISSION|Entailment/exclusion/underspecification require meaning; four frozen single-pool examples matched48/48 judgments over eight unsigned simulations|
+|Judgment|PASS_ADMISSION|Entailment/exclusion/underspecification require meaning; V2 per-relation spike matched36/36 cells across6 unsigned simulations; V1 failures retained,not counted PASS|
 |Evidence availability|PASS_ADMISSION|Canonical bounded pledges plus target-fetched fixed W3C context; actual probe HTTP200,181875raw bytes,exact digest match|
 |Evidence authenticity|PASS_ADMISSION|Actual sender/deposit/role/full pool digest constitute the internal pledge; no actor-hosted receipt or external-work fact is admitted; authority matrix below|
-|Equivalence|PASS_ADMISSION|All six normalized directed classes and code-derived core;independent replay;rationale ignored;locked target applied by code after validation|
+|Equivalence|PASS_ADMISSION|Code assigns all6 directed IDs;one bounded semantic question per relation;validator independently replays all6 classes and code-derived core;rationale ignored|
 |Consequence|PASS_ADMISSION|Core membership determines whose actual1GEN funds the fixed recipient and whose1GEN is refunded|
 |Adversarial|PASS_ADMISSION|Grantee prefers a larger core; contributors resist unsupported charges and may manipulate language or omit funding|
 |State model|PASS_ADMISSION|Isolated immutable pools/slots,append-only attempts,own credits,explicit states,time guards,safety/value matrices and conservation|
@@ -66,7 +65,7 @@ code owns coalition computation, target, payer provenance and every value exit.
 |Differentiation|PASS_ADMISSION|Greatest cash-contributor closure and cascading assurance loss differ from priority execution pairs,capacity matching,policy authorization,netting and contingent branch reserves|
 |Claim-to-code|PASS_ADMISSION|Six complete method/state/view/test/network rows below; actual execution evidence remains pending|
 |Full lifecycle|PASS_ADMISSION / PENDING_EXECUTION|Two-member core grant,three-cycle grant,target failure,partial/unknown expiry,own native exits and zero closure specified before code|
-|Scope honesty|PASS_ADMISSION|Constitutive declarations and cash-backed cofunding only; no external delivery,identity/charity fact,dominant-strategy theorem,unanimity,adoption or completed deployment claim|
+|Scope honesty|PASS_ADMISSION|Constitutive declarations and cash-backed cofunding only; no external delivery,identity/charity fact,dominant-strategy theorem,unanimity,adoption or V2 deployment claim|
 
 ## Actors, roles and incentives
 
@@ -78,7 +77,7 @@ code owns coalition computation, target, payer provenance and every value exit.
 
 ## Scope and non-goals
 
-V1 has exactly three donors,one1GEN pledge per donor,target2 or3GEN,a deadline
+V2 has exactly three donors,one1GEN pledge per donor,target2 or3GEN,a deadline
 within seven days and at most three semantic attempts. Recipient may overlap a
 donor; credit accumulation must merge both roles without overwrite or duplication.
 There is no external-work verification,arbitrary payment request,transferable
@@ -99,7 +98,7 @@ result or raw-JSON registry. Pool,Pledge,Cell,Attempt are storage dataclasses.
 Money,counters,masks and deadlines use bigint. Public views expose JSON strings
 of structured records,never raw mutable JSON as canonical storage.
 
-Pool definition binds PK_V1,chain ID,contract address,pool ID,creator,three donor
+Pool definition binds PK_V2,chain ID,contract address,pool ID,creator,three donor
 addresses,recipient,target,deadline and source URL/hash. Its digest is immutable.
 Each pledge authenticates that exact digest using its runtime sender and1GEN
 deposit; its support and required-peer purpose are immutable and timestamped.
@@ -151,14 +150,14 @@ expected IDs,authority,amounts,recipient,target,deadline or allowed consequences
 
 | Consequential claim/fact | Evidence/artifact | Data controller | Authoritative source/issuer | Deterministic verification | Canonical objective/entity/actor binding | Freshness/anti-replay | Semantic role after verification | Non-penalizing failure state | Consequence blocked | Required negative test |
 |---|---|---|---|---|---|---|---|---|---|---|
-|Pool payment policy|Immutable pool definition|Creator|Runtime-authenticated named donor|Nonzero distinct donor roles,valid target/deadline,unique ID;each deposit assents exact digest|PK_V1,chain,contract,pool,roles,recipient,target,time,source version|Unique ID,no update,creation clock|Policy loads from locked state;model cannot redefine it|Reject unchanged state|Pledge/review/funding/credit|Valid digest for wrong pool/chain/version/objective cannot enroll or pay|
+|Pool payment policy|Immutable pool definition|Creator|Runtime-authenticated named donor|Nonzero distinct donor roles,valid target/deadline,unique ID;each deposit assents exact digest|PK_V2,chain,contract,pool,roles,recipient,target,time,source version|Unique ID,no update,creation clock|Policy loads from locked state;model cannot redefine it|Reject unchanged state|Pledge/review/funding/credit|Valid digest for wrong pool/chain/version/objective cannot enroll or pay|
 |Actual conditional pledge|One1GEN deposit plus exact support/requirement|Exact donor|Runtime sender and native deposit|Named donor,empty own slot,1GEN,matching digest|This pool/donor/address/policy/source/version and own clauses|Once per role;now<deadline;canonical timestamp|Interpret declared cofunding purpose only,never outside fact|Reject unchanged accounting|Inclusion,funding,credit,rights|Hash-valid text from wrong actor;cross-pool replay;late/future window;fabricated receipt cannot replace sender/deposit|
 |Public vocabulary context|Fixed dated W3C bytes|W3C origin|Fixed HTTPS version URL|HTTP/size/UTF8/exact raw SHA before model|Locked source/policy objective;not payout or actor authority|Dated version;independent validator refetch|Vocabulary only;cannot establish actual work or legal status|SOURCE_UNVERIFIABLE/RETRYABLE|Model review,grant/refund allocation|Stable attacker bytes/wrong digest/version/unavailable source -> no hard change or model invocation|
 |Verdict and native exit|Complete six-cell result plus own ledger|Validator/protocol and owner|Independent replay plus deterministic code/runtime owner|Exact IDs/enums,source stage,core/target conservation;own sender;debit then EVM boundary|Pool/attempt/all donor IDs/recipient/remaining credit|One terminal allocation;own remaining credit only|Only edge classifications are model judgments|Invalid output reverts or explicit retry|Arbitrary amounts/recipient/core,duplicate settlement/exit|Wrong meaning with same core;extra/missing/duplicate IDs;payout injection;wrong owner;parent-only finality cannot prove delivery|
 
 ## Consensus design
 
-One pool per review prompt. Six directed IDs D0:D1,D0:D2,D1:D0,D1:D2,D2:D0,D2:D1.
+One pool per review;one independently asked relation per model call. Six directed IDs D0:D1,D0:D2,D1:D0,D1:D2,D2:D0,D2:D1.
 For Di:Dj compare Di.required_peer_purpose with Dj.declared_support_purpose.
 COVERED means clear entailment/inclusion;NOT_COVERED means clear exclusion;
 UNCLEAR means underspecified/missing referenced context or requiring an outside
@@ -174,8 +173,11 @@ Do not infer that any activity occurred or will occur from a funding purpose.
 |Rationale|Optional bounded prose|Ignored for consensus|Different wording is not a different economic decision|
 
 Nondeterminism uses captured locals,no storage access inside closures,and v0.3
-sandboxed gl.vm.run_nondet_default. Non-Return/invalid leader rejects. Normalize
-text/LazyJSON,one optional code fence,enum case and cell order;reject duplicate
+sandboxed gl.vm.run_nondet_default. Non-Return/invalid leader rejects. Code assigns each ID,then normalizes one class response,assembles all6IDs and
+validates complete coverage. Maximum6 model calls per leader or validator,with
+source fetched once per independent evaluation. Each question includes only
+locked owner requirement and peer purpose. Normalize text/LazyJSON,one optional
+code fence and enum case;reason wording ignored. Reject duplicate
 JSON keys,missing/extra/duplicate IDs,invalid types/enums and extra consequence,
 recipient or amount fields. Errors must never become accepted shape-only results.
 UNDETERMINED means no canonical decision: inspect state/attempt before retry,
@@ -291,22 +293,19 @@ explicitly abandoned/replaced;otherwise superseded revisions recover to zero.
 
 ## Definition of Done and honest limitations
 
-Admission plus single-pool frozen viability passed,including48/48 observed
-classes. Initial four-pool batch failed;an ambiguous fixture's overly definite
-oracle and a duplicate-ID preparation error were preserved,not relabeled PASS.
-Production evaluates exactly one pool per prompt;arbitrary wording remains fallible.
-Required completion:one ASCII class;recognized semantic lint;meaningful per-write
-RED-to-GREEN records;all local/adversarial/metadata/parser checks;exact-source
-smoke;successful finalized judgments/consequences;own native exits/zero closure;
-public hygiene/history/CI;unchanged objective grader NO BLOCKER;copy-ready
-description under1000chars;final full master audit. Local lint,111 Python tests,
-7 script tests,ASCII/metadata and unsigned schema/constructor now pass. Real
-signed execution and subsequent gates remain pending because safely discovered
-authorized configuration has only one distinct EOA. Additional key use and
-funding have not been authorized.
-
-No deployment,address,public repo,CI,independent adopters,unanimous validators,
-browser workflow,actual work,legal/charity identity or Portal acceptance is claimed.
+V2 admission and unsigned per-relation feasibility passed36/36 frozen cells;
+V1 batch failures remain preserved. Owner approved exact V2 behavior and19GEN
+cumulative escrow scope before implementation. All six write safety cards and
+value/authority destinations above precede V2 source changes;no state/value
+write body changes are proposed. Add meaningful RED tests for six relation
+questions,strict one-cell parser,source failure before any model call and full
+independent replay. Keep every existing authorization,temporal,settlement,
+accounting,semantic same-core edge-swap and source-authenticity assertion.
+Required completion:one ASCII class,recognized semantic lint,all local checks,
+exact-source schema/semantic smoke,successful finalized judgments/consequences,
+every native exit/zero closure,public hygiene/history/CI,unchanged objective
+grader NO BLOCKER,copy-ready description and final full master audit. V1 money
+and unsigned V2 simulations do not prove any of the V2 network lifecycle.
 
 ## Adoption path and kill criteria
 

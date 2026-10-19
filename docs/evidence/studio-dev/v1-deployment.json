@@ -50,5 +50,9 @@
     "hash": "0xb9298b617c2cb36b5fa8024370b3e2605992dad05531430f32d8f6dd1c956bb4",
     "from": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
     "to": "0x312185ec90df0b86cc7996d7d6d978aaa7694bdd"
-  }
+  },
+  "active": false,
+  "revisionStatus": "SUPERSEDED_ZERO_LIABILITY",
+  "reason": "Owner-approved PK_V2 repair",
+  "recoveryProof": "v1-cycle-recovery-audit.json"
 }

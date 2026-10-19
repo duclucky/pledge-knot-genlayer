@@ -1,0 +1,52 @@
+{
+  "command": "node .codex/exact-v2-probe.mjs --fixture=pair-v1",
+  "at": "2026-10-19T16:32:33.689Z",
+  "fixtureSha256": "6d13c6d34c4e388232a7cf04c7942e07a163252c12d8067c009dbc6591c6bd09",
+  "productionSourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+  "probeSourceSha256": "b2577cdbc79b37965779120613051a01efe4b9d0081f9cbf8d138e7c00ed83ef",
+  "expectedLabelsInPrompt": false,
+  "scope": "Unsigned model simulation, not consensus/finality/value proof",
+  "runs": [
+    {
+      "run": 1,
+      "startedAt": "2026-10-19T16:32:34.423Z",
+      "matched": true,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "core": 3
+        }
+      ],
+      "finishedAt": "2026-10-19T16:32:50.957Z"
+    },
+    {
+      "run": 2,
+      "startedAt": "2026-10-19T16:32:50.959Z",
+      "matched": true,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "core": 3
+        }
+      ],
+      "finishedAt": "2026-10-19T16:33:06.321Z"
+    }
+  ],
+  "passed": true
+}

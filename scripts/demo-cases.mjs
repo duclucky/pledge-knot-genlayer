@@ -7,9 +7,18 @@ const pair=[
  ['Backing only closed proprietary advertising analytics.','Support for shipping physical medical equipment.']
 ];
 const cycle=[
- ['Support for publication of freely downloadable training manuals.','Support for freely downloadable translation of manuals into French.'],
- ['Support for publishing freely downloadable French translations of manuals.','Support for accessibility testing of documentation.'],
- ['Support for public accessibility testing of documentation.','Support for publishing freely downloadable training manuals.']
+ [
+  "Funding only the publication of original English training manuals for free public download. This pledge excludes translation work and accessibility testing.",
+  "Funding translation of training manuals into French for free public download."
+ ],
+ [
+  "Financial backing solely for translating training manuals into French and making those translations freely downloadable. This pledge excludes publishing original English manuals and performing accessibility tests.",
+  "Funding public accessibility testing of documentation."
+ ],
+ [
+  "Funding only public accessibility tests of documentation. This pledge excludes publishing original English manuals and translating manuals into French.",
+  "Funding publication of original English training manuals for free public download."
+ ]
 ];
 const unclear=[
  ['Support for creating freely downloadable documentation.','Support for the activity defined only in unavailable annex Q. No activity meaning is specified here.'],
@@ -18,11 +27,11 @@ const unclear=[
 ];
 const pairVector=['COVERED','NOT_COVERED','COVERED','NOT_COVERED','NOT_COVERED','NOT_COVERED'];
 export const cases={
- pair:{id:'pk-pair-v1',target:2,pledges:pair,count:3,classes:pairVector,computed:3,funded:3,phase:'FUNDED',credits:[2,0,1]},
- cycle:{id:'pk-cycle-v1',target:3,pledges:cycle,count:3,classes:['COVERED','NOT_COVERED','NOT_COVERED','COVERED','COVERED','NOT_COVERED'],computed:7,funded:7,phase:'FUNDED',credits:[3,0,0]},
- target:{id:'pk-target-v1',target:3,pledges:pair,count:3,classes:pairVector,computed:3,funded:0,phase:'REFUNDED',credits:[1,1,1]},
- unclear:{id:'pk-unclear-v1',target:2,pledges:unclear,count:3,classes:['UNCLEAR','UNCLEAR','COVERED','NOT_COVERED','NOT_COVERED','NOT_COVERED'],computed:0,funded:0,phase:'RETRYABLE',credits:[1,1,1]},
- partial:{id:'pk-partial-v1',target:2,pledges:pair,count:1,credits:[1,0,0]}
+ pair:{id:'pk-pair-v2',target:2,pledges:pair,count:3,classes:pairVector,computed:3,funded:3,phase:'FUNDED',credits:[2,0,1]},
+ cycle:{id:'pk-cycle-v2',target:3,pledges:cycle,count:3,classes:['COVERED','NOT_COVERED','NOT_COVERED','COVERED','COVERED','NOT_COVERED'],computed:7,funded:7,phase:'FUNDED',credits:[3,0,0]},
+ target:{id:'pk-target-v2',target:3,pledges:pair,count:3,classes:pairVector,computed:3,funded:0,phase:'REFUNDED',credits:[1,1,1]},
+ unclear:{id:'pk-unclear-v2',target:2,pledges:unclear,count:3,classes:['UNCLEAR','UNCLEAR','COVERED','NOT_COVERED','NOT_COVERED','NOT_COVERED'],computed:0,funded:0,phase:'RETRYABLE',credits:[1,1,1]},
+ partial:{id:'pk-partial-v2',target:2,pledges:pair,count:1,credits:[1,0,0]}
 };
 export function validateMeaning(kind,pool,attempt,core){
  const c=cases[kind];

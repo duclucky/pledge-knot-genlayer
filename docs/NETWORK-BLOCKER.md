@@ -13,8 +13,8 @@ Source SHA256: c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f.
 agreement with two completed agreeing validators. The fixed recipient withdrew
 2 GEN and excluded donor withdrew1 GEN. Each has exact contract-balance decrease
 and delivered-recipient proof. Pool CLOSED, received/withdrawn3GEN, liability0.
-See evidence/studio-dev/semantic-pair.json, delivery-pair-exit0.json,
-delivery-pair-exit1.json and case-pair-final.json.
+See evidence/studio-dev/v1-semantic-pair.json, v1-delivery-pair-exit0.json,
+v1-delivery-pair-exit1.json and v1-case-pair-final.json.
 
 `node scripts/lifecycle.mjs --execute --case=cycle` stopped at
 [adjudication](https://explorer-studio-dev.genlayer.com/tx/0x44d8a35e6adc9f0e0e132fc19bda9a7e2e80d1985e31c75eb758bfadcdba440d).
@@ -29,7 +29,7 @@ adjudication retry, oracle relabeling or weaker equivalence check was used.
 
 Read-only final verification (`read(get_pool)`, `read(get_accounting)`,
 `eth_getBalance`, and allowlisted `eth_getTransactionByHash` projection) saved
-evidence/studio-dev/blocked-state.json at 14:49:29 UTC:
+evidence/studio-dev/v1-blocked-state.json at 14:49:29 UTC:
 
 - pair: MAJORITY_AGREE, successful=true, CLOSED, liability0;
 - cycle: MAJORITY_DISAGREE, successful=false, READY, attempts0, unresolved;
@@ -80,7 +80,7 @@ zero canonical donor credits, both CLOSED pools, exact deployed source and
 native contract balance0. Output: recoveryPassed=true, fullLifecyclePassed=false;
 received6GEN,withdrawn6GEN,locked0GEN,credits0GEN,invariant=true;
 reserved fee upper bound0.309102232800227744GEN against unchanged1GEN cap.
-See evidence/studio-dev/cycle-recovery-audit.json. No wallet generation, funding,
+See evidence/studio-dev/v1-cycle-recovery-audit.json. No wallet generation, funding,
 blind retry or extra demo deposits. The first command attempt had a connection
 timeout before any recovery journal/hash; read-only inspection confirmed no
 broadcast and READY state before the actual submission.
