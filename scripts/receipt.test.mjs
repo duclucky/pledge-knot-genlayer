@@ -6,6 +6,12 @@ test('raw Studio success requires finalized successful execution',()=>{
  assert.equal(receiptState({status:7,consensus_data:{leader_receipt:{mode:'leader',execution_result:'SUCCESS'}}}).successful,true);
  for(const tx of [{status:7},{status:7,execution_result:'ERROR'},{status:5,execution_result:'SUCCESS'},null])assert.equal(receiptState(tx).successful,false);
 });
+test('majority disagreement finalized after UNDETERMINED is never successful application execution',()=>{
+ const receipt={status:7,result:2,result_name:'MAJORITY_DISAGREE',execution_result:'SUCCESS',consensus_data:{leader_receipt:{mode:'leader',execution_result:'SUCCESS'}}};
+ assert.equal(receiptState(receipt).successful,false);
+ for(const name of ['UNDETERMINED','MAJORITY_DISAGREE','NO_MAJORITY','UNKNOWN_FUTURE_RESULT'])assert.equal(receiptState({...receipt,result_name:name}).successful,false);
+ assert.equal(receiptState({...receipt,result:1,result_name:'MAJORITY_AGREE'}).successful,true);
+});
 test('normalized RC success and failed idle quorum distinguish actual failures',()=>{
  assert.equal(receiptState({statusName:'FINALIZED',txExecutionResultName:'FINISHED_WITH_RETURN'}).successful,true);
  assert.equal(receiptState({statusName:'FINALIZED',txExecutionResult:1}).successful,true);

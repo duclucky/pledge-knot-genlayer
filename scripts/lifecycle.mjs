@@ -7,6 +7,7 @@ import {quoteWrite} from './fees.mjs';
 import {contractArgs} from './contract-args.mjs';
 import {externalDeliveryProof} from './external-delivery.mjs';
 import {cases,validateMeaning,withdrawalPlan,successfulAgreementCount} from './demo-cases.mjs';
+import {recoveryPlan} from './recovery-policy.mjs';
 const GEN=10n**18n,sleep=n=>new Promise(r=>setTimeout(r,n));
 async function main(){
  const network=await verifyNetwork(),deployment=await loadJournal('deployment.json'),sourceIdentity=await identity();
@@ -42,11 +43,11 @@ async function main(){
   if(state.successful!==success||(!success&&state.execution!=='ERROR'))throw new SafeError('UnexpectedLifecycleExecution');
   record.after=await snapshot(id,false,owner);record.receipt=safeReceipt(tx);
   if(!success&&JSON.stringify([record.before.pool,record.before.accounting,record.before.nativeContractGEN])!==JSON.stringify([record.after.pool,record.after.accounting,record.after.nativeContractGEN]))throw new SafeError('RejectedWriteChangedCanonicalState');
-  Object.assign(record,{status:'FINALIZED',executionResult:state.execution,finalizedObservedAt:new Date().toISOString(),explorer:EXPLORER+'/transactions/'+record.hash,verified:true});
+  Object.assign(record,{status:'FINALIZED',executionResult:state.execution,finalizedObservedAt:new Date().toISOString(),explorer:EXPLORER+'/tx/'+record.hash,verified:true});
   await save(name,record);console.log(JSON.stringify({step:key,hash:record.hash,execution:state.execution,phase:record.after.pool.phase,accounting:record.after.accounting}));return record;
  }
- async function withdraw(kind,step){
-  const key=kind+'-exit'+step,c=cases[kind],plan=withdrawalPlan(kind)[step],actor=accounts[plan.owner],amount=plan.amount;
+ async function withdraw(kind,step,plans=withdrawalPlan(kind),prefix=kind){
+  const key=prefix+'-exit'+step,c=cases[kind],plan=plans[step],actor=accounts[plan.owner],amount=plan.amount;
   const record=await write(key,actor,'withdraw_credit',[c.id,amount]),name='delivery-'+key+'.json',old=await loadJournal(name);
   if(old){if(old.parentHash!==record.hash||!old.balanceProven||!old.externalReceipt?.messageValueDelivered)throw new SafeError('SavedDeliveryMismatch');return;}
   const expected=parseUnits(record.before.nativeContractGEN,18)-BigInt(amount)*GEN;
@@ -92,6 +93,23 @@ async function main(){
   const final=await snapshot(c.id);
   if(final.pool.phase!=='CLOSED'||final.pool.locked!=='0 GEN'||final.pool.credits!=='0 GEN'||final.pool.received!==c.count+' GEN'||final.pool.withdrawn!==c.count+' GEN'||final.nativeContractGEN!=='0')throw new SafeError('CaseZeroLiabilityRequired');
   await save('case-'+kind+'-final.json',final);
+ }
+ if(process.argv.includes('--recover-cycle')){
+  const c=cases.cycle,current=await pool(c.id),plan=recoveryPlan(current,Math.floor(Date.now()/1000),accounts.map(a=>a.address));
+  if(plan.recover)await write('cycle-recovery',accounts[0],'recover',[c.id]);
+  for(let i=0;i<plan.withdrawals.length;i++){
+   const step=plan.withdrawals[i],credit=await read(target,'get_credit',[c.id,accounts[step.owner].address]);
+   if(credit==='0 GEN'&&!await loadJournal('lifecycle-cycle-recovery-exit'+i+'.json'))throw new SafeError('UnjournaledRecoveryWithdrawal');
+   await withdraw('cycle',i,plan.withdrawals,'cycle-recovery');
+  }
+  if(current.phase!=='CLOSED')await write('cycle-recovery-close',accounts[0],'close_pool',[c.id]);
+  const final=await snapshot(c.id);
+  if(final.pool.phase!=='CLOSED'||final.pool.locked!=='0 GEN'||final.pool.credits!=='0 GEN'||final.pool.withdrawn!=='3 GEN'||final.nativeContractGEN!=='0'||!final.accounting.invariant)throw new SafeError('RecoveryZeroLiabilityRequired');
+  for(let i=0;i<3;i++){
+   const proof=await loadJournal('delivery-cycle-recovery-exit'+i+'.json');
+   if(!proof?.balanceProven||!proof.externalReceipt?.messageValueDelivered||proof.expectedTransferGEN!=='1'||proof.recipient?.toLowerCase()!==accounts[i].address.toLowerCase())throw new SafeError('EachRecoveryRecipientProofRequired');
+  }
+  await save('cycle-recovery-final.json',final);console.log(JSON.stringify({recoveryComplete:true,...final}));return;
  }
  const selected=process.argv.find(x=>x.startsWith('--case='))?.slice(7)??'all';
  if(selected!=='all'&&!cases[selected])throw new SafeError('UnknownDemoCase');

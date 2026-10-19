@@ -68,7 +68,7 @@ Observed Studio Dev chain61997; exact-source schema14 methods; constructor
 See `evidence/studio-dev/runtime-probe.json` for source commit/SHA and methods.
 No key loading, signing, funding or broadcast occurs in this probe.
 
-## Remaining execution boundary
+## Historical pre-authorization execution boundary
 
 Read-only command: `node scripts/role-preflight.mjs`.
 Observed all three authorized configuration roles present but `distinctRoles:1`,
@@ -98,3 +98,32 @@ check; semantic validation still loads the pinned SDK and recognizes the actual
 project class. No grading-bot file is changed. Generic Windows direct-mode,
 receipt, fee and journaling infrastructure is reused from the workspace; the
 conditional cofunding state machine, contributor closure and tests are new.
+
+## Current checkpoint, 2026-10-19
+
+The role blocker above was resolved by explicit owner approval of two existing
+EOAs, 13 GEN total sequential escrow and a 1 GEN aggregate fee cap. Deployment,
+signed native-sender smoke and the pair case have real Studio Dev evidence.
+The cycle case failed MAJORITY_DISAGREE; it is not successful settlement despite
+leader execution SUCCESS. See NETWORK-BLOCKER.md. No new wallets/funding occurred.
+
+Receipt regression: `.codex/tdd/17-disagreement-red.txt` reproduces finalized
+MAJORITY_DISAGREE incorrectly accepted as success. The parser now additionally
+requires accepted consensus when result_name is present; normalized receipts
+retain their tested interpretation. `.codex/tdd/17-disagreement-green.txt`:
+112 Python tests, 18 Node tests passed, no skips. Read-only network verification
+shows pair MAJORITY_AGREE successful=true and cycle MAJORITY_DISAGREE
+successful=false, with cycle canonical state unchanged (blocked-state.json).
+
+Recovery-policy RED: `node --test scripts/recovery-policy.test.mjs` with the
+unimplemented policy, log `.codex/tdd/18-recovery-red.txt`. Three focused tests
+now pass: expiry -1/equality/+1, forbidden state/value/actor mismatches, and
+expired/closed resumability. Required final check includes these three tests.
+The deployed contract source is unchanged; this change only protects tooling.
+
+Final command `npm run check`, log `.codex/tdd/18-recovery-green.txt`:
+112 Python tests passed in20.90s,21 Node tests passed,0 failed,0 skipped,
+PLEDGEKNOT_CHECK_PASS,exit0. Lint recognizes PledgeKnotContract with14 methods.
+`node scripts/lifecycle.mjs --execute --recover-cycle` at14:54:16UTC returned
+RecoveryDeadlineNotReached,exit1; fee-budget SHA unchanged, no broadcast.
+This proves early refusal, not completed recovery.

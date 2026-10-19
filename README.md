@@ -8,7 +8,7 @@ it funds one fixed recipient only if that viable group meets the locked target.
 Excluded contributors, failed targets and expired unresolved pools refund the
 actual payers. No organizer or model supplies recipients or payout amounts.
 
-Status: implemented and locally verified; deployment/lifecycle evidence pending.
+Status: deployed on Studio Dev; five-case lifecycle verification in progress.
 This repository is contract-only: no user-facing app, hosted frontend or Vercel.
 See [specification](docs/README.md) and [test-first plan](docs/TDD-PLAN.md).
 See [commands and real local results](docs/LOCAL-VERIFICATION.md).
@@ -55,6 +55,25 @@ With a 2 GEN target, a clear reciprocal D0/D1 matrix produces core {D0,D1}:
 the locked recipient earns 2 GEN and D2 recovers 1 GEN. A 3 GEN target on that
 same matrix refunds all three donors. Wording remains subject to real consensus.
 
+## Deployment
+
+NETWORK = Studio Dev, chain ID 61997.
+CONTRACT_ADDRESS = 0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD.
+[Contract Explorer](https://explorer-studio-dev.genlayer.com/address/0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD)
+and [successful finalized deployment](https://explorer-studio-dev.genlayer.com/tx/0xb9298b617c2cb36b5fa8024370b3e2605992dad05531430f32d8f6dd1c956bb4).
+The exact deployed source matches SHA256
+`c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f`.
+Browser observations and sanitized receipts are in docs/evidence/studio-dev/.
+
+The real pk-pair-v1 pool finalized the reciprocal D0/D1 core with two completed,
+independently agreeing validator executions. The recipient received 2 GEN and
+D2 recovered 1 GEN. Both exits have exact native contract-balance decreases and
+delivered-recipient receipts. The pool closed with zero remaining GEN/liability.
+See semantic-pair.json, delivery-pair-exit0.json, delivery-pair-exit1.json and
+case-pair-final.json under docs/evidence/studio-dev/. The next cycle case failed semantic consensus; see docs/NETWORK-BLOCKER.md.
+The three remaining cases were not started. This first case alone is not
+complete submission evidence.
+
 ## Verification and network status
 
 Use Python 3.12 and this repository's virtual environment, install
@@ -62,8 +81,27 @@ requirements.lock, run npm ci, then npm run check. It checks every contract with
 the semantic linter, all direct tests and the SDK/receipt/script tests. Windows
 uses .venv/Scripts; POSIX uses .venv/bin. Set PYTHONUTF8=1.
 
-The exact committed source passed unsigned Studio Dev 61997 schema recognition
-and constructor simulation. These probes do not create a deployed address or
-prove finalized semantic consensus, payments or recipient delivery.
-No deployment address, public repository, successful CI or submission readiness
-is claimed yet. Three distinct authorized donor EOAs are required for execution.
+The exact source passed lint, direct tests, metadata and unsigned target checks
+before deployment. Current local suite:112 Python tests and21 script tests.
+The owner approved reuse of three existing distinct EOAs,13 GEN total escrow
+across five sequential cases,and a1 GEN total network-fee cap. Signed fee
+envelopes are checked and journaled before broadcast. No new wallet or funding
+was needed. Public repository,CI and submission readiness remain pending.
+
+## Current blocker and recovery
+
+The frozen pk-cycle-v1 fixture finalized with MAJORITY_DISAGREE. Leader SUCCESS
+alone is not accepted consensus or applied state. A publication pledge does not
+unambiguously determine the accessibility-testing relation: the leader returned
+UNCLEAR where the predeclared oracle expected NOT_COVERED. The oracle, validator
+and deployed contract are unchanged. Cycle remains READY, attempts 0, with
+3 GEN locked and no allocation. No further demo deposits are permitted in this run.
+The earlier unsigned viability results remain historical, not a stability guarantee.
+
+Recovery is available only at/after 2026-10-19 15:53:34 UTC (22:53:34 Bangkok).
+From this project, `node scripts/lifecycle.mjs --execute --recover-cycle` uses the
+existing signed-operation journal and 1 GEN fee cap, refunds each original donor
+1 GEN, verifies each native balance decrease and delivered-recipient message,
+then closes the pool. It refuses early recovery and never calls adjudicate or
+creates/funds another pool. Recovery execution is still pending; no background
+execution is scheduled. See docs/evidence/studio-dev/blocked-state.json.

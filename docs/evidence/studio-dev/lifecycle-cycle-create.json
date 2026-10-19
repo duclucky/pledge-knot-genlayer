@@ -1,0 +1,90 @@
+{
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "rpc": "https://studio-next.genlayer.com/api",
+  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0x73788e61769c15bf5f97b07d5f93d50a752035377adaf9aa23d8e8ef063e3e14",
+  "identity": {
+    "network": "Studio Dev",
+    "chainId": 61997,
+    "sourceCommit": "d83aba0e9adf30a385d4b5f6a538e64ea8effa3e",
+    "sourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+    "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
+    "api": "v0.3.0",
+    "genvm": "v0.6.0-rc5",
+    "sdk": "2.0.0-rc.1"
+  },
+  "target": "0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD",
+  "operation": "create_pool",
+  "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+  "args": [
+    "pk-cycle-v1",
+    "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+    "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+    "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+    "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+    3,
+    1792425214
+  ],
+  "valueGEN": "0",
+  "feeDepositGEN": "0.000378519600010352",
+  "expectedSuccess": true,
+  "before": {
+    "observedAt": "2026-10-19T13:53:34.723Z",
+    "pool": null,
+    "accounting": {
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "invariant": true
+    },
+    "nativeContractGEN": "0"
+  },
+  "preparedAt": "2026-10-19T13:53:39.080Z",
+  "status": "FINALIZED",
+  "hash": "0x73788e61769c15bf5f97b07d5f93d50a752035377adaf9aa23d8e8ef063e3e14",
+  "after": {
+    "observedAt": "2026-10-19T14:21:26.531Z",
+    "pool": {
+      "id": "pk-cycle-v1",
+      "version": "PK_V1",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792425214,
+      "definition_digest": "041a916ada7a0847f5f713c3207ddd2185d93c85f077e5b0b3a3ca801fd2986a",
+      "phase": "OPEN",
+      "pledged_mask": 0,
+      "attempts": 0,
+      "resolved": false,
+      "received": "0 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "0 GEN"
+    },
+    "accounting": {
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "invariant": true
+    },
+    "nativeContractGEN": "0"
+  },
+  "receipt": {
+    "status": "FINALIZED",
+    "execution": "SUCCESS",
+    "successful": true,
+    "hash": "0x73788e61769c15bf5f97b07d5f93d50a752035377adaf9aa23d8e8ef063e3e14",
+    "from": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "to": "0x312185ec90df0b86cc7996d7d6d978aaa7694bdd"
+  },
+  "executionResult": "SUCCESS",
+  "finalizedObservedAt": "2026-10-19T14:21:38.626Z",
+  "verified": true
+}

@@ -1,0 +1,77 @@
+{
+  "at": "2026-10-19T14:36:16.802Z",
+  "hash": "0x44d8a35e6adc9f0e0e132fc19bda9a7e2e80d1985e31c75eb758bfadcdba440d",
+  "status": "FINALIZED",
+  "execution": "SUCCESS",
+  "successful": true,
+  "pool": {
+    "id": "pk-cycle-v1",
+    "version": "PK_V1",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "3 GEN",
+    "deadline": 1792425214,
+    "definition_digest": "041a916ada7a0847f5f713c3207ddd2185d93c85f077e5b0b3a3ca801fd2986a",
+    "phase": "READY",
+    "pledged_mask": 7,
+    "attempts": 0,
+    "resolved": false,
+    "received": "3 GEN",
+    "locked": "3 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "0 GEN"
+  },
+  "attempt": null,
+  "core": {
+    "resolved": false,
+    "computed_mask": 0,
+    "funded_mask": 0,
+    "computed_donors": [],
+    "funded_donors": [],
+    "grant": "0 GEN"
+  },
+  "nativeContractGEN": "3",
+  "validators": [
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution": "SUCCESS"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution": "SUCCESS"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution": "SUCCESS"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution": "ERROR"
+    }
+  ],
+  "leaderShape": [
+    {
+      "mode": "leader",
+      "resultType": "string",
+      "eqType": "object",
+      "eqKeys": [
+        "0"
+      ]
+    },
+    {
+      "mode": "validator",
+      "resultType": "string",
+      "eqType": "undefined",
+      "eqKeys": []
+    }
+  ]
+}

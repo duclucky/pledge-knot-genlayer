@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-10-19T14:43:58.110Z",
+  "target": "0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD",
+  "pool": "pk-cycle-v1",
+  "deadlineUnix": 1792425214,
+  "deadlineUTC": "2026-10-19T15:53:34.000Z",
+  "deadlineBangkok": "19/10/2026, 22:53:34",
+  "remainingSeconds": 4176,
+  "phase": "READY",
+  "locked": "3 GEN",
+  "recoveryAuthorized": true,
+  "plannedActions": [
+    "recover by actual funded D0 after deadline",
+    "withdraw 1 GEN to each actual donor",
+    "close at zero liability"
+  ],
+  "noFurtherDemoDeposits": true
+}

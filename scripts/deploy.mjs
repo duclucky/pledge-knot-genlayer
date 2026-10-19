@@ -38,7 +38,7 @@ async function main(){
  if(code!==await readFile(sourcePath,'utf8')||Object.keys(schema.methods??{}).length!==14)throw new SafeError('DeployedCodeOrSchemaMismatch');
  const accounting=JSON.parse(await read(target,'get_accounting'));
  if(!accounting.invariant||['received','locked','credits','withdrawn'].some(k=>accounting[k]!=='0 GEN')||await balance(target)!==0n)throw new SafeError('DeploymentAccountingNotEmpty');
- const deployment={...attempt,address:target,status:'FINALIZED',executionResult:'SUCCESS',finalizedObservedAt:new Date().toISOString(),explorer:EXPLORER+'/address/'+target,transactionExplorer:EXPLORER+'/transactions/'+attempt.hash,methods:Object.keys(schema.methods).sort(),accounting,nativeBalanceGEN:'0',receipt:safeReceipt(tx)};
+ const deployment={...attempt,address:target,status:'FINALIZED',executionResult:'SUCCESS',finalizedObservedAt:new Date().toISOString(),explorer:EXPLORER+'/address/'+target,transactionExplorer:EXPLORER+'/tx/'+attempt.hash,methods:Object.keys(schema.methods).sort(),accounting,nativeBalanceGEN:'0',receipt:safeReceipt(tx)};
  await save('deployment.json',deployment);await save('deployment-attempt.json',{...attempt,status:'FINALIZED'});
  console.log(JSON.stringify(deployment));
 }

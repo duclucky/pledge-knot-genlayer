@@ -27,10 +27,13 @@ export class SafeError extends Error{constructor(kind,code,markers={}){super(kin
 console.warn=()=>{};
 console.error=()=>{};
 export function safeError(error){
- const text=String(error?.message??'');
- return {kind:error instanceof SafeError?error.kind:['AbortError','TimeoutError'].includes(error?.name)?error.name:'OperationFailed',errorType:typeof error?.name==='string'&&/^[A-Za-z]{1,64}(?:Error|Exception)$/.test(error.name)?error.name:null,rpcCode:error instanceof SafeError?error.code:null,
-  rpcMethod:typeof error?.rpcMethod==='string'?error.rpcMethod:null,
-  markers:{insufficientFunds:/insufficient funds/i.test(text),invalidAddress:/invalid address|Address.*invalid/i.test(text),timeout:/time.*out/i.test(text),nonPayable:/non.payable/i.test(text),...(error instanceof SafeError?error.markers:{})}};
+ const causes=[],seen=new Set();
+ for(let cause=error;cause&&typeof cause==='object'&&!seen.has(cause)&&causes.length<8;cause=cause.cause){seen.add(cause);causes.push(cause);}
+ const own=causes.find(c=>c instanceof SafeError),text=causes.map(c=>String(c.message??'')).join(' ');
+ const transport=causes.find(c=>['ECONNRESET','ENETUNREACH','ETIMEDOUT','UND_ERR_CONNECT_TIMEOUT','UND_ERR_SOCKET'].includes(c.code));
+ return {kind:own?.kind??(['AbortError','TimeoutError'].includes(error?.name)?error.name:'OperationFailed'),errorType:typeof error?.name==='string'&&/^[A-Za-z]{1,64}(?:Error|Exception)$/.test(error.name)?error.name:null,rpcCode:own?.code??null,
+  rpcMethod:typeof own?.rpcMethod==='string'?own.rpcMethod:null,transportCode:transport?.code??null,
+  markers:{fetchFailed:causes.some(c=>c instanceof TypeError&&c.message==='fetch failed'),insufficientFunds:/insufficient funds/i.test(text),invalidAddress:/invalid address|Address.*invalid/i.test(text),timeout:/time.*out/i.test(text),nonPayable:/non.payable/i.test(text),...(own?.markers??{})}};
 }
 export async function rpc(method,params=[]){
  const response=await fetch(RPC,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method,params}),signal:AbortSignal.timeout(55000)});

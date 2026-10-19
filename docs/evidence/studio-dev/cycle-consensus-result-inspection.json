@@ -1,0 +1,8 @@
+{
+  "hash": "0x44d8a35e6adc9f0e0e132fc19bda9a7e2e80d1985e31c75eb758bfadcdba440d",
+  "resultName": "MAJORITY_DISAGREE",
+  "resultType": "number",
+  "resultKnown": 2,
+  "leaderSemantic": null,
+  "historyShape": "object"
+}

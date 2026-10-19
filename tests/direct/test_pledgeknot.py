@@ -375,6 +375,24 @@ def test_actual_settlement_cannot_repeat_or_change_pledges(env):
         with pytest.raises(Exception):action()
         assert snapshot(env)==before
 
+def test_two_funded_pools_keep_verdicts_credits_and_live_reserves_isolated(env):
+    ready(env);c,vm,a=env;create(env,pool='other')
+    for i in range(3):deposit(env,i,pool='other')
+    before_other=snapshot(env,'other');answer(vm,PAIR);vm.sender=a[0];c.adjudicate('pool')
+    assert snapshot(env,'other')[0]==before_other[0]
+    assert data(c.get_accounting())=={'received':'6 GEN','locked':'3 GEN','credits':'3 GEN','withdrawn':'0 GEN','invariant':True}
+    with pytest.raises(Exception):c.withdraw_credit('other',1)
+    assert c.get_credit('pool',a[0])=='2 GEN' and c.get_credit('other',a[0])=='0 GEN'
+    c.withdraw_credit('pool',2);vm.sender=a[2];c.withdraw_credit('pool',1);vm.sender=a[0];c.close_pool('pool')
+    assert data(c.get_pool('pool'))['phase']=='CLOSED' and data(c.get_pool('other'))['phase']=='READY'
+    assert data(c.get_accounting())['locked']=='3 GEN'
+    answer(vm,EMPTY);c.adjudicate('other')
+    assert data(c.get_pool('other'))['phase']=='REFUNDED'
+    assert data(c.get_matrix('pool'))['cells'][0]['class']=='COVERED'
+    assert all(cell['class']=='NOT_COVERED' for cell in data(c.get_matrix('other'))['cells'])
+    assert all(c.get_credit('other',owner)=='1 GEN' for owner in a[:3])
+    assert data(c.get_accounting())=={'received':'6 GEN','locked':'0 GEN','credits':'3 GEN','withdrawn':'3 GEN','invariant':True}
+
 def test_source_metadata_public_surface_and_temporal_guards():
     source=SOURCE.read_bytes().decode('ascii');lines=source.splitlines();tree=ast.parse(source)
     assert lines[0]=='# v0.3.0' and lines[1]=='# { "Depends": "py-genlayer:5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng" }' and lines[2]=='import genlayer as gl'

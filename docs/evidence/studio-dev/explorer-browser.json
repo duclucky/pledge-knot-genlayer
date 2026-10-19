@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-19T13:45:11.579Z",
+  "scope": "Browser observation; safe selected fields only",
+  "addressUrl": "https://explorer-studio-dev.genlayer.com/address/0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD",
+  "deployTxUrl": "https://explorer-studio-dev.genlayer.com/tx/0xb9298b617c2cb36b5fa8024370b3e2605992dad05531430f32d8f6dd1c956bb4",
+  "status": "FINALIZED",
+  "executionResult": "SUCCESS",
+  "screenshots": [
+    "explorer-deploy.png",
+    "explorer-execution.png"
+  ],
+  "verified": true
+}

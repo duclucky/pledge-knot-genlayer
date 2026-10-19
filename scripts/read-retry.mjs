@@ -2,7 +2,7 @@
 const rateLimited=error=>{
  const seen=new Set();
  for(let cause=error;cause&&typeof cause==='object'&&!seen.has(cause);cause=cause.cause){
-  seen.add(cause);if([-32029,-32005,-32006,429].includes(cause.code)||cause.status===429)return true;
+  seen.add(cause);if([-32029,-32005,-32006,429].includes(cause.code)||cause.status===429||cause.name==='TimeoutError'||(cause instanceof TypeError&&cause.message==='fetch failed'))return true;
  }
  return false;
 };

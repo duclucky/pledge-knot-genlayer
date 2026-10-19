@@ -1,0 +1,74 @@
+{
+  "observedAt": "2026-10-19T14:49:29.443Z",
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "rpc": "https://studio-next.genlayer.com/api",
+  "explorer": "https://explorer-studio-dev.genlayer.com",
+  "target": "0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD",
+  "pools": [
+    {
+      "id": "pk-pair-v1",
+      "version": "PK_V1",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792424418,
+      "definition_digest": "45fbe658dc594af3a31ae95e7b5b1a2be5551b754df1274a5b2014df9db1a66b",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    },
+    {
+      "id": "pk-cycle-v1",
+      "version": "PK_V1",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792425214,
+      "definition_digest": "041a916ada7a0847f5f713c3207ddd2185d93c85f077e5b0b3a3ca801fd2986a",
+      "phase": "READY",
+      "pledged_mask": 7,
+      "attempts": 0,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "3 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "0 GEN"
+    }
+  ],
+  "accounting": {
+    "received": "6 GEN",
+    "locked": "3 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "3 GEN",
+    "invariant": true
+  },
+  "nativeContractGEN": "3",
+  "pairConsensus": "MAJORITY_AGREE",
+  "pairReceipt": {
+    "status": "FINALIZED",
+    "execution": "SUCCESS",
+    "successful": true
+  },
+  "cycleConsensus": "MAJORITY_DISAGREE",
+  "cycleReceipt": {
+    "status": "FINALIZED",
+    "execution": "SUCCESS",
+    "successful": false
+  }
+}

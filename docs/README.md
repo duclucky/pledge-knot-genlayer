@@ -3,15 +3,18 @@
 ## Identity
 
 IDEA-048 / PledgeKnot / pledge-knot / Intelligent Contracts.
-Status: LOCAL_IMPLEMENTATION_VERIFIED, fourteen admission gates passed;
-execution PENDING_EXECUTION. Local proof: LOCAL-VERIFICATION.md.
-Repository URL and deployed address: PENDING_REAL_EVIDENCE.
+Status: BLOCKED_SEMANTIC_CONSENSUS / NOT_SUBMITTED. Fourteen historical
+admission gates passed; Gate13 execution is NOT PASSED. Current viability needs
+Phase2/4 reassessment. See NETWORK-BLOCKER.md and LOCAL-VERIFICATION.md.
+Public repository: PENDING. Deployed address:
+0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD.
 Target: Studio Dev61997, https://studio-next.genlayer.com/api .
 Pinned family: Python API v0.3.0, GenVM v0.6.0-rc5, runner
 5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng;
 JS2.0.0-rc.1, Python client0.19.0rc2, genlayer-test0.30.0rc2,
 genvm-linter0.11.1rc2. Exact-source lint/schema/constructor passed;
-signed authority smoke and funded lifecycles remain required.
+signed authority smoke and first pair lifecycle passed. Cycle consensus failed;
+remaining lifecycle scenarios and cycle recovery remain pending.
 
 ## One-sentence product hook
 

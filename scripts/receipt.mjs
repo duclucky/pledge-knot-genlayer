@@ -16,7 +16,8 @@ export function receiptState(receipt){
  if(receipt.txExecutionResultName!==undefined)candidates.push(receipt.txExecutionResultName==='FINISHED_WITH_RETURN'?'SUCCESS':'ERROR');
  else if(receipt.txExecutionResult!==undefined)candidates.push(Number(receipt.txExecutionResult)===1?'SUCCESS':'ERROR');
  const execution=candidates.length===0?'UNKNOWN':candidates.every(x=>x==='SUCCESS')?'SUCCESS':'ERROR';
- return {status,execution,successful:status==='FINALIZED'&&execution==='SUCCESS'};
+ const consensusAccepted=receipt.result_name===undefined||receipt.result_name==='MAJORITY_AGREE';
+ return {status,execution,successful:status==='FINALIZED'&&execution==='SUCCESS'&&consensusAccepted};
 }
 export function safeReceipt(receipt){
  const state=receiptState(receipt);
