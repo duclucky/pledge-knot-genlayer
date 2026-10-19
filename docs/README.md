@@ -52,7 +52,7 @@ code owns coalition computation, target, payer provenance and every value exit.
 |Judgment|PASS_ADMISSION|Entailment/exclusion/underspecification require meaning; four frozen single-pool examples matched48/48 judgments over eight unsigned simulations|
 |Evidence availability|PASS_ADMISSION|Canonical bounded pledges plus target-fetched fixed W3C context; actual probe HTTP200,181875raw bytes,exact digest match|
 |Evidence authenticity|PASS_ADMISSION|Actual sender/deposit/role/full pool digest constitute the internal pledge; no actor-hosted receipt or external-work fact is admitted; authority matrix below|
-|Equivalence|PASS_ADMISSION|All six normalized directed classes and code-derived core/target signature; independent replay; rationale wording ignored|
+|Equivalence|PASS_ADMISSION|All six normalized directed classes and code-derived core;independent replay;rationale ignored;locked target applied by code after validation|
 |Consequence|PASS_ADMISSION|Core membership determines whose actual1GEN funds the fixed recipient and whose1GEN is refunded|
 |Adversarial|PASS_ADMISSION|Grantee prefers a larger core; contributors resist unsupported charges and may manipulate language or omit funding|
 |State model|PASS_ADMISSION|Isolated immutable pools/slots,append-only attempts,own credits,explicit states,time guards,safety/value matrices and conservation|
@@ -242,14 +242,14 @@ Historical RED must be recorded per implementation batch as in TDD-PLAN.md.
 
 ## Claim-to-code matrix
 
-| Product claim | Contract method/state | View/read | Direct test | Network evidence |
+| Claim | Contract method/state | View/read | Test | Network evidence |
 |---|---|---|---|---|
-|Only authenticated actual payer pledges count|create_pool/pledge,immutable slots|pool/pledge|wrong_digest_actor_pool;payable;duplicate/stale;isolation|Separate donor pledge receipts and authority smoke planned|
-|Validators compare all directed meaning|adjudicate/_judge/attempts|attempt/matrix|validator_replay;same_core_wrong_meaning;nonReturn;invalid coverage|Finalized review with completed independent validator executions planned|
-|Greatest contributor set includes cash-backed cycles and cascades|adjudicate/_greatest_core|core/matrix|all_graphs_independent_subset_oracle;three_cycle;peeling_chain|Two-member and three-cycle canonical cores/credits planned|
-|Only sufficient core funds fixed recipient|adjudicate,FUNDED/REFUNDED|pool/core/credit|target_failure;fixed_destinations;recipient_overlap;duplicate terminal|Target2 success,target3 cycle and insufficient-core all-refund planned|
-|Unresolved/partial deposits recover to actual payer|recover/EXPIRED|pool/pledge/credit|partial_unknown_expiry;clock_boundaries;wrong actor/state|Partial and UNCLEAR expiry receipts/own refunds planned|
-|Own money leaves and closes at zero liability|withdraw_credit/close_pool|credit/accounting/native balance|debit_EVM_boundary;duplicate/amount/closed;receipt parser|Per-exit native decrease and recipient proof;all pools CLOSED planned|
+|Only authenticated actual payer pledges count|create_pool/pledge,immutable slots|pool/pledge|test_pledge_safety_before_body;test_pledge_deadline_stale_open;test_source_metadata_public_surface_and_temporal_guards|Separate donor pledge receipts and authority smoke planned|
+|Validators compare all directed meaning|adjudicate/_judge/attempts|attempt/matrix|test_semantic_validator_replay_all_edges_not_only_same_core;test_adjudicate_invalid_output_no_mutation|Finalized review with completed independent validator executions planned|
+|Greatest contributor set includes cash-backed cycles and cascades|adjudicate/_greatest_core|core/matrix|test_exhaustive_independent_subset_oracle_512_graph_masks;test_core_three_cycle_and_cascading_loss_require_actual_closure|Two-member and three-cycle canonical cores/credits planned|
+|Only sufficient core funds fixed recipient|adjudicate,FUNDED/REFUNDED|pool/core/credit|test_adjudicate_core_and_conservation;test_recipient_overlaps_excluded_donor_credit_adds_then_split_exit;test_actual_settlement_cannot_repeat_or_change_pledges|Target2 success,target3 cycle and insufficient-core all-refund planned|
+|Unresolved/partial deposits recover to actual payer|recover/EXPIRED|pool/pledge/credit|test_recover_stale_phase_all_actual_payers;test_retry_exhaustion_recovery_no_orphan;test_recover_safety_before_body|Partial and UNCLEAR expiry receipts/own refunds planned|
+|Own money leaves and closes at zero liability|withdraw_credit/close_pool|credit/accounting/native balance|test_withdraw_actual_EVM_boundary_debit_then_message;test_withdraw_safety_before_body;test_close_actual_zero_liability_and_idempotent;receipt.test.mjs|Per-exit native decrease and recipient proof;all pools CLOSED planned|
 
 ## Analogue and differentiation matrix
 

@@ -81,6 +81,14 @@ Pending: real deployment, bounded signed authority smoke, five funded lifecycles
 every native balance/recipient proof, zero closure, public repository/CI, unchanged
 objective grader NO BLOCKER and submission fields. Admission PASS is not execution PASS.
 
+Pre-deployment original checker command (PowerShell7, no SkipDynamic):
+`pwsh -NoProfile -File ../tools/genlayer-grading-bot/genlayer-precheck.ps1 -Project <this child> -Category intelligent-contracts`.
+Observed0 static BLOCKER,0 WARN; npm run check PASS; gltest PASS. It still reports
+MISSING repository/Studio URL and deployed Explorer URL. Its automatic text
+heuristic mistakes this unsigned constructor SUCCESS for deployment evidence;
+that inference is false and is not accepted here. The real acceptance command
+with a verified deployed address has not run. No checker file was changed.
+
 ## Runtime compatibility notes
 
 genvm-linter0.11.1rc2 AST rules predate the v0.3 sandbox/storage rename.
