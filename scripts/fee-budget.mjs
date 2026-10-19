@@ -3,8 +3,9 @@ import {parseTransaction,parseUnits,formatUnits} from 'viem';
 import {SafeError} from './network.mjs';
 export function feeReservation(serialized,feeGEN,applicationGEN){
  const tx=parseTransaction(serialized),fee=parseUnits(feeGEN,18),application=parseUnits(applicationGEN,18);
- const price=tx.gasPrice??tx.maxFeePerGas;
- if(tx.chainId!==61997||!tx.gas||typeof price!=='bigint'||price<=0n||fee<=0n||application<0n||application>2n*10n**18n||tx.value!==fee+application)throw new SafeError('SignedFeeEnvelopeMismatch');
+ // viem omits a legacy gasPrice field when its RLP integer is zero.
+ const price=tx.type==='legacy'?(tx.gasPrice??0n):tx.maxFeePerGas;
+ if(tx.chainId!==61997||!tx.gas||typeof price!=='bigint'||price<0n||fee<=0n||application<0n||application>2n*10n**18n||tx.value!==fee+application)throw new SafeError('SignedFeeEnvelopeMismatch');
  const gas=tx.gas*price;
  return {feeGEN:formatUnits(fee,18),gasGEN:formatUnits(gas,18),totalGEN:formatUnits(fee+gas,18)};
 }

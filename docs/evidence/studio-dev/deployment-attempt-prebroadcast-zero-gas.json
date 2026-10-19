@@ -1,0 +1,31 @@
+{
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "sourceCommit": "f0b881ebc7831ad55659270f7d2e9f47b645b863",
+  "sourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+  "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
+  "api": "v0.3.0",
+  "genvm": "v0.6.0-rc5",
+  "sdk": "2.0.0-rc.1",
+  "operation": "deploy",
+  "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+  "valueGEN": "0",
+  "feeDepositGEN": "0.000379287600010352",
+  "preparedAt": "2026-10-19T13:30:15.609Z",
+  "status": "ABORTED_PREBROADCAST",
+  "hash": null,
+  "submissionObservation": {
+    "kind": "OperationFailed",
+    "errorType": "UnknownRpcError",
+    "rpcCode": null,
+    "rpcMethod": null,
+    "markers": {
+      "insufficientFunds": false,
+      "invalidAddress": false,
+      "timeout": false,
+      "nonPayable": false
+    }
+  },
+  "reason": "Confirmed Studio Dev eth_gasPrice=0 was rejected by local fee envelope guard before hash persistence/broadcast. Regression reproduced; zero gas allowance retains positive fee deposit and total 1 GEN cap.",
+  "archivedAt": "2026-10-19T13:33:08.560Z"
+}

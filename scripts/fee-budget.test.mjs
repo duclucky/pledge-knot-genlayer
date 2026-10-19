@@ -16,3 +16,7 @@ test('cap violation stops before broadcast; hash replay reserves exactly once',(
  assert.throws(()=>reserveFees(first,h,{feeGEN:'0.1',gasGEN:'0',totalGEN:'0.1'}));
  assert.equal(first.reservedGEN,'0.8');
 });
+test('verified zero EVM gas price still reserves positive GenLayer fees',()=>{
+ const signed=serializeTransaction({type:'legacy',chainId:61997,nonce:0,to:'0x'+'a'.repeat(40),gas:200000n,gasPrice:0n,value:parseUnits('0.01',18)});
+ assert.deepEqual(feeReservation(signed,'0.01','0'),{feeGEN:'0.01',gasGEN:'0',totalGEN:'0.01'});
+});
