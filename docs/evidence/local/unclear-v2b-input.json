@@ -1,0 +1,28 @@
+{
+  "version": "unclear-input-v2b",
+  "poolId": "pk-unclear-v2b",
+  "pledges": [
+    [
+      "Support for creating freely downloadable documentation.",
+      "Support for the unidentified activity described only in unavailable annex Q. That activity might be public accessibility testing of documentation or closed proprietary advertising analytics; the missing annex is needed to know which. No activity is identified by this declaration."
+    ],
+    [
+      "Support for public accessibility testing of documentation.",
+      "Support for creating freely downloadable documentation."
+    ],
+    [
+      "Backing only closed proprietary advertising analytics.",
+      "Support for shipping physical medical equipment."
+    ]
+  ],
+  "expectedClasses": [
+    "UNCLEAR",
+    "UNCLEAR",
+    "COVERED",
+    "NOT_COVERED",
+    "NOT_COVERED",
+    "NOT_COVERED"
+  ],
+  "expectedCore": 0,
+  "change": "A new undeclared annex explicitly could mean either candidate activity. Original missing-annex declaration and failed oracle remain unchanged."
+}

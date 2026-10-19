@@ -1,8 +1,9 @@
-# Proposed PledgeKnot V2 - approval required before production changes
+# Approved PledgeKnot V2 design and retained proposal
 
 Status: OWNER APPROVED V2 AND CUMULATIVE19GEN. Implementation now authorized;
 V2 local implementation now passes semantic lint and122 Python tests.
-Deployment and independent network lifecycle remain pending. Original proposal
+V2 deployment is finalized/SUCCESS;independent funded lifecycle is RUNNING.
+Original proposal
 and rationale below are retained. Aggregate fee cap remains1GEN across revisions.
 This is a proposed repair of IDEA-048, not a new contribution or novelty claim.
 

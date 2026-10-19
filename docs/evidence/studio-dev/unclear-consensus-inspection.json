@@ -1,0 +1,60 @@
+{
+  "observedAt": "2026-10-19T21:46:26.431Z",
+  "hash": "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9",
+  "status": "FINALIZED",
+  "execution": "SUCCESS",
+  "successful": false,
+  "consensus": "MAJORITY_DISAGREE",
+  "pool": {
+    "id": "pk-unclear-v2",
+    "version": "PK_V2",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "2 GEN",
+    "deadline": 1792430136,
+    "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+    "phase": "READY",
+    "pledged_mask": 7,
+    "attempts": 0,
+    "resolved": false,
+    "received": "3 GEN",
+    "locked": "3 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "0 GEN"
+  },
+  "accounting": {
+    "received": "12 GEN",
+    "locked": "3 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "9 GEN",
+    "invariant": true
+  },
+  "nativeGEN": "3",
+  "validators": [
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution": "SUCCESS"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution": "ERROR"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution": "SUCCESS"
+    },
+    {
+      "mode": "validator",
+      "vote": "disagree",
+      "execution": "SUCCESS"
+    }
+  ]
+}

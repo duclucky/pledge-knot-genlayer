@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-19T16:56:04.447Z",
+  "parentHash": "0xe8dc16e55a32a3236546d59d1315dc6812ba1349c28f64384cc184825b9c5d36",
+  "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+  "expectedTransferGEN": "1",
+  "contractBeforeGEN": "1",
+  "contractAfterGEN": "0",
+  "recipientBeforeGEN": "23.166392806000028549",
+  "recipientAfterGEN": "24.166266500000027726",
+  "recipientNetIncreaseGEN": "0.999873693999999177",
+  "reservedFeeUpperBoundGEN": "0.000759801600010352",
+  "creditAfter": "0 GEN",
+  "externalReceipt": {
+    "kind": "parent-attached external EVM execution receipt",
+    "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+    "valueGEN": "1",
+    "executionRecorded": true,
+    "messageValueDelivered": true,
+    "effectId": "0x85db8476af6967e308a93206f453a163284258fe4cf722f400814bca4f0af8ea",
+    "separateChildHashAvailable": false
+  },
+  "balanceProven": true
+}

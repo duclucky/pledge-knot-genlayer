@@ -164,3 +164,26 @@ still count toward19GEN;20thGEN,corrupt baseline and replay mismatch reject.
 All V1 network files moved to v1-* with manifest and fresh zero balance proof;
 fee-budget.json retained unchanged and escrow-budget seeded from all6verified
 V1native deposit hashes. V1 results are never counted as V2 lifecycle proof.
+
+## V2 real checkpoint, 2026-10-19 21:55UTC / 2026-10-20 Bangkok
+
+node .codex/verify-v2-checkpoint.mjs ->checkpointPassed=true,
+fullLifecyclePassed=false,positiveSemanticCases3,recoveredFailedCases1,
+nativeExits10;received12GEN,withdrawn12GEN,locked/credits/native0,invariant=true.
+Source remains3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f.
+Missing-annex review0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9
+finalized MAJORITY_DISAGREE,not success. Its leader D0:D2 was NOT_COVERED versus
+frozen UNCLEAR;one validator agreed,two disagreed. Attempts stayed0,allocation0.
+Actual5operation expiry recovery/three1GEN exits/closure are separately proved.
+The wrong semantic result remains FAIL. No blind adjudication retry or source edit.
+
+Recovery tooling RED1fail before explicit V2 recovery support,then full
+npm run check122Python+25NodePASS,0skip,log22-unclear-recovery-green.txt.
+Original grader with actual V2 Explorer:0BLOCKER,0WARN,exit0,repoMISS;not completion.
+Grading orchestrator SHA remains0e90ae93c72c9464b4b995db6896cf08ea8f8d14b66a847156012f830e896746.
+A new frozen unidentified-activity declaration matched12/12cells over2unsigned
+exact-source probes. It is a proposed distinct case,not a relabelled old result.
+No source/validator change;need explicit cumulative22GENscope because18GEN
+already deposited across V1+V2 and original19GEN allowance leaves1GEN only.
+Aggregate fee cap1GEN unchanged;reserved upperbound0.626549248800631472GEN,
+not claimed actual fees. See UNCLEAR-CASE-RETRY.md. New-case value writes pending.

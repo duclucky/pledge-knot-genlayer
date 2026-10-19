@@ -6,7 +6,9 @@ IDEA-048 / PledgeKnot / pledge-knot / Intelligent Contracts.
 Status: V2 PASS_ADMISSION / OWNER_APPROVED_IMPLEMENTATION / PENDING_EXECUTION.
 Owner explicitly approved PROPOSED-V2 and cumulative19GEN escrow; aggregate
 fees stay1GEN across V1+V2. V1 all6GEN exited with zero liability; its failure
-and recovery remain archived evidence, not V2 proof. V2 not deployed yet.
+and recovery remain archived evidence, not V2 proof. V2 deployed FINALIZED/SUCCESS at
+0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a;three semantic cases passed;the missing-annex case failed
+consensus and recovered,all12GEN out,zero liability. Partial case unstarted.
 Target: Studio Dev61997, https://studio-next.genlayer.com/api .
 Pinned family: Python API v0.3.0,GenVM v0.6.0-rc5,runner
 5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng;

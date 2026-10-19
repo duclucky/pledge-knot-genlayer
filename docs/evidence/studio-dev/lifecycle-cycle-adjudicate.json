@@ -1,0 +1,106 @@
+{
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "rpc": "https://studio-next.genlayer.com/api",
+  "explorer": "https://explorer-studio-dev.genlayer.com/tx/0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+  "identity": {
+    "network": "Studio Dev",
+    "chainId": 61997,
+    "sourceCommit": "bc9306a5e8acffdbb27f0b30161207732ea6e5ac",
+    "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+    "contractVersion": "PK_V2",
+    "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
+    "api": "v0.3.0",
+    "genvm": "v0.6.0-rc5",
+    "sdk": "2.0.0-rc.1"
+  },
+  "target": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "operation": "adjudicate",
+  "actor": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+  "args": [
+    "pk-cycle-v2"
+  ],
+  "valueGEN": "0",
+  "feeDepositGEN": "0.000380197200010352",
+  "expectedSuccess": true,
+  "before": {
+    "observedAt": "2026-10-19T16:52:18.677Z",
+    "pool": {
+      "id": "pk-cycle-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792435679,
+      "definition_digest": "cbeecb43435d32039777fdcdc47204e5eeed9fc3c6aa04078caa1de07cdec9a0",
+      "phase": "READY",
+      "pledged_mask": 7,
+      "attempts": 0,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "3 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "0 GEN"
+    },
+    "accounting": {
+      "received": "6 GEN",
+      "locked": "3 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN",
+      "invariant": true
+    },
+    "nativeContractGEN": "3"
+  },
+  "preparedAt": "2026-10-19T16:52:43.400Z",
+  "status": "FINALIZED",
+  "hash": "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+  "after": {
+    "observedAt": "2026-10-19T16:53:59.144Z",
+    "pool": {
+      "id": "pk-cycle-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "3 GEN",
+      "deadline": 1792435679,
+      "definition_digest": "cbeecb43435d32039777fdcdc47204e5eeed9fc3c6aa04078caa1de07cdec9a0",
+      "phase": "FUNDED",
+      "pledged_mask": 7,
+      "attempts": 1,
+      "resolved": true,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "3 GEN",
+      "withdrawn": "0 GEN"
+    },
+    "accounting": {
+      "received": "6 GEN",
+      "locked": "0 GEN",
+      "credits": "3 GEN",
+      "withdrawn": "3 GEN",
+      "invariant": true
+    },
+    "nativeContractGEN": "3"
+  },
+  "receipt": {
+    "status": "FINALIZED",
+    "execution": "SUCCESS",
+    "successful": true,
+    "hash": "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+    "from": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "to": "0xecee9caff3dc3fe026ea71d8fd3a1532ca7f230a"
+  },
+  "executionResult": "SUCCESS",
+  "finalizedObservedAt": "2026-10-19T16:54:01.104Z",
+  "verified": true
+}

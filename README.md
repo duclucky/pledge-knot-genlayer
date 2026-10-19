@@ -8,7 +8,8 @@ it funds one fixed recipient only if that viable group meets the locked target.
 Excluded contributors, failed targets and expired unresolved pools refund the
 actual payers. No organizer or model supplies recipients or payout amounts.
 
-Status: deployed on Studio Dev; five-case lifecycle verification in progress.
+Status: deployed on Studio Dev;three funded cases passed;missing-annex
+consensus failed and all its funds recovered. Full acceptance is incomplete.
 This repository is contract-only: no user-facing app, hosted frontend or Vercel.
 See [specification](docs/README.md) and [test-first plan](docs/TDD-PLAN.md).
 See [commands and real local results](docs/LOCAL-VERIFICATION.md).
@@ -21,8 +22,10 @@ Proposed integrations are treasury cofunding coordinators, not adopted clients.
 
 For each directed Di:Dj relationship, validators independently decide whether
 Dj's declared funding purpose covers Di's required co-backer purpose. All six
-COVERED/NOT_COVERED/UNCLEAR classes must agree after normalization. Cell order,
-enum case and rationale wording may differ; different edge meanings reject
+COVERED/NOT_COVERED/UNCLEAR classes must agree after normalization. Code assigns
+each directed ID and asks one relation at a time;each validator independently
+refetches context and reclassifies all6. Enum case and rationale wording may
+differ;different edge meanings reject
 even when they produce the same contributor core. The model cannot choose a
 recipient, target, contributor set or payment amount.
 
@@ -57,11 +60,25 @@ same matrix refunds all three donors. Wording remains subject to real consensus.
 
 ## Deployment
 
-Active V2: PENDING_REAL_EVIDENCE. NETWORK = Studio Dev,chain ID61997.
+Active V2: NETWORK = Studio Dev,chain ID61997.
+CONTRACT_ADDRESS = 0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a.
+[Contract Explorer](https://explorer-studio-dev.genlayer.com/address/0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a)
+and [finalized successful deploy](https://explorer-studio-dev.genlayer.com/tx/0xf5e68d2f2cec90e7d21fd5652f7c8e5b53b662c0abca56f73cc2dd2eb006bd3e).
+Exact sourceSHA3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f;
+14recognized methods,empty initial ledger and signed caller smoke passed.
+Three V2 semantic cases are finalized and CLOSED:pair,three-cycle,target failure.
+They withdrew9GEN. Original missing-annex review finalized MAJORITY_DISAGREE,
+applied no attempt/allocation,and recovered3GEN to actual payers after expiry.
+V2 now received12GEN,withdrew12GEN,locked/credits/native0. Read-only independent
+proof:docs/evidence/studio-dev/v2-blocked-checkpoint.json. Full acceptance remains
+blocked;partial case has not started.
+Explorer URLs returnedHTTP200 with address/transaction markers; browser visual
+inspection is unavailable because local browser use is disabled in Work settings.
+
 Historical V1 address0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD is superseded
 with zero liability. Its failed cycle and all6GEN native exits are preserved
 under docs/evidence/studio-dev/v1-* with an archive manifest. They are not V2
-execution proof. A new immutable V2 deployment and all5cases remain required.
+execution proof. No archive/failure was relabeled as V2 success.
 
 ## Verification and network status
 
@@ -72,7 +89,8 @@ uses .venv/Scripts; POSIX uses .venv/bin. Set PYTHONUTF8=1.
 
 The exact source passed lint, direct tests, metadata and unsigned target checks
 before deployment. Current local suite:122 Python tests and24 script tests.
-The owner approved reuse of three existing distinct EOAs,13 GEN total escrow
+The owner approved reuse of three existing distinct EOAs,19 GEN cumulative escrow
+(6GEN V1 already recovered plus13GEN for the complete new V2 suite)
 across five sequential cases,and a1 GEN total network-fee cap. Signed fee
 envelopes are checked and journaled before broadcast. No new wallet or funding
 was needed. Public repository,CI and submission readiness remain pending.
@@ -96,8 +114,12 @@ A proposed per-relation V2 judge is documented in docs/PROPOSED-V2.md. Six
 unsigned simulations matched36/36 frozen cells across the explicit new cycle,
 original pair and unavailable-annex case. A batch probe on the same new cycle
 failed and is also retained. These are model simulations, not independent
-network consensus or settlement. V2 is not implemented/deployed. Owner explicitly approved
+network consensus or settlement. V2 is implemented and deployed;funded
+lifecycle verification is blocked by the preserved annex disagreement.
+Owner explicitly approved
 its public behavior change and cumulative19GEN escrow scope;
-the existing aggregate1GEN fee ceiling would remain unchanged. V2 implementation is now locally verified;network deployment and lifecycle
-remain pending. Both cumulative19GENescrow and aggregate1GENfee caps are
+the existing aggregate1GEN fee ceiling would remain unchanged. V2 implementation and deployment are verified;three cases passed and the
+failed-annex case was recovered. A new explicit unresolved declaration matched
+12/12cells in2unsigned probes. Its proposed run needs cumulative22GEN approval;
+see docs/UNCLEAR-CASE-RETRY.md. No new deposit before approval. Both cumulative19GENescrow and aggregate1GENfee caps are
 enforced before broadcast,including the old6GENdeposits already recovered.

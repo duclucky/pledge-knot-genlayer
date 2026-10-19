@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-19T16:38:03.881Z",
+  "address": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "hash": "0xf5e68d2f2cec90e7d21fd5652f7c8e5b53b662c0abca56f73cc2dd2eb006bd3e",
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "results": [
+    {
+      "url": "https://explorer-studio-dev.genlayer.com/address/0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+      "http": 200,
+      "title": "GenLayer Studio Explorer",
+      "addressMarker": true,
+      "transactionMarker": true
+    },
+    {
+      "url": "https://explorer-studio-dev.genlayer.com/tx/0xf5e68d2f2cec90e7d21fd5652f7c8e5b53b662c0abca56f73cc2dd2eb006bd3e",
+      "http": 200,
+      "title": "GenLayer Studio Explorer",
+      "addressMarker": false,
+      "transactionMarker": true
+    }
+  ],
+  "browserVisualVerified": false,
+  "browserBlocker": "Local browser use is disabled in Work settings",
+  "rpcDeploymentProof": "deployment.json"
+}

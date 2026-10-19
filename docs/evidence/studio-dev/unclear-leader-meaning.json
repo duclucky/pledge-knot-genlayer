@@ -1,0 +1,15 @@
+{
+  "hash": "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9",
+  "consensus": "MAJORITY_DISAGREE",
+  "leaderMeaning": {
+    "stage": "OK",
+    "classes": [
+      "UNCLEAR",
+      "NOT_COVERED",
+      "COVERED",
+      "NOT_COVERED",
+      "NOT_COVERED",
+      "NOT_COVERED"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-10-19T16:43:19.804Z",
+  "pool": {
+    "id": "pk-pair-v2",
+    "version": "PK_V2",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "2 GEN",
+    "deadline": 1792435086,
+    "definition_digest": "091f7e7a0b20671abacd12000396edeb825236c8fb12a8313c120bb9783642d8",
+    "phase": "FUNDED",
+    "pledged_mask": 7,
+    "attempts": 1,
+    "resolved": true,
+    "received": "3 GEN",
+    "locked": "0 GEN",
+    "credits": "3 GEN",
+    "withdrawn": "0 GEN"
+  },
+  "attempt": {
+    "id": "pk-pair-v2:1",
+    "requester": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "timestamp": 1792428126,
+    "definition_digest": "091f7e7a0b20671abacd12000396edeb825236c8fb12a8313c120bb9783642d8",
+    "stage": "OK",
+    "cells": [
+      {
+        "id": "D0:D1",
+        "class": "COVERED"
+      },
+      {
+        "id": "D0:D2",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D1:D0",
+        "class": "COVERED"
+      },
+      {
+        "id": "D1:D2",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D2:D0",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D2:D1",
+        "class": "NOT_COVERED"
+      }
+    ]
+  },
+  "core": {
+    "resolved": true,
+    "computed_mask": 3,
+    "funded_mask": 3,
+    "computed_donors": [
+      "D0",
+      "D1"
+    ],
+    "funded_donors": [
+      "D0",
+      "D1"
+    ],
+    "grant": "2 GEN"
+  },
+  "completedIndependentAgree": 2,
+  "reviewHash": "0x0a37970479d4ae5eabb9126ed3e286f219f7fcc9559d323b4c55348fbfb39198",
+  "matrix": {
+    "cells": [
+      {
+        "id": "D0:D1",
+        "class": "COVERED"
+      },
+      {
+        "id": "D0:D2",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D1:D0",
+        "class": "COVERED"
+      },
+      {
+        "id": "D1:D2",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D2:D0",
+        "class": "NOT_COVERED"
+      },
+      {
+        "id": "D2:D1",
+        "class": "NOT_COVERED"
+      }
+    ]
+  }
+}

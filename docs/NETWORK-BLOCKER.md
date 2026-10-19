@@ -1,7 +1,8 @@
-# PledgeKnot - blocked at Phase 7
+# PledgeKnot V1 historical consensus blocker and completed recovery
 
-2026-10-19. NOT COMPLETE / NOT SUBMITTED. No further demo deposits.
-The deployed contract, frozen oracle and semantic validator are unchanged.
+2026-10-19. NOT COMPLETE / NOT SUBMITTED. V1 receives no further deposits.
+Current V2 was owner-approved,implemented and deployed;funded verification is
+in progress. The V1 frozen oracle/source/failure below remain unchanged.
 Historical admission PASS is not current execution PASS.
 
 ## Historical network result before recovery
@@ -38,7 +39,8 @@ evidence/studio-dev/v1-blocked-state.json at 14:49:29 UTC:
 
 Target-failure, unavailable-annex and partial-funding cases have not started.
 Phase7/Gate13 execution remains blocked; Phase8-10 are not skipped or completed.
-Phase2/4 reassessment now has a V2 proposal; production/scope approval is pending.
+That checkpoint required Phase2/4 reassessment. The owner later approved V2;
+its full five-case execution remains in progress.
 
 ## Recovery completed, 16:21 UTC
 
@@ -87,7 +89,9 @@ broadcast and READY state before the actual submission.
 
 Recovery is complete. The full five-case lifecycle is still incomplete. V2
 repair proposal and6 unsigned/36cell results are in PROPOSED-V2.md. No V2 source
-change, deployment or value flow has occurred; behavior/scope approval is pending.
+change existed at that checkpoint. The owner subsequently approved V2 and
+cumulative19GEN escrow,keeping1GEN aggregate fees. V2 is now deployed;its
+full five-case acceptance is still in progress.
 
 ## Receipt fix and objective checker
 

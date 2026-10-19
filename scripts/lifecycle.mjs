@@ -94,22 +94,24 @@ async function main(){
   if(final.pool.phase!=='CLOSED'||final.pool.locked!=='0 GEN'||final.pool.credits!=='0 GEN'||final.pool.received!==c.count+' GEN'||final.pool.withdrawn!==c.count+' GEN'||final.nativeContractGEN!=='0')throw new SafeError('CaseZeroLiabilityRequired');
   await save('case-'+kind+'-final.json',final);
  }
- if(process.argv.includes('--recover-cycle')){
-  const c=cases.cycle,current=await pool(c.id),plan=recoveryPlan(current,Math.floor(Date.now()/1000),accounts.map(a=>a.address));
-  if(plan.recover)await write('cycle-recovery',accounts[0],'recover',[c.id]);
+ if(process.argv.includes('--recover-cycle')||process.argv.includes('--recover-unclear')){
+  if(process.argv.includes('--recover-cycle')&&process.argv.includes('--recover-unclear'))throw new SafeError('OneRecoveryScopeRequired');
+  const kind=process.argv.includes('--recover-unclear')?'unclear':'cycle',prefix=kind+'-recovery';
+  const c=cases[kind],current=await pool(c.id),expectedId=kind==='unclear'?'pk-unclear-v2':'pk-cycle-v1',plan=recoveryPlan(current,Math.floor(Date.now()/1000),accounts.map(a=>a.address),expectedId);
+  if(plan.recover)await write(prefix,accounts[0],'recover',[c.id]);
   for(let i=0;i<plan.withdrawals.length;i++){
    const step=plan.withdrawals[i],credit=await read(target,'get_credit',[c.id,accounts[step.owner].address]);
-   if(credit==='0 GEN'&&!await loadJournal('lifecycle-cycle-recovery-exit'+i+'.json'))throw new SafeError('UnjournaledRecoveryWithdrawal');
-   await withdraw('cycle',i,plan.withdrawals,'cycle-recovery');
+   if(credit==='0 GEN'&&!await loadJournal('lifecycle-'+prefix+'-exit'+i+'.json'))throw new SafeError('UnjournaledRecoveryWithdrawal');
+   await withdraw(kind,i,plan.withdrawals,prefix);
   }
-  if(current.phase!=='CLOSED')await write('cycle-recovery-close',accounts[0],'close_pool',[c.id]);
+  if(current.phase!=='CLOSED')await write(prefix+'-close',accounts[0],'close_pool',[c.id]);
   const final=await snapshot(c.id);
   if(final.pool.phase!=='CLOSED'||final.pool.locked!=='0 GEN'||final.pool.credits!=='0 GEN'||final.pool.withdrawn!=='3 GEN'||final.nativeContractGEN!=='0'||!final.accounting.invariant)throw new SafeError('RecoveryZeroLiabilityRequired');
   for(let i=0;i<3;i++){
-   const proof=await loadJournal('delivery-cycle-recovery-exit'+i+'.json');
+   const proof=await loadJournal('delivery-'+prefix+'-exit'+i+'.json');
    if(!proof?.balanceProven||!proof.externalReceipt?.messageValueDelivered||proof.expectedTransferGEN!=='1'||proof.recipient?.toLowerCase()!==accounts[i].address.toLowerCase())throw new SafeError('EachRecoveryRecipientProofRequired');
   }
-  await save('cycle-recovery-final.json',final);console.log(JSON.stringify({recoveryComplete:true,...final}));return;
+  await save(prefix+'-final.json',final);console.log(JSON.stringify({recoveryComplete:true,scope:kind,fullLifecyclePassed:false,...final}));return;
  }
  const selected=process.argv.find(x=>x.startsWith('--case='))?.slice(7)??'all';
  if(selected!=='all'&&!cases[selected])throw new SafeError('UnknownDemoCase');

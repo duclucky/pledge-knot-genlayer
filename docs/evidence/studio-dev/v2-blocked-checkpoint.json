@@ -1,0 +1,210 @@
+{
+  "command": "node .codex/verify-v2-checkpoint.mjs",
+  "observedAt": "2026-10-19T21:53:00.357Z",
+  "network": "Studio Dev",
+  "chainId": 61997,
+  "target": "0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a",
+  "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+  "positives": [
+    {
+      "case": "pair",
+      "pool": "pk-pair-v2",
+      "hash": "0x0a37970479d4ae5eabb9126ed3e286f219f7fcc9559d323b4c55348fbfb39198",
+      "completedIndependentAgree": 2,
+      "core": {
+        "resolved": true,
+        "computed_mask": 3,
+        "funded_mask": 3,
+        "computed_donors": [
+          "D0",
+          "D1"
+        ],
+        "funded_donors": [
+          "D0",
+          "D1"
+        ],
+        "grant": "2 GEN"
+      },
+      "closed": true,
+      "withdrawnGEN": "3"
+    },
+    {
+      "case": "cycle",
+      "pool": "pk-cycle-v2",
+      "hash": "0x24b84df86fd336a6e83184d8e71667054e521712514279ffdf1258d4d700dbbf",
+      "completedIndependentAgree": 2,
+      "core": {
+        "resolved": true,
+        "computed_mask": 7,
+        "funded_mask": 7,
+        "computed_donors": [
+          "D0",
+          "D1",
+          "D2"
+        ],
+        "funded_donors": [
+          "D0",
+          "D1",
+          "D2"
+        ],
+        "grant": "3 GEN"
+      },
+      "closed": true,
+      "withdrawnGEN": "3"
+    },
+    {
+      "case": "target",
+      "pool": "pk-target-v2",
+      "hash": "0xe9fd7b71148d58a19dadd4c66ac28243956d671dd417523c95559d6569483424",
+      "completedIndependentAgree": 2,
+      "core": {
+        "resolved": true,
+        "computed_mask": 3,
+        "funded_mask": 0,
+        "computed_donors": [
+          "D0",
+          "D1"
+        ],
+        "funded_donors": [],
+        "grant": "0 GEN"
+      },
+      "closed": true,
+      "withdrawnGEN": "3"
+    }
+  ],
+  "failedReview": {
+    "hash": "0x57542aac2709d8208dfd41ab9e9b9e2f6d4cee5030530631c3911fbfa3b0d6c9",
+    "consensus": "MAJORITY_DISAGREE",
+    "appliedAttempt": false,
+    "recoveredPool": {
+      "id": "pk-unclear-v2",
+      "version": "PK_V2",
+      "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "donors": [
+        "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+        "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+        "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+      ],
+      "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "target": "2 GEN",
+      "deadline": 1792430136,
+      "definition_digest": "20500d7989b1c20a6df73c40a34ac9a78d20a5ff07eb0173143678196192e3f4",
+      "phase": "CLOSED",
+      "pledged_mask": 7,
+      "attempts": 0,
+      "resolved": false,
+      "received": "3 GEN",
+      "locked": "0 GEN",
+      "credits": "0 GEN",
+      "withdrawn": "3 GEN"
+    }
+  },
+  "recoveries": [
+    {
+      "operation": "recover",
+      "hash": "0x3337d06d5fe71885f86084808a0e822376dfe8829c601085b2ff5cd0b3e15f23"
+    },
+    {
+      "operation": "withdraw_credit",
+      "hash": "0x7ae8e906a64819b33330916c7d83a3b356881b594490e572d152a21a7700035c"
+    },
+    {
+      "operation": "withdraw_credit",
+      "hash": "0x22fb1ad38da2ab01ed8b6ab67e00a41b2a9aec5e6dac222f6c5353a2e4e8134f"
+    },
+    {
+      "operation": "withdraw_credit",
+      "hash": "0x4418b2aa1743b77ec0a12dfbbe65f8cef6bd20783179454367821164dd3b2313"
+    },
+    {
+      "operation": "close_pool",
+      "hash": "0xc9d1bf52e0ba8cd6eddcec2e9d7a9c896f8ece5f6949f0090432d638a71928ae"
+    }
+  ],
+  "exits": [
+    {
+      "hash": "0x6324cbc5559da9da29cc3297007d50e9ed2cd4f3e3751749d42c8e41fc7bbfd6",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "amountGEN": "2",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x66ccb966113ef84aef0d1f0c125f6c20f6da841a2257f53efe35d32ed585a9d0",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0xaf665bbc60cd963fa84c2d29668845d665fdab1f418e82f9ca60884aa88c5071",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "amountGEN": "2",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0xe8dc16e55a32a3236546d59d1315dc6812ba1349c28f64384cc184825b9c5d36",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x94184c8015c5066c71ebe21d67731b9b817a320d39b5d73de36d1c018396ef39",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0xf8b7ae05bc5bcb5174738720ef42a47e9a301179f4f6f1fe6ac90e12c3318078",
+      "recipient": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x07c9b46f641ee8fdc01b2bb9ade4680d875699a473b5acfcca3922af5b3983b9",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x7ae8e906a64819b33330916c7d83a3b356881b594490e572d152a21a7700035c",
+      "recipient": "0xBd733BC56Ec4a55FA25C068B9306b0171335D199",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x22fb1ad38da2ab01ed8b6ab67e00a41b2a9aec5e6dac222f6c5353a2e4e8134f",
+      "recipient": "0x2818B7BC95a05Df416E7c2e7F928e12FE4715cFD",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    },
+    {
+      "hash": "0x4418b2aa1743b77ec0a12dfbbe65f8cef6bd20783179454367821164dd3b2313",
+      "recipient": "0xc73a3DED1164883C41aB87ED13a279B2b4CFD4B8",
+      "amountGEN": "1",
+      "exactNativeDecrease": true,
+      "delivered": true
+    }
+  ],
+  "accounting": {
+    "received": "12 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "12 GEN",
+    "invariant": true
+  },
+  "nativeContractGEN": "0",
+  "feeCapGEN": "1",
+  "reservedFeeUpperBoundGEN": "0.626549248800631472",
+  "cumulativeEscrowCapGEN": "19",
+  "cumulativeDepositsGEN": "18",
+  "checkpointPassed": true,
+  "fullLifecyclePassed": false
+}
