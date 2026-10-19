@@ -3,13 +3,15 @@
 ## Identity
 
 IDEA-048 / PledgeKnot / pledge-knot / Intelligent Contracts.
-Status: DESIGN, fourteen admission gates passed; execution PENDING_EXECUTION.
+Status: LOCAL_IMPLEMENTATION_VERIFIED, fourteen admission gates passed;
+execution PENDING_EXECUTION. Local proof: LOCAL-VERIFICATION.md.
 Repository URL and deployed address: PENDING_REAL_EVIDENCE.
 Target: Studio Dev61997, https://studio-next.genlayer.com/api .
 Pinned family: Python API v0.3.0, GenVM v0.6.0-rc5, runner
 5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng;
 JS2.0.0-rc.1, Python client0.19.0rc2, genlayer-test0.30.0rc2,
-genvm-linter0.11.1rc2. Exact-source lint/schema/constructor/smoke remain required.
+genvm-linter0.11.1rc2. Exact-source lint/schema/constructor passed;
+signed authority smoke and funded lifecycles remain required.
 
 ## One-sentence product hook
 
@@ -292,7 +294,11 @@ Required completion:one ASCII class;recognized semantic lint;meaningful per-writ
 RED-to-GREEN records;all local/adversarial/metadata/parser checks;exact-source
 smoke;successful finalized judgments/consequences;own native exits/zero closure;
 public hygiene/history/CI;unchanged objective grader NO BLOCKER;copy-ready
-description under1000chars;final full master audit. These are still pending.
+description under1000chars;final full master audit. Local lint,111 Python tests,
+7 script tests,ASCII/metadata and unsigned schema/constructor now pass. Real
+signed execution and subsequent gates remain pending because safely discovered
+authorized configuration has only one distinct EOA. Additional key use and
+funding have not been authorized.
 
 No deployment,address,public repo,CI,independent adopters,unanimous validators,
 browser workflow,actual work,legal/charity identity or Portal acceptance is claimed.

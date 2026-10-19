@@ -15,4 +15,5 @@ CLAUDE.md
 precheck-report.*
 grade-report.json
 docs/evidence/studio-dev/role-preflight.json
+docs/evidence/studio-dev/role-preflight.local.json
 docs/evidence/studio-dev/authorized-demo-roles.json

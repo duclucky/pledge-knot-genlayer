@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-19T13:18:36.430Z",
+  "command": "node scripts/runtime-probe.mjs",
+  "scope": "Unsigned exact-source schema/constructor only; not finality or semantic consensus.",
+  "network": {
+    "network": "Studio Dev",
+    "chainId": 61997,
+    "rpc": "https://studio-next.genlayer.com/api",
+    "explorer": "https://explorer-studio-dev.genlayer.com"
+  },
+  "identity": {
+    "network": "Studio Dev",
+    "chainId": 61997,
+    "sourceCommit": "46110a14ae8620dc6bb9b252a47c7f46e6586a8d",
+    "sourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+    "runner": "5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng",
+    "api": "v0.3.0",
+    "genvm": "v0.6.0-rc5",
+    "sdk": "2.0.0-rc.1"
+  },
+  "checks": [
+    {
+      "kind": "schema",
+      "methods": [
+        "adjudicate",
+        "close_pool",
+        "create_pool",
+        "get_accounting",
+        "get_attempt",
+        "get_core",
+        "get_credit",
+        "get_matrix",
+        "get_pledge",
+        "get_policy",
+        "get_pool",
+        "pledge",
+        "recover",
+        "withdraw_credit"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "constructor",
+      "executionResult": "SUCCESS",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
