@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-19T16:21:12.240Z",
+  "command": "node .codex/cellwise-probe.mjs --fixture=pair-v1",
+  "fixtureSha256": "6d13c6d34c4e388232a7cf04c7942e07a163252c12d8067c009dbc6591c6bd09",
+  "productionSourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+  "probeSourceSha256": "82789258c979b14443bc66389708a66dc8829f492e33e6cf22daeacc3a836065",
+  "hypothesis": "Batching may confuse directed scope roles; independently ask each of the six relations under the same coverage definitions.",
+  "expectedLabelsInPrompt": false,
+  "unsignedOnly": true,
+  "productionChanged": false,
+  "runs": [
+    {
+      "run": 1,
+      "startedAt": "2026-10-19T16:21:12.245Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "The peer purpose explicitly provides financial backing for public accessibility testing of documentation, which directly includes the owner's required support for that same purpose.",
+            "Peer purpose is only closed proprietary advertising analytics, which does not include support for public accessibility testing of documentation.",
+            "Peer purpose supports creating openly downloadable documentation, which clearly includes freely downloadable documentation; 'with accessible text' is an added qualifier, not an exclusion.",
+            "The peer purpose is only for closed proprietary advertising analytics, which does not include creating freely downloadable documentation.",
+            "The peer purpose is funding downloadable documentation with accessible text, not shipping physical medical equipment.",
+            "Peer purpose is funding accessibility testing of documentation, not shipping physical medical equipment."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:21:23.375Z"
+    },
+    {
+      "run": 2,
+      "startedAt": "2026-10-19T16:21:23.377Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "The peer purpose directly matches the required purpose: financial backing/support for public accessibility testing of documentation.",
+            "Peer purpose is only closed proprietary advertising analytics, which does not include public accessibility testing of documentation.",
+            "Peer purpose supports creating openly downloadable documentation, which clearly includes freely downloadable documentation; 'accessible text' adds detail without limiting coverage.",
+            "Peer purpose is only closed proprietary advertising analytics, which does not include creating freely downloadable documentation and implies a different, restrictive purpose.",
+            "Peer purpose is funding downloadable documentation with accessible text, not shipping physical medical equipment.",
+            "Peer purpose is funding accessibility testing of documentation, not shipping physical medical equipment."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:21:36.553Z"
+    }
+  ],
+  "passed": true
+}

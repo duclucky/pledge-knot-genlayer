@@ -14,7 +14,9 @@ Pinned family: Python API v0.3.0, GenVM v0.6.0-rc5, runner
 JS2.0.0-rc.1, Python client0.19.0rc2, genlayer-test0.30.0rc2,
 genvm-linter0.11.1rc2. Exact-source lint/schema/constructor passed;
 signed authority smoke and first pair lifecycle passed. Cycle consensus failed;
-remaining lifecycle scenarios and cycle recovery remain pending.
+cycle recovery completed with all3GEN refunded and zero liability.
+Remaining semantic lifecycle scenarios are pending. V2 proposal awaits owner
+approval; current deployed V1 source and all14 historical gate records remain.
 
 ## One-sentence product hook
 

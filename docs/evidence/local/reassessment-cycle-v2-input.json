@@ -1,0 +1,38 @@
+{
+  "version": "cycle-input-v2",
+  "poolId": "pk-cycle-v2",
+  "change": "New declarations explicitly separate original-publication, translation, and accessibility-testing scopes. The v1 failed declaration, frozen oracle and deployed judge remain unchanged.",
+  "pledges": [
+    [
+      "Funding only the publication of original English training manuals for free public download. This pledge excludes translation work and accessibility testing.",
+      "Funding translation of training manuals into French for free public download."
+    ],
+    [
+      "Financial backing solely for translating training manuals into French and making those translations freely downloadable. This pledge excludes publishing original English manuals and performing accessibility tests.",
+      "Funding public accessibility testing of documentation."
+    ],
+    [
+      "Funding only public accessibility tests of documentation. This pledge excludes publishing original English manuals and translating manuals into French.",
+      "Funding publication of original English training manuals for free public download."
+    ]
+  ],
+  "expectedClasses": [
+    "COVERED",
+    "NOT_COVERED",
+    "NOT_COVERED",
+    "COVERED",
+    "COVERED",
+    "NOT_COVERED"
+  ],
+  "expectedCore": 7,
+  "targetGEN": "3",
+  "plannedDepositsGEN": [
+    "1",
+    "1",
+    "1"
+  ],
+  "plannedRecipientWithdrawalsGEN": [
+    "2",
+    "1"
+  ]
+}

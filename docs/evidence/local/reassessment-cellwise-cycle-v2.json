@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-19T16:19:35.489Z",
+  "command": "node .codex/cellwise-probe.mjs",
+  "fixtureSha256": "6df447f3f7bc6c62977204624137e6339c41b3529817d7908d91755f4204ba95",
+  "productionSourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+  "probeSourceSha256": "f6d5004fd5e312f46762f31d9b12c5a276084bb5a44a86746cc232f824c70049",
+  "hypothesis": "Batching may confuse directed scope roles; independently ask each of the six relations under the same coverage definitions.",
+  "expectedLabelsInPrompt": false,
+  "unsignedOnly": true,
+  "productionChanged": false,
+  "runs": [
+    {
+      "run": 1,
+      "startedAt": "2026-10-19T16:19:35.494Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "Peer purpose explicitly funds translating training manuals into French and making them freely downloadable, which directly includes the owner's required purpose.",
+            "Peer purpose is limited to public accessibility tests of documentation and explicitly excludes translating manuals into French, which the owner requires.",
+            "The peer purpose is limited to publishing original English training manuals and explicitly excludes accessibility testing, which is the owner's required purpose.",
+            "Peer purpose explicitly funds public accessibility tests of documentation, which directly includes the required purpose. The exclusions concern manuals publishing/translation, not accessibility testing.",
+            "The peer purpose explicitly funds publication of original English training manuals for free public download, exactly matching the required purpose. Its exclusions concern additional activities, not the required purpose.",
+            "Peer purpose is only for translating manuals into French and free download, and it explicitly excludes publishing original English manuals, which the owner requires."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:19:48.374Z"
+    },
+    {
+      "run": 2,
+      "startedAt": "2026-10-19T16:19:48.375Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "Peer purpose explicitly funds translating training manuals into French and making them freely downloadable, which directly includes the owner's required purpose.",
+            "Peer purpose is limited to public accessibility tests and explicitly excludes translating manuals into French, which the owner requires.",
+            "Peer purpose explicitly limits funding to publication of English training manuals and expressly excludes accessibility testing, which the owner requires.",
+            "Peer purpose explicitly funds public accessibility tests of documentation, which directly includes the required purpose. The exclusions concern other activities, not accessibility testing.",
+            "The peer purpose explicitly funds publication of original English training manuals for free public download, which exactly includes the owner's required purpose. Its exclusions apply to other work, not the required purpose.",
+            "Peer purpose is only for French translations and explicitly excludes publishing original English manuals, which the owner requires."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:20:00.512Z"
+    }
+  ],
+  "passed": true
+}

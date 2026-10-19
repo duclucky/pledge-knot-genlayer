@@ -1,0 +1,33 @@
+{
+  "observedAt": "2026-10-19T16:21:03.809Z",
+  "pool": {
+    "id": "pk-cycle-v1",
+    "version": "PK_V1",
+    "creator": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "donors": [
+      "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+      "0x2818b7bc95a05df416e7c2e7f928e12fe4715cfd",
+      "0xc73a3ded1164883c41ab87ed13a279b2b4cfd4b8"
+    ],
+    "recipient": "0xbd733bc56ec4a55fa25c068b9306b0171335d199",
+    "target": "3 GEN",
+    "deadline": 1792425214,
+    "definition_digest": "041a916ada7a0847f5f713c3207ddd2185d93c85f077e5b0b3a3ca801fd2986a",
+    "phase": "CLOSED",
+    "pledged_mask": 7,
+    "attempts": 0,
+    "resolved": false,
+    "received": "3 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "3 GEN"
+  },
+  "accounting": {
+    "received": "6 GEN",
+    "locked": "0 GEN",
+    "credits": "0 GEN",
+    "withdrawn": "6 GEN",
+    "invariant": true
+  },
+  "nativeContractGEN": "0"
+}

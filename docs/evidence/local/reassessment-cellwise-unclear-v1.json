@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-19T16:21:37.251Z",
+  "command": "node .codex/cellwise-probe.mjs --fixture=unclear-v1",
+  "fixtureSha256": "943019d93de4d71684e8ba4db44dd4af59c9a757bf66c896758cfcbf9861c25a",
+  "productionSourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+  "probeSourceSha256": "789ee78b20c6f995f68348252e56412e3eb8d51e14056670c1af85deb459faa5",
+  "hypothesis": "Batching may confuse directed scope roles; independently ask each of the six relations under the same coverage definitions.",
+  "expectedLabelsInPrompt": false,
+  "unsignedOnly": true,
+  "productionChanged": false,
+  "runs": [
+    {
+      "run": 1,
+      "startedAt": "2026-10-19T16:21:37.256Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "UNCLEAR",
+            "UNCLEAR",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "Owner requirement depends entirely on unavailable annex Q, so the required activity is unspecified here and cannot be compared reliably to the peer purpose.",
+            "Owner requirement depends entirely on unavailable annex Q, so the required activity is unspecified here and cannot be compared reliably to the peer purpose.",
+            "Peer purpose exactly matches the required purpose: support for creating freely downloadable documentation.",
+            "Peer purpose is only for closed proprietary advertising analytics, which does not include support for creating freely downloadable documentation.",
+            "Creating freely downloadable documentation does not entail or include shipping physical medical equipment.",
+            "Peer purpose is accessibility testing of documentation, which does not include or entail shipping physical medical equipment."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:21:54.852Z"
+    },
+    {
+      "run": 2,
+      "startedAt": "2026-10-19T16:21:54.854Z",
+      "matched": true,
+      "http": 200,
+      "rpcErrorCode": null,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "UNCLEAR",
+            "UNCLEAR",
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED"
+          ],
+          "reasons": [
+            "Owner requirement depends entirely on unavailable annex Q, so the required activity is unspecified here and cannot be compared reliably to the peer purpose.",
+            "Owner requirement depends entirely on unavailable annex Q, so the required activity is unspecified here and cannot be compared clearly to the peer purpose.",
+            "Peer purpose exactly matches the required purpose: support for creating freely downloadable documentation.",
+            "Peer purpose is only closed proprietary advertising analytics, which does not include support for creating freely downloadable documentation.",
+            "Creating freely downloadable documentation does not include or entail shipping physical medical equipment.",
+            "Peer purpose is accessibility testing of documentation, which does not include or entail shipping physical medical equipment."
+          ]
+        }
+      ],
+      "finishedAt": "2026-10-19T16:22:08.445Z"
+    }
+  ],
+  "passed": true
+}

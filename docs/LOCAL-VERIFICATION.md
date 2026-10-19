@@ -127,3 +127,22 @@ PLEDGEKNOT_CHECK_PASS,exit0. Lint recognizes PledgeKnotContract with14 methods.
 `node scripts/lifecycle.mjs --execute --recover-cycle` at14:54:16UTC returned
 RecoveryDeadlineNotReached,exit1; fee-budget SHA unchanged, no broadcast.
 This proves early refusal, not completed recovery.
+
+## Recovery and unsigned repair reassessment, 2026-10-19
+
+`node scripts/lifecycle.mjs --execute --recover-cycle` completed5 finalized
+operations after expiry,3 exact1GEN refunds and zero closure at16:21UTC.
+`node scripts/recovery-audit.mjs` independently reread source/receipts/state:
+recoveryPassed=true,fullLifecyclePassed=false,operations5,exactNativeRefunds3;
+global received6GEN,withdrawn6GEN,locked0GEN,credits0GEN,native0,invariant=true.
+See evidence/studio-dev/cycle-recovery-audit.json. Existing1GEN fee cap retained;
+reserved signed-fee upper bound0.309102232800227744GEN,not actual fee expenditure.
+
+`.codex/reassessment-probe.mjs` used the exact production judge on a new frozen
+explicit-scope cycle:1run failed expected D1:D2,computed core0. Failure retained.
+`.codex/cellwise-probe.mjs` tested one directed relation at a time with same
+coverage definitions:2runs new cycle+2original pair+2original unavailable-annex,
+36/36 normalized cells matched frozen oracles. No expected labels in model
+input, no key/signing/broadcast or GEN. This is unsigned feasibility only, not
+live independent consensus. Public sanitized records: evidence/local/reassessment-*.
+V2 production behavior/scope changes await approval; see PROPOSED-V2.md.

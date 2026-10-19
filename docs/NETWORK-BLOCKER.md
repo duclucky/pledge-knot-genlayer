@@ -4,7 +4,7 @@
 The deployed contract, frozen oracle and semantic validator are unchanged.
 Historical admission PASS is not current execution PASS.
 
-## Verified network result
+## Historical network result before recovery
 
 Contract: [Studio Dev61997](https://explorer-studio-dev.genlayer.com/address/0x312185Ec90dF0B86CC7996d7d6D978aaa7694BdD).
 Source SHA256: c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f.
@@ -38,9 +38,9 @@ evidence/studio-dev/blocked-state.json at 14:49:29 UTC:
 
 Target-failure, unavailable-annex and partial-funding cases have not started.
 Phase7/Gate13 execution remains blocked; Phase8-10 are not skipped or completed.
-Return to Phase2/4 for viability/spec reassessment after handling existing funds.
+Phase2/4 reassessment now has a V2 proposal; production/scope approval is pending.
 
-## Recovery still pending
+## Recovery completed, 16:21 UTC
 
 Immutable deadline: 1792425214, **2026-10-19 15:53:34 UTC** /
 **22:53:34 Bangkok**. Recovery before that time is forbidden by the contract.
@@ -64,10 +64,30 @@ proofs before recoveryComplete can be reported.
 
 Before expiry the real command returned RecoveryDeadlineNotReached, exit1;
 the signed-fee journal was unchanged and no write was broadcast (14:54:16 UTC).
-The policy tests pass, but actual refund execution awaits expiry. No
-background execution or scheduled wake-up has been created. Planned recovery
-is not transfer proof. Do not label the3GEN recovered until canonical closure,
-balance and all three recipient proofs exist.
+After expiry, the same command finalized these actual operations:
+
+| Operation | Transaction hash |
+|---|---|
+| Recover | 0x213630a2067e2d58ae2f192c7fdbcfb9e5653282563d993c9e992a4298a9669f |
+| D0 withdraw1 GEN | 0x0798d1da4951ceaa6315961f78c494fd0ecc0ff9469185026dec20da493ae4d8 |
+| D1 withdraw1 GEN | 0x96a00a82a1c800299f8ccf275a8d8e3ab1f9c821dd9fb4f1b7a36cf4b885c128 |
+| D2 withdraw1 GEN | 0x40c46a067135fb22d23e7691a5221892a85ff1de23f196cd988727db8df09a79 |
+| Close | 0x77ef761c932f23f12cba2141795f33d13252ce6093d1c108168098e6d5a6a53d |
+
+`node scripts/recovery-audit.mjs` freshly re-read all5 finalized successful
+operations,3 exact native1GEN decreases and delivered-recipient messages,
+zero canonical donor credits, both CLOSED pools, exact deployed source and
+native contract balance0. Output: recoveryPassed=true, fullLifecyclePassed=false;
+received6GEN,withdrawn6GEN,locked0GEN,credits0GEN,invariant=true;
+reserved fee upper bound0.309102232800227744GEN against unchanged1GEN cap.
+See evidence/studio-dev/cycle-recovery-audit.json. No wallet generation, funding,
+blind retry or extra demo deposits. The first command attempt had a connection
+timeout before any recovery journal/hash; read-only inspection confirmed no
+broadcast and READY state before the actual submission.
+
+Recovery is complete. The full five-case lifecycle is still incomplete. V2
+repair proposal and6 unsigned/36cell results are in PROPOSED-V2.md. No V2 source
+change, deployment or value flow has occurred; behavior/scope approval is pending.
 
 ## Receipt fix and objective checker
 

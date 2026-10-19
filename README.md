@@ -88,20 +88,26 @@ across five sequential cases,and a1 GEN total network-fee cap. Signed fee
 envelopes are checked and journaled before broadcast. No new wallet or funding
 was needed. Public repository,CI and submission readiness remain pending.
 
-## Current blocker and recovery
+## Current blocker and completed recovery
 
 The frozen pk-cycle-v1 fixture finalized with MAJORITY_DISAGREE. Leader SUCCESS
-alone is not accepted consensus or applied state. A publication pledge does not
-unambiguously determine the accessibility-testing relation: the leader returned
-UNCLEAR where the predeclared oracle expected NOT_COVERED. The oracle, validator
-and deployed contract are unchanged. Cycle remains READY, attempts 0, with
-3 GEN locked and no allocation. No further demo deposits are permitted in this run.
-The earlier unsigned viability results remain historical, not a stability guarantee.
+alone is not accepted consensus or applied state. A publication pledge did not
+unambiguously determine the accessibility-testing relation. The frozen oracle,
+validator and deployed contract are unchanged. This failure is preserved.
 
-Recovery is available only at/after 2026-10-19 15:53:34 UTC (22:53:34 Bangkok).
-From this project, `node scripts/lifecycle.mjs --execute --recover-cycle` uses the
-existing signed-operation journal and 1 GEN fee cap, refunds each original donor
-1 GEN, verifies each native balance decrease and delivered-recipient message,
-then closes the pool. It refuses early recovery and never calls adjudicate or
-creates/funds another pool. Recovery execution is still pending; no background
-execution is scheduled. See docs/evidence/studio-dev/blocked-state.json.
+After its immutable expiry, recovery finalized and each original donor withdrew
+1 GEN with exact native balance decrease and delivered-recipient proof. The
+pool is CLOSED; global received6 GEN, withdrawn6 GEN, locked0 GEN, credits0 GEN,
+native contract balance0. `node scripts/recovery-audit.mjs` independently
+rechecked all5 recovery operations and3 actual refunds, recoveryPassed=true,
+fullLifecyclePassed=false. See docs/evidence/studio-dev/cycle-recovery-audit.json.
+This recovery does not turn a failed cycle judgment into successful consensus.
+
+A proposed per-relation V2 judge is documented in docs/PROPOSED-V2.md. Six
+unsigned simulations matched36/36 frozen cells across the explicit new cycle,
+original pair and unavailable-annex case. A batch probe on the same new cycle
+failed and is also retained. These are model simulations, not independent
+network consensus or settlement. V2 is not implemented/deployed. Owner approval
+is pending for its public behavior change and the cumulative19GEN escrow scope;
+the existing aggregate1GEN fee ceiling would remain unchanged. No further demo
+deposits or production behavior changes occur while approval is pending.

@@ -1,0 +1,32 @@
+{
+  "command": "node .codex/reassessment-probe.mjs",
+  "at": "2026-10-19T16:17:17.610Z",
+  "fixtureSha256": "6df447f3f7bc6c62977204624137e6339c41b3529817d7908d91755f4204ba95",
+  "productionSourceSha256": "c483e13de92446f54b2b548f4614cbcf7380fbe08aee984ec9b73bec3c51343f",
+  "probeSourceSha256": "9af8d73d416cb8a96f6f846ef499194b25bfcb32f43b820d06cd8f09560f9644",
+  "expectedLabelsInPrompt": false,
+  "scope": "Unsigned model simulation, not consensus/finality/value proof",
+  "runs": [
+    {
+      "run": 1,
+      "startedAt": "2026-10-19T16:17:18.331Z",
+      "matched": false,
+      "executionResult": "SUCCESS",
+      "observations": [
+        {
+          "classes": [
+            "COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "NOT_COVERED",
+            "COVERED",
+            "NOT_COVERED"
+          ],
+          "core": 0
+        }
+      ],
+      "finishedAt": "2026-10-19T16:17:39.449Z"
+    }
+  ],
+  "passed": false
+}
