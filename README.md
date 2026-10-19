@@ -96,10 +96,10 @@ execution proof. No archive/failure was relabeled as V2 success.
 
 ## Verification and network status
 
-Use Python 3.12 and this repository's virtual environment, install
+Use Windows Python 3.12 and this repository's virtual environment, install
 requirements.lock, run npm ci, then npm run check. It checks every contract with
-the semantic linter, all direct tests and the SDK/receipt/script tests. Windows
-uses .venv/Scripts; POSIX uses .venv/bin. Set PYTHONUTF8=1.
+the semantic linter, all direct tests and the SDK/receipt/script tests. The
+verified Windows setup uses .venv/Scripts. Set PYTHONUTF8=1.
 
 The exact source passed lint, direct tests, metadata and unsigned target checks
 before deployment. Current local suite: 122 Python tests and 26 script tests.
@@ -110,7 +110,15 @@ envelopes are checked and journaled before broadcast. No new wallet or funding
 was needed. The signed-fee reservation upper bound across both revisions is
 0.633753753600786752 GEN, below the 1 GEN cap; this is not actual fee spending.
 See [local output](docs/evidence/local/check.txt) and [review](docs/REVIEW.md).
-Public repository, CI and the final acceptance check remain pending.
+The [public repository](https://github.com/duclucky/pledge-knot-genlayer) is
+published with incremental history.
+[CI passed](https://github.com/duclucky/pledge-knot-genlayer/actions/runs/39334713953)
+on a fresh Windows runner with the same 122 Python and 26 script tests.
+Copy-ready fields are in [SUBMISSION.md](docs/SUBMISSION.md); Portal submission
+is performed by the owner. The unchanged objective checker returned
+0 BLOCKER, 0 WARN, npm/gltest PASS, all four gates PASS and all three evidence
+checks OK with the real repository and deployed Explorer URL.
+See [acceptance proof](docs/evidence/local/acceptance.json).
 
 ## Preserved failures and limits
 

@@ -20,7 +20,10 @@ Six unsigned per-relation simulations matched36/36 frozen cells across new
 explicit cycle,original pair and missing-annex. No expected labels in prompt.
 Those simulations alone were model feasibility. Subsequent real network proof
 is evidence/studio-dev/lifecycle-audit.json: passed=true,52operations,14native
-exits,4independent reviews. Public repository/CI and final packaging are pending.
+exits,4independent reviews. Public repository and CI are verified; copy-ready
+fields are in SUBMISSION.md. The unchanged objective checker passed0BLOCKER,
+0WARN with real repo/Explorer and804-character notes; local acceptance.json
+binds actual dynamic checks and unchanged grader hashes.
 
 ## One-sentence product hook
 

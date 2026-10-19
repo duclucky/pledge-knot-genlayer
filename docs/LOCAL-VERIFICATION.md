@@ -205,3 +205,16 @@ No source/validator change;need explicit cumulative22GENscope because18GEN
 already deposited across V1+V2 and original19GEN allowance leaves1GEN only.
 Aggregate fee cap1GEN unchanged;reserved upperbound0.626549248800631472GEN,
 not claimed actual fees. See UNCLEAR-CASE-RETRY.md. New-case value writes pending.
+
+## Public CI, 2026-10-19 22:29UTC
+
+Initial run39334487280 failed before any test because setup-python's default
+pip cache lookup did not match requirements.lock. One workflow input,
+cache-dependency-path:requirements.lock,corrected that configuration. No test
+or contract rule was removed. A required local check still passed122Python and
+26Node tests. Subsequent run39334713953 at commitc0c962a9b4d63dfdaaa378fcba63f68a81018624
+completed success on a fresh Windows runner; lint recognized the expected class
+and14methods,122Python/26Node passed,0failed/0skipped.
+Evidence: evidence/local/ci.json and ci-check-output.txt.
+Official action behavior: https://github.com/actions/setup-python/blob/v5/README.md#caching-packages-dependencies .
+Successful CI: https://github.com/duclucky/pledge-knot-genlayer/actions/runs/39334713953 .

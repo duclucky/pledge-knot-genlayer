@@ -1,0 +1,66 @@
+{
+  "at": "2026-10-19T22:31:52.312156+00:00",
+  "command": "pwsh -NoProfile -File ../tools/genlayer-grading-bot/genlayer-precheck.ps1 -Project 'D:/Genlayer Project/pledge-knot' -Category intelligent-contracts -RepoUrl https://github.com/duclucky/pledge-knot-genlayer -ExplorerUrl https://explorer-studio-dev.genlayer.com/address/0xeceE9CaFf3DC3fE026eA71d8fD3a1532cA7f230a -NotesFile .codex/description.txt",
+  "exitCode": 0,
+  "category": "intelligent-contracts",
+  "blockers": 0,
+  "warnings": 0,
+  "autoVerified": 7,
+  "dynamic": {
+    "npmRunCheck": "PASS",
+    "gltest": "PASS",
+    "skipDynamic": false
+  },
+  "gateStatuses": [
+    {
+      "item": "real GenLayer contract present",
+      "status": "pass"
+    },
+    {
+      "item": "uses consensus (not deterministic-only / not fake off-chain)",
+      "status": "pass"
+    },
+    {
+      "item": "not a renamed boilerplate / empty fork",
+      "status": "pass"
+    },
+    {
+      "item": "repository builds & tests pass",
+      "status": "pass"
+    }
+  ],
+  "missingItems": [],
+  "evidenceChecks": [
+    {
+      "item": "GitHub repo OR Studio contract URL provided",
+      "ok": true
+    },
+    {
+      "item": "deployed explorer address URL (valid pattern)",
+      "ok": true
+    },
+    {
+      "item": "submission notes <= 1000 chars (is 804)",
+      "ok": true
+    }
+  ],
+  "descriptionCharacters": 804,
+  "gradeVerdict": "GATE OK - address MISSING items + confirm the manual (!) criteria, then submit",
+  "graderFilesUnmodified": true,
+  "graderSha256": {
+    "genlayer-precheck.ps1": "0e90ae93c72c9464b4b995db6896cf08ea8f8d14b66a847156012f830e896746",
+    "precheck_static.py": "e67ae6076ce48d5cc4d3179138f7dacb514792ea21d0a48ab5b4d93222263f44",
+    "genlayer_grade.py": "b80fd0a80f5040865ec8f7801bca1adbe44ca1a617e314cf4385fe0e24a7db59"
+  },
+  "sourceSha256": "3879221193c6affce84c9d9cc14f92e0f3dc40376710d3f5124100e364298c4f",
+  "ci": {
+    "conclusion": "success",
+    "headSha": "c0c962a9b4d63dfdaaa378fcba63f68a81018624",
+    "status": "completed",
+    "updatedAt": "2026-10-19T22:29:08Z",
+    "url": "https://github.com/duclucky/pledge-knot-genlayer/actions/runs/39334713953"
+  },
+  "realNetworkAuditPassed": true,
+  "manualCriteriaReview": "docs/REVIEW.md",
+  "officialScoreOrPortalAcceptanceClaimed": false
+}
